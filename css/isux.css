@@ -32,6 +32,8 @@ body{padding-top:50px;background: #f2f2f2;font:14px/1.5em tahoma,"HelveticaNeue"
 .operate-attr .hand{background: url(../images/hand.png) no-repeat left center;}
 .operate-attr .speak{background: url(../images/speak.png) no-repeat left center;}
 .operate-attr .spare{background: url(../images/spare.png) no-repeat left center;}
+.opearate-8{left:16px;}
+.opearate-8 i{width: 35px;color: #fff;}
 .opearate-8 .hand{background: url(../images/handw.png) no-repeat left center;}
 .opearate-8 .speak{background: url(../images/speakw.png) no-repeat left center;}
 .opearate-8 .spare{background: url(../images/sparew.png) no-repeat left center;}
