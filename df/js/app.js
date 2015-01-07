@@ -7,7 +7,10 @@ $(document).ready(function(){
         mode: 'vertical',
         loop:false,
         grabCursor: true
-    })
+    });
+    setTimeout(function(){
+        $(".swiper-slide").addClass("visiable");
+    },400);    
 }).on("click",".cyli-lst li",function(){
     var $niu = $('<div class="z-niu"><img src="img/z_niu.png"></div>');
 	var prevImg = $(".cyli-lst").children(".active").children("img");
