@@ -17,7 +17,7 @@ img,input,button,select{vertical-align: middle;border:none;outline: none;}
 input{border-radius:0;-webkit-appearance: none;-moz-appearance:none;appearance:none;/*-webkit-user-select: none; -moz-user-select: none; user-select: none;*/}
 input:focus,textarea:focus{outline: none;}
 input[type='button']{cursor: pointer;}
-ul,li,a{-webkit-tap-highlight-color:rgba(0,0,0,0);}/*去除点击高亮样式*/
+ul,li,a,i{-webkit-tap-highlight-color:rgba(0,0,0,0);}/*去除点击高亮样式*/
 a{background-repeat: no-repeat;background-size: contain;}
 a,a:visited,a:hover,a:focus{text-decoration: none;outline:none;background-color: transparent;}
 img{width: 100%;}
@@ -36,9 +36,8 @@ textarea{width: 100%;border: none;overflow: hidden;resize: none;}
 .fr{float: right;}
 .show-img{font-size: 0;text-align: center;}
 .img-devide{display: inline-block;height: 100%;width: 0;vertical-align: middle;*zoom: 1;*display:inline;}
-.tb-wap .short-ipt{width: 50%;}
-.tb-wap .middle-ipt{width: 70%;}
 .pr{position: relative;}
+.txt-al{text-align: left!important}
 
 .rotate-img{-webkit-transform:rotate(90deg);display: block;}
 .tb-wap{width: 100%;border-collapse: collapse;table-layout: fixed;}
@@ -56,6 +55,9 @@ textarea{width: 100%;border: none;overflow: hidden;resize: none;}
 .gr-bg{background-color: #21acc4;}
 .bl-bg{background-color: #02328d;}
 
+.left50{left:50%;}
+.left25{left: 25%;}
+.left75{left: 75%;}
 .mt2{margin-top: 2px;}
 .pointer{cursor: pointer;}
 
