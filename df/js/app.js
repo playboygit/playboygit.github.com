@@ -54,7 +54,6 @@ var arr310={
 };
 /**/
 var arr311={
-    sy:["房地产营销"],
     tj:["招商地产、万科A、华夏幸福","国投中鲁等","世联行、三六五网","南国置业、中华企业","暂无明确标的"]
 };
 var arr312={
@@ -82,6 +81,8 @@ var arr316={
     sy:["光伏、风电","光伏","储能","核电","风电"],
     tj:["粤水电、云南盐化、福建南纺、甘肃电投","阳光电源、隆基股份","阳光电源","丹甫股份","金风科技、吉新科技"]
 };
+var flag1 = true;
+var flag2 = true;
 $(document).ready(function(){
     var height = screen.height;
     var size = $(".swiper-wrapper .item").size();
@@ -90,28 +91,194 @@ $(document).ready(function(){
     var tpSwiper = new Swiper('#swiper-container',{
         mode: 'vertical',
         loop:false,
-        grabCursor: true
+        grabCursor: true,
+        onSlideChangeEnd:function(swiper){
+            switch(swiper.activeIndex){
+                case 1:
+                $(".red-bg .md-box").removeClass("hidden").addClass("box-slide-mup");
+                break;
+                case 2:
+                setTimeout(function(){
+                    $(".reda1 .slideDown1").removeClass("hidden").addClass("box-slide-down");
+                    setTimeout(function(){
+                        $(".reda1 .slideDown2").removeClass("hidden").addClass("box-slide-down");
+                        setTimeout(function(){
+                            $(".reda1 .slideDown3").removeClass("hidden").addClass("box-slide-mdown");   
+                        },800);
+                    },800);
+                },50);
+                break;
+                case 3:
+                setTimeout(function(){
+                    $(".reda2 .slideDown1").removeClass("hidden").addClass("box-slide-down");
+                    setTimeout(function(){
+                        $(".reda2 .slideDown2").removeClass("hidden").addClass("box-slide-down");
+                        setTimeout(function(){
+                            $(".reda2 .slideDown3").removeClass("hidden").addClass("box-slide-down");   
+                        },800);
+                    },800);
+                },50);
+                break;
+                case 4:
+                setTimeout(function(){
+                    $(".redb1 .slideDown1").removeClass("hidden").addClass("box-slide-down");
+                    setTimeout(function(){
+                        $(".redb1 .slideDown2").removeClass("hidden").addClass("box-slide-down");
+                    },800);
+                },50);
+                break;
+                case 5:
+                setTimeout(function(){
+                    $(".redb2 .slideDown1").removeClass("hidden").addClass("box-slide-down");
+                    setTimeout(function(){
+                        $(".redb2 .slideDown2").removeClass("hidden").addClass("box-slide-down");
+                    },800);
+                },50);
+                break;
+                case 6:
+                $(".blue02 .md-box").removeClass("hidden").addClass("box-slide-mup");
+                break;
+                case 7:
+                $(".part20 .popIn").removeClass("hidden").addClass("box-pop-in");
+                setTimeout(function(){
+                    $(".part20 .part20-title").removeClass("hidden").addClass("box-fadeIn");
+                },400); 
+                $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake");
+                if(flag1){
+                    var i=0;
+                    var timer = setInterval(function(){
+                        if(i<9){
+                            i++;
+                        }else{
+                            i=0;
+                            clearInterval(timer);
+                        }
+                        var $this = $(".cyli-lst li").eq(i);
+                        var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
+                        var prevImg = $(".cyli-lst").children(".active").children("img");
+                        prevImg.attr("src",prevImg.attr("data-nsrc"));
+                        var index = $(this).index();
+                        $this.children("img").attr("src",$this.children("img").attr("data-asrc"));
+                        $(".cyli-lst").find(".z-niu").remove(); 
+                        $(".cyli-lst li").removeClass("active").eq(i).addClass("active").append($niu);
+                        $("#tip1").html(arrP2.sm[i]);
+                        $("#tip2").html(arrP2.yp[i]);
+                        $("#tip3").html(arrP2.gg[i]);
+                        $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake");                   
+                    },800);
+                    flag1=false;
+                }
+                break;
+                case 8:
+                $(".yellow03 .md-box").removeClass("hidden").addClass("box-slide-mup");
+                break;
+                case 9:
+                $(".part3-container .part3-statu-img").addClass("box-shake");
+                setTimeout(function(){
+                    $(".part3-container .part3-statu-img").removeClass("box-shake");
+                },650);
+                if(flag2){
+                    var i=0;
+                    var timer = setInterval(function(){
+                        if(i<4){
+                            i++;
+                        }else{
+                            i=1;
+                            clearInterval(timer);
+                        }
+                        var $this = $(".slide31 .node").eq(i); 
+                        var acNode = $this.closest("div").children(".node-ac");
+                        var oldIndex = $this.closest("div").attr("data-index");
+                        var index = $this.attr("data-index");
+                        console.log(index);
+                        acNode.children("h3").html(acNode.attr("p"+index));
+                        acNode.removeClass("node"+oldIndex).addClass("node"+index);
+                        $this.removeClass("node"+index).addClass("node"+oldIndex);
+                        $this.attr("data-index",oldIndex);
+                        acNode.attr("data-index",index);
+                        $this.closest("div").attr("data-index",index);
+                        switch(index){
+                            case "1":
+                            $(".cont-31 li").removeClass("active").addClass("active");
+                            $(".wrap-cont-txt31").removeClass($(".wrap-cont-txt31").attr("data-class")).addClass("w100").attr("data-class","w100");
+                            $(".wrap-cont-txt31").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr31.sy[0]);
+                            $(".wrap-cont-txt31").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr31.tj[0]);
+                            break;
+                            case "2":
+                            $(".cont-31 li").removeClass("active").eq(0).addClass("active");
+                            $(".wrap-cont-txt31").removeClass($(".wrap-cont-txt31").attr("data-class")).addClass("w25").attr("data-class","w25");
+                            $(".wrap-cont-txt31").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr31.sy[1]);
+                            $(".wrap-cont-txt31").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr31.tj[1]);
+                            break;
+                            case "3":
+                            $(".cont-31 li").removeClass("active");
+                            $(".cont-31 li").eq(0).addClass("active");
+                            $(".cont-31 li").eq(1).addClass("active");
+                            $(".wrap-cont-txt31").removeClass($(".wrap-cont-txt31").attr("data-class")).addClass("w50").attr("data-class","w50");
+                            $(".wrap-cont-txt31").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr31.sy[2]);
+                            $(".wrap-cont-txt31").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr31.tj[2]);
+                            break;
+                            case "4":
+                            $(".cont-31 li").removeClass("active");
+                            $(".cont-31 li").eq(2).addClass("active");
+                            $(".cont-31 li").eq(3).addClass("active");
+                            $(".wrap-cont-txt31").removeClass($(".wrap-cont-txt31").attr("data-class")).addClass("w50 left50").attr("data-class","w50 left50");
+                            $(".wrap-cont-txt31").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr31.sy[3]);
+                            $(".wrap-cont-txt31").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr31.tj[3]);
+                            break;
+                        }
+                        $(".part3-container .part3-statu-img").addClass("box-shake");
+                        setTimeout(function(){
+                            $(".part3-container .part3-statu-img").removeClass("box-shake");
+                        },650); 
+                        },800);
+                    flag2=false;
+                }                 
+                break;  
+                case 10:
+                $(".last .slideUp").removeClass("hidden").addClass("box-slide-up");
+                $(".last .goUp").removeClass("hidden").addClass("box-goUp");
+                break;           
+            } 
+        }
     });
     var part3Swiper = new Swiper('#part3-container',{
         mode: 'horizontal',
         loop:false,
         grabCursor: true,
         onSlideChangeEnd:function(swiper){
-            console.log(swiper.activeIndex);
+            setTimeout(function(){
+                $(".part3-container .part3-statu-img").addClass("box-shake");
+                setTimeout(function(){
+                    $(".part3-container .part3-statu-img").removeClass("box-shake");
+                },650);
+            },50);  
         }
     });
+    setTimeout(function(){
+        $(".b-txt .cfpl-txt").removeClass("hidden").addClass("box-slide-down");
+        setTimeout(function(){
+            $(".b-txt .dfzq-txt").removeClass("hidden").addClass("box-slide-up");
+            setTimeout(function(){
+                  $(".s-logo").removeClass("hidden").addClass("box-pop-in"); 
+            },200);
+        },600);
+    },600);
     setTimeout(function(){
         $(".swiper-slide").addClass("visiable");
     },400);    
 }).on("click",".cyli-lst li",function(){
-    var $niu = $('<div class="z-niu"><img src="img/z_niu.png"></div>');
+    var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
 	var prevImg = $(".cyli-lst").children(".active").children("img");
 	prevImg.attr("src",prevImg.attr("data-nsrc"));
 	var index = $(this).index();
 	$(this).children("img").attr("src",$(this).children("img").attr("data-asrc"));
     $(".cyli-lst").find(".z-niu").remove(); 
 	$(".cyli-lst li").removeClass("active").eq(index).addClass("active").append($niu);
-
+    $("#tip1").html(arrP2.sm[index]);
+    $("#tip2").html(arrP2.yp[index]);
+    $("#tip3").html(arrP2.gg[index]);
+    $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake"); 
 }).on("click",".slide31 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -120,6 +287,7 @@ $(document).ready(function(){
     acNode.removeClass("node"+oldIndex).addClass("node"+index);
     $(this).removeClass("node"+index).addClass("node"+oldIndex);
     $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     switch(index){
         case "1":
@@ -159,6 +327,7 @@ $(document).ready(function(){
     acNode.removeClass("node_"+oldIndex).addClass("node_"+index);
     $(this).removeClass("node_"+index).addClass("node_"+oldIndex);
     $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     switch(index){
         case "1":
@@ -206,6 +375,7 @@ $(document).ready(function(){
     acNode.removeClass("node-"+oldIndex).addClass("node-"+index);
     $(this).removeClass("node-"+index).addClass("node-"+oldIndex);
     $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     switch(index){
         case "1":
@@ -226,5 +396,478 @@ $(document).ready(function(){
         $(".wrap-cont-txt33").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr33.sy[2]);
         $(".wrap-cont-txt33").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr33.tj[2]);
         break;      
+    }
+}).on("click",".slide34 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("node-"+oldIndex).addClass("node-"+index);
+    $(this).removeClass("node-"+index).addClass("node-"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".cont-34 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt34").removeClass($(".wrap-cont-txt34").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt34").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr34.sy[0]);
+        $(".wrap-cont-txt34").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr34.tj[0]);
+        break;
+        case "2":
+        $(".cont-34 li").removeClass("active").eq(1).addClass("active");
+        $(".wrap-cont-txt34").removeClass($(".wrap-cont-txt34").attr("data-class")).addClass("w25 left25").attr("data-class","w25 left25");
+        $(".wrap-cont-txt34").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr34.sy[1]);
+        $(".wrap-cont-txt34").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr34.tj[1]);
+        break;
+        case "3":
+        $(".cont-34 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt34").removeClass($(".wrap-cont-txt34").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt34").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr34.sy[2]);
+        $(".wrap-cont-txt34").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr34.tj[2]);
+        break;      
+    }
+}).on("click",".slide35 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    $(".cont-35 p").html($(".cont-35").attr("p"+index));
+    acNode.removeClass("node-"+oldIndex).addClass("node-"+index);
+    $(this).removeClass("node-"+index).addClass("node-"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".wrap-cont-txt35").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr35.sy[0]);
+        $(".wrap-cont-txt35").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr35.tj[0]);
+        break;
+        case "2":
+        $(".wrap-cont-txt35").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr35.sy[1]);
+        $(".wrap-cont-txt35").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr35.tj[1]);
+        break;
+        case "3":
+        $(".wrap-cont-txt35").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr35.sy[2]);
+        $(".wrap-cont-txt35").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr35.tj[2]);
+        break;      
+    }
+}).on("click",".slide36 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("node"+oldIndex).addClass("node"+index);
+    $(this).removeClass("node"+index).addClass("node"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".cont-36 li").removeClass("active").eq(0).addClass("active");
+        $(".wrap-cont-txt36").removeClass($(".wrap-cont-txt36").attr("data-class")).addClass("w25").attr("data-class","w25");
+        $(".wrap-cont-txt36").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr36.sy[0]);
+        $(".wrap-cont-txt36").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr36.tj[0]);
+        break;
+        case "2":
+        $(".cont-36 li").removeClass("active").eq(0).addClass("active");
+        $(".wrap-cont-txt36").removeClass($(".wrap-cont-txt36").attr("data-class")).addClass("w25").attr("data-class","w25");
+        $(".wrap-cont-txt36").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr36.sy[1]);
+        $(".wrap-cont-txt36").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr36.tj[1]);
+        break;
+        case "3":
+        $(".cont-36 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt36").removeClass($(".wrap-cont-txt36").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt36").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr36.sy[2]);
+        $(".wrap-cont-txt36").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr36.tj[2]);
+        break;
+        case "4":
+        $(".cont-36 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt36").removeClass($(".wrap-cont-txt36").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt36").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr36.sy[3]);
+        $(".wrap-cont-txt36").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr36.tj[3]);
+        break;
+    }
+}).on("click",".slide37 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("node-"+oldIndex).addClass("node-"+index);
+    $(this).removeClass("node-"+index).addClass("node-"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".cont-37").removeClass("mb5");
+        $(".cont-37 .li1").addClass("show");
+        $(".cont-37 .li2").removeClass("show");
+        $(".cont-37 .li3").removeClass("show");
+        $(".wrap-cont-txt37").removeClass($(".wrap-cont-txt37").attr("data-class")).addClass("w25 left25").attr("data-class","w25 left25");
+        $(".wrap-cont-txt37").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr37.sy[0]);
+        $(".wrap-cont-txt37").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr37.tj[0]);
+        break;
+        case "2":
+        $(".cont-37").removeClass("mb5").addClass("mb5");
+        $(".cont-37 .li1").removeClass("show");
+        $(".cont-37 .li3").removeClass("show");
+        $(".cont-37 .li2").addClass("show");
+        $(".wrap-cont-txt37").removeClass($(".wrap-cont-txt37").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt37").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr37.sy[1]);
+        $(".wrap-cont-txt37").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr37.tj[1]);
+        break;
+        case "3":
+        $(".cont-37").removeClass("mb5").addClass("mb5");
+        $(".cont-37 .li1").removeClass("show");
+        $(".cont-37 .li2").removeClass("show");
+        $(".cont-37 .li3").addClass("show");
+        $(".wrap-cont-txt37").removeClass($(".wrap-cont-txt37").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt37").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr37.sy[2]);
+        $(".wrap-cont-txt37").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr37.tj[2]);
+        break;      
+    }
+}).on("click",".slide38 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("node"+oldIndex).addClass("node"+index);
+    $(this).removeClass("node"+index).addClass("node"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".cont-38 li").removeClass("active").eq(0).addClass("active");
+        $(".wrap-cont-txt38").removeClass($(".wrap-cont-txt38").attr("data-class")).addClass("w25").attr("data-class","w25");
+        $(".wrap-cont-txt38").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr38.sy[0]);
+        $(".wrap-cont-txt38").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr38.tj[0]);
+        break;
+        case "2":
+        $(".cont-38 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt38").removeClass($(".wrap-cont-txt38").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt38").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr38.sy[1]);
+        $(".wrap-cont-txt38").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr38.tj[1]);
+        break;
+        case "3":
+        $(".cont-38 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt38").removeClass($(".wrap-cont-txt38").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt38").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr38.sy[2]);
+        $(".wrap-cont-txt38").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr38.tj[2]);
+        break;
+        case "4":
+        $(".cont-38 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt38").removeClass($(".wrap-cont-txt38").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt38").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr38.sy[3]);
+        $(".wrap-cont-txt38").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr38.tj[3]);
+        break;
+    }
+}).on("click",".slide39 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("node_"+oldIndex).addClass("node_"+index);
+    $(this).removeClass("node_"+index).addClass("node_"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".cont-39").removeClass("mb5");
+        $(".cont-39 .li1").addClass("show");
+        $(".cont-39 .w100").removeClass("show");
+        $(".wrap-cont-txt39").removeClass($(".wrap-cont-txt39").attr("data-class")).addClass("w25").attr("data-class","w25");
+        $(".wrap-cont-txt39").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr32.sy[0]);
+        $(".wrap-cont-txt39").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr32.tj[0]);
+        break;
+        case "2":
+        $(".cont-39").addClass("mb5");
+        $(".cont-39 .li1").removeClass("show");
+        $(".cont-39 .w100").removeClass("show").eq(0).addClass("show");
+        $(".wrap-cont-txt39").removeClass($(".wrap-cont-txt39").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt39").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr32.sy[1]);
+        $(".wrap-cont-txt39").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr32.tj[1]);
+        break;
+        case "3":
+        $(".cont-39").addClass("mb5");
+        $(".cont-39 .li1").removeClass("show");
+        $(".cont-39 .w100").removeClass("show").eq(1).addClass("show");
+        $(".wrap-cont-txt39").removeClass($(".wrap-cont-txt39").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt39").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr32.sy[2]);
+        $(".wrap-cont-txt39").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr32.tj[2]);
+        break;
+        case "4":
+        $(".cont-39").addClass("mb5");
+        $(".cont-39 .li1").removeClass("show");
+        $(".cont-39 .w100").removeClass("show").eq(2).addClass("show");
+        $(".wrap-cont-txt39").removeClass($(".wrap-cont-txt39").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt39").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr32.sy[3]);
+        $(".wrap-cont-txt39").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr32.tj[3]);
+        break;
+        case "5":
+        $(".cont-39").addClass("mb5");
+        $(".cont-39 .li1").removeClass("show");
+        $(".cont-39 .w100").removeClass("show").eq(3).addClass("show");
+        $(".wrap-cont-txt39").removeClass($(".wrap-cont-txt39").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt39").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr32.sy[4]);
+        $(".wrap-cont-txt39").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr32.tj[4]);
+        break;
+    }
+}).on("click",".slide310 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("node_"+oldIndex).addClass("node_"+index);
+    $(this).removeClass("node_"+index).addClass("node_"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".cont-310 .w100").removeClass("show").eq(0).addClass("show");
+        $(".wrap-cont-txt310").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr310.tj[0]);
+        break;
+        case "2":
+        $(".cont-310 .w100").removeClass("show").eq(1).addClass("show");
+        $(".wrap-cont-txt310").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr310.tj[1]);
+        break;
+        case "3":
+        $(".cont-310 .w100").removeClass("show").eq(2).addClass("show");
+        $(".wrap-cont-txt310").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr310.tj[2]);
+        break;
+        case "4":
+        $(".cont-310 .w100").removeClass("show").eq(3).addClass("show");
+        $(".wrap-cont-txt310").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr310.tj[3]);
+        break;
+        case "5":
+        $(".cont-310 .w100").removeClass("show").eq(4).addClass("show");
+        $(".wrap-cont-txt310").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr310.tj[4]);
+        break;
+    }
+}).on("click",".slide311 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("node_"+oldIndex).addClass("node_"+index);
+    $(this).removeClass("node_"+index).addClass("node_"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".cont-311 .w100").removeClass("show").eq(0).addClass("show");
+        $(".wrap-cont-txt311").find(".cont-txt1").removeClass("show");
+        $(".wrap-cont-txt311").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr311.tj[0]);
+        break;
+        case "2":
+        $(".cont-311 .w100").removeClass("show").eq(1).addClass("show");
+        $(".wrap-cont-txt311").find(".cont-txt1").removeClass("show");
+        $(".wrap-cont-txt311").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr311.tj[1]);
+        break;
+        case "3":
+        $(".cont-311 .w100").removeClass("show").eq(2).addClass("show");
+        $(".wrap-cont-txt311").find(".cont-txt1").addClass("show");
+        $(".wrap-cont-txt311").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr311.tj[2]);
+        break;
+        case "4":
+        $(".cont-311 .w100").removeClass("show").eq(3).addClass("show");
+        $(".wrap-cont-txt311").find(".cont-txt1").removeClass("show");
+        $(".wrap-cont-txt311").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr311.tj[3]);
+        break;
+        case "5":
+        $(".cont-311 .w100").removeClass("show").eq(4).addClass("show");
+        $(".wrap-cont-txt311").find(".cont-txt1").removeClass("show");
+        $(".wrap-cont-txt311").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr311.tj[4]);
+        break;
+    }
+}).on("click",".slide312 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("node"+oldIndex).addClass("node"+index);
+    $(this).removeClass("node"+index).addClass("node"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".cont-312 li").removeClass("active").eq(0).addClass("active");
+        $(".wrap-cont-txt312").removeClass($(".wrap-cont-txt312").attr("data-class")).addClass("w25").attr("data-class","w25");
+        $(".wrap-cont-txt312").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr312.sy[0]);
+        $(".wrap-cont-txt312").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr312.tj[0]);
+        break;
+        case "2":
+        $(".cont-312 li").removeClass("active").eq(2).addClass("active");
+        $(".wrap-cont-txt312").removeClass($(".wrap-cont-txt312").attr("data-class")).addClass("w25 left50").attr("data-class","w25 left50");
+        $(".wrap-cont-txt312").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr312.sy[1]);
+        $(".wrap-cont-txt312").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr312.tj[1]);
+        break;
+        case "3":
+        $(".cont-312 li").removeClass("active");
+        $(".cont-312 li").eq(2).addClass("active");
+        $(".cont-312 li").eq(3).addClass("active");
+        $(".wrap-cont-txt312").removeClass($(".wrap-cont-txt312").attr("data-class")).addClass("w50 left50").attr("data-class","w50 left50");
+        $(".wrap-cont-txt312").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr312.sy[2]);
+        $(".wrap-cont-txt312").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr312.tj[2]);
+        break;
+        case "4":
+        $(".cont-312 li").removeClass("active").eq(1).addClass("active");
+        $(".wrap-cont-txt312").removeClass($(".wrap-cont-txt312").attr("data-class")).addClass("w25 left25").attr("data-class","w25 left25");
+        $(".wrap-cont-txt312").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr312.sy[3]);
+        $(".wrap-cont-txt312").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr312.tj[3]);
+        break;
+    }
+}).on("click",".slide313 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("node_"+oldIndex).addClass("node_"+index);
+    $(this).removeClass("node_"+index).addClass("node_"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".cont-313 li").removeClass("active").eq(0).addClass("active");
+        $(".wrap-cont-txt313").removeClass($(".wrap-cont-txt313").attr("data-class")).addClass("w25").attr("data-class","w25");
+        $(".wrap-cont-txt313").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr313.sy[0]);
+        $(".wrap-cont-txt313").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr313.tj[0]);
+        break;
+        case "2":
+        $(".cont-313 li").removeClass("active").eq(0).addClass("active");
+        $(".wrap-cont-txt313").removeClass($(".wrap-cont-txt313").attr("data-class")).addClass("w25").attr("data-class","w25");
+        $(".wrap-cont-txt313").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr313.sy[1]);
+        $(".wrap-cont-txt313").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr313.tj[1]);
+        break;
+        case "3":
+        $(".cont-313 li").removeClass("active").eq(0).addClass("active");
+        $(".wrap-cont-txt313").removeClass($(".wrap-cont-txt313").attr("data-class")).addClass("w25").attr("data-class","w25");
+        $(".wrap-cont-txt313").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr313.sy[2]);
+        $(".wrap-cont-txt313").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr313.tj[2]);
+        break;
+        case "4":
+        $(".cont-313 li").removeClass("active").eq(1).addClass("active");
+        $(".wrap-cont-txt313").removeClass($(".wrap-cont-txt313").attr("data-class")).addClass("w50 left25").attr("data-class","w50 left25");
+        $(".wrap-cont-txt313").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr313.sy[3]);
+        $(".wrap-cont-txt313").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr313.tj[3]);
+        break;
+        case "5":
+        $(".cont-313 li").removeClass("active").eq(0).addClass("active");
+        $(".wrap-cont-txt313").removeClass($(".wrap-cont-txt313").attr("data-class")).addClass("w25").attr("data-class","w25");
+        $(".wrap-cont-txt313").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr313.sy[4]);
+        $(".wrap-cont-txt313").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr313.tj[4]);
+        break;
+    }
+}).on("click",".slide314 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("node"+oldIndex).addClass("node"+index);
+    $(this).removeClass("node"+index).addClass("node"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".cont-314 li").removeClass("active");
+        $(".cont-314 li").eq(0).addClass("active");
+        $(".cont-314 li").eq(1).addClass("active");
+        $(".wrap-cont-txt314").removeClass($(".wrap-cont-txt314").attr("data-class")).addClass("w50").attr("data-class","w50");
+        $(".wrap-cont-txt314").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr314.sy[0]);
+        $(".wrap-cont-txt314").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr314.tj[0]);
+        break;
+        case "2":
+        $(".cont-314 li").removeClass("active");
+        $(".cont-314 li").eq(0).addClass("active");
+        $(".cont-314 li").eq(1).addClass("active");
+        $(".wrap-cont-txt314").removeClass($(".wrap-cont-txt314").attr("data-class")).addClass("w50").attr("data-class","w50");
+        $(".wrap-cont-txt314").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr314.sy[1]);
+        $(".wrap-cont-txt314").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr314.tj[1]);
+        break;
+        case "3":
+        $(".cont-314 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt314").removeClass($(".wrap-cont-txt314").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt314").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr314.sy[2]);
+        $(".wrap-cont-txt314").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr314.tj[2]);
+        break;
+        case "4":
+        $(".cont-314 li").removeClass("active");
+        $(".cont-314 li").eq(0).addClass("active");
+        $(".cont-314 li").eq(1).addClass("active");
+        $(".wrap-cont-txt314").removeClass($(".wrap-cont-txt314").attr("data-class")).addClass("w50").attr("data-class","w50");
+        $(".wrap-cont-txt314").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr314.sy[3]);
+        $(".wrap-cont-txt314").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr314.tj[3]);
+        break;
+    }
+}).on("click",".slide315 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("nodes"+oldIndex).addClass("nodes"+index);
+    $(this).removeClass("nodes"+index).addClass("nodes"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".wrap-cont-txt315").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr315.sy[0]);
+        $(".wrap-cont-txt315").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr315.tj[0]);
+        break;
+        case "2":
+        $(".wrap-cont-txt315").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr315.sy[1]);
+        $(".wrap-cont-txt315").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr315.tj[1]);
+        break;
+    }
+}).on("click",".slide316 .node",function(){
+    var acNode = $(this).closest("div").children(".node-ac");
+    var oldIndex = $(this).closest("div").attr("data-index");
+    var index = $(this).attr("data-index");
+    acNode.children("h3").html(acNode.attr("p"+index));
+    acNode.removeClass("node_"+oldIndex).addClass("node_"+index);
+    $(this).removeClass("node_"+index).addClass("node_"+oldIndex);
+    $(this).attr("data-index",oldIndex);
+    acNode.attr("data-index",index);
+    $(this).closest("div").attr("data-index",index);
+    switch(index){
+        case "1":
+        $(".cont-316 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt316").removeClass($(".wrap-cont-txt316").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt316").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr316.sy[0]);
+        $(".wrap-cont-txt316").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr316.tj[0]);
+        break;
+        case "2":
+        $(".cont-316 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt316").removeClass($(".wrap-cont-txt316").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt316").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr316.sy[1]);
+        $(".wrap-cont-txt316").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr316.tj[1]);
+        break;
+        case "3":
+        $(".cont-316 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt316").removeClass($(".wrap-cont-txt316").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt316").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr316.sy[2]);
+        $(".wrap-cont-txt316").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr316.tj[2]);
+        break;
+        case "4":
+        $(".cont-316 li").removeClass("active").addClass("active");
+        $(".wrap-cont-txt316").removeClass($(".wrap-cont-txt316").attr("data-class")).addClass("w100").attr("data-class","w100");
+        $(".wrap-cont-txt316").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr316.sy[3]);
+        $(".wrap-cont-txt316").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr316.tj[3]);
+        break;
+        case "5":
+        $(".cont-316 li").removeClass("active");
+        $(".cont-316 li").eq(0).addClass("active");
+        $(".cont-316 li").eq(1).addClass("active");
+        $(".wrap-cont-txt316").removeClass($(".wrap-cont-txt316").attr("data-class")).addClass("w50").attr("data-class","w50");
+        $(".wrap-cont-txt316").find(".cont-txt1").html('<span class="cont-name">受益板块：</span>'+arr316.sy[4]);
+        $(".wrap-cont-txt316").find(".cont-txt2").html('<span class="cont-name">推荐公司：</span>'+arr316.tj[4]);
+        break;
     }
 });
