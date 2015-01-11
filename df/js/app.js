@@ -145,27 +145,29 @@ $(document).ready(function(){
                 },400); 
                 $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake");
                 if(flag1){
-                    var i=0;
-                    var timer = setInterval(function(){
-                        if(i<9){
-                            i++;
-                        }else{
-                            i=0;
-                            clearInterval(timer);
-                        }
-                        var $this = $(".cyli-lst li").eq(i);
-                        var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
-                        var prevImg = $(".cyli-lst").children(".active").children("img");
-                        prevImg.attr("src",prevImg.attr("data-nsrc"));
-                        var index = $(this).index();
-                        $this.children("img").attr("src",$this.children("img").attr("data-asrc"));
-                        $(".cyli-lst").find(".z-niu").remove(); 
-                        $(".cyli-lst li").removeClass("active").eq(i).addClass("active").append($niu);
-                        $("#tip1").html(arrP2.sm[i]);
-                        $("#tip2").html(arrP2.yp[i]);
-                        $("#tip3").html(arrP2.gg[i]);
-                        $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake");                   
-                    },800);
+                    setTimeout(function(){
+                        var i=0;
+                        var timer = setInterval(function(){
+                            if(i<9){
+                                i++;
+                            }else{
+                                i=0;
+                                clearInterval(timer);
+                            }
+                            var $this = $(".cyli-lst li").eq(i);
+                            var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
+                            var prevImg = $(".cyli-lst").children(".active").children("img");
+                            prevImg.attr("src",prevImg.attr("data-nsrc"));
+                            var index = $(this).index();
+                            $this.children("img").attr("src",$this.children("img").attr("data-asrc"));
+                            $(".cyli-lst").find(".z-niu").remove(); 
+                            $(".cyli-lst li").removeClass("active").eq(i).addClass("active").append($niu);
+                            $("#tip1").html(arrP2.sm[i]);
+                            $("#tip2").html(arrP2.yp[i]);
+                            $("#tip3").html(arrP2.gg[i]);
+                            $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake");                   
+                        },800);
+                    },800);      
                     flag1=false;
                 }
                 break;
@@ -178,7 +180,8 @@ $(document).ready(function(){
                     $(".part3-container .part3-statu-img").removeClass("box-shake");
                 },650);
                 if(flag2){
-                    var i=0;
+                    setTimeout(function(){
+                         var i=0;
                     var timer = setInterval(function(){
                         if(i<4){
                             i++;
@@ -190,7 +193,6 @@ $(document).ready(function(){
                         var acNode = $this.closest("div").children(".node-ac");
                         var oldIndex = $this.closest("div").attr("data-index");
                         var index = $this.attr("data-index");
-                        console.log(index);
                         acNode.children("h3").html(acNode.attr("p"+index));
                         acNode.removeClass("node"+oldIndex).addClass("node"+index);
                         $this.removeClass("node"+index).addClass("node"+oldIndex);
@@ -232,6 +234,7 @@ $(document).ready(function(){
                             $(".part3-container .part3-statu-img").removeClass("box-shake");
                         },650); 
                         },800);
+                    },800);
                     flag2=false;
                 }                 
                 break;  

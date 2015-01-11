@@ -40,14 +40,6 @@ textarea{width: 100%;border: none;overflow: hidden;resize: none;}
 .txt-al{text-align: left!important}
 
 .rotate-img{-webkit-transform:rotate(90deg);display: block;}
-.tb-wap{width: 100%;border-collapse: collapse;table-layout: fixed;}
-.tb-wap td{padding: 2rem 0;color: #202020;font-size: 1.5rem;line-height:18px;border-bottom: 2px solid #ccc;}
-.tb-wap input{color: #222;width: 100%;height: 18px;font-size:1.5rem;padding: 2px;border:none;line-height: 18px;}
-.tb-wap .error-td{border-color: #fe6a7c;}
-
-.error-tip{position: absolute;display:block;color: #fff;background-color: #fe6a7c;font-size: 1.2rem;line-height: 120%;left: 0;bottom: 0;white-space:nowrap;}
-.form-error{color: #f03;font-size: 12px;display: block;position: absolute;bottom: 4px;width: 180px;}
-.space-box{height: 3rem;width: 100%;}
 .red{color: #fe6a7c;}
 .green{color: #4be2d4;}
 .black{color: #222!important;}
