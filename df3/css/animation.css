@@ -112,6 +112,10 @@
 @-webkit-keyframes cyleft{0%{-webkit-transform:translateX(80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(80%);opacity:0.5;}}
 @-webkit-keyframes cyright{0%{-webkit-transform:translateX(-80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(-80%);opacity:0.5;}}
 @-webkit-keyframes cyup{0%{-webkit-transform:translateY(100%);opacity:0.5;}50%{-webkit-transform:translateY(0);opacity:1;}100%{-webkit-transform:translateY(100%);opacity:0.5;}}
+@-webkit-keyframes goup{0%{-webkit-transform:translate(-50%,100%);}100%{-webkit-transform:translate(-50%,0);}}
+.box-goup{
+    -webkit-animation:goup 0.8s ease-out;
+}
 .box-goUp{
 	-webkit-animation:fadeUp 25s ease-out infinite;
     -moz-animation:fadeUp 25s ease-out infinite;

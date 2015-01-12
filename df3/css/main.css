@@ -15,9 +15,9 @@
 .part3b{}
 .part3{background-image: url(../img/3/part_03.png);}
 .last{background-image: url(../img/3/last.jpg);}
-.arrow-lst{width: 55.9%;position: relative;height:270px;overflow:hidden;top: 16%;left:50%;-webkit-transform:translate(-50%,0);z-index: 2;}
-.arrow-lst li{position:absolute;width: 17.9%;}
-.arrow-lst>li>img{opacity: 0.3;}
+.arrow-lst{width: 55.9%;position: relative;overflow:hidden;top: 22%;left:50%;-webkit-transform:translate(-50%,0);z-index: 2;}
+/* .arrow-lst li{position:absolute;width: 17.9%;}
+.arrow-lst>li>img{opacity: 0.3;} */
 .arr1{left: 0;top: 40px;z-index: 30;}
 .arr2{left: 18%;top: 15px;z-index: 31;}
 .arr3{left: 35%;top: 60px;z-index: 32;}
