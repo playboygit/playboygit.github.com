@@ -95,7 +95,9 @@ $(document).ready(function(){
         onSlideChangeEnd:function(swiper){
             switch(swiper.activeIndex){
                 case 1:
-                $(".red-bg .md-box").removeClass("hidden").addClass("box-slide-mup");
+                setTimeout(function(){
+                	$(".red-bg .md-box").removeClass("hidden").addClass("box-slide-mup");
+                },200);
                 break;
                 case 2:
                 setTimeout(function(){
@@ -103,21 +105,18 @@ $(document).ready(function(){
                     setTimeout(function(){
                         $(".reda1 .slideDown2").removeClass("hidden").addClass("box-slide-down");
                         setTimeout(function(){
-                            $(".reda1 .slideDown3").removeClass("hidden").addClass("box-slide-mdown");   
+                            $(".reda1 .slideDown3").removeClass("hidden").addClass("box-slide-mdown");  
                         },800);
                     },800);
                 },50);
                 break;
                 case 3:
-                setTimeout(function(){
-                    $(".reda2 .slideDown1").removeClass("hidden").addClass("box-slide-down");
                     setTimeout(function(){
                         $(".reda2 .slideDown2").removeClass("hidden").addClass("box-slide-down");
                         setTimeout(function(){
                             $(".reda2 .slideDown3").removeClass("hidden").addClass("box-slide-down");   
                         },800);
-                    },800);
-                },50);
+                    },200);
                 break;
                 case 4:
                 setTimeout(function(){
@@ -128,57 +127,71 @@ $(document).ready(function(){
                 },50);
                 break;
                 case 5:
-                setTimeout(function(){
-                    $(".redb2 .slideDown1").removeClass("hidden").addClass("box-slide-down");
                     setTimeout(function(){
                         $(".redb2 .slideDown2").removeClass("hidden").addClass("box-slide-down");
-                    },800);
-                },50);
+                    },200);
                 break;
                 case 6:
-                $(".blue02 .md-box").removeClass("hidden").addClass("box-slide-mup");
+                setTimeout(function(){
+                	$(".blue02 .md-box").removeClass("hidden").addClass("box-slide-mup");
+                },200); 
                 break;
                 case 7:
-                $(".part20 .popIn").removeClass("hidden").addClass("box-pop-in");
                 setTimeout(function(){
-                    $(".part20 .part20-title").removeClass("hidden").addClass("box-fadeIn");
-                },400); 
+					$(".part20 .tip-box-l").removeClass("hidden").addClass("box-slide-left");
+					$(".part20 .tip-box-r").removeClass("hidden").addClass("box-slide-right");
+					setTimeout(function(){
+						$(".part20 .popIn").removeClass("hidden").addClass("box-pop-in");
+						setTimeout(function(){
+		                    $(".part20 .part20-title").removeClass("hidden").addClass("box-fadeIn");
+		                },400); 
+					},800);
+                },100);                                          
                 $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake");
+                $(".cyli-lst").addClass("reflect"); 
                 if(flag1){
-                    var i=0;
-                    var timer = setInterval(function(){
-                        if(i<9){
-                            i++;
-                        }else{
-                            i=0;
-                            clearInterval(timer);
-                        }
-                        var $this = $(".cyli-lst li").eq(i);
-                        var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
-                        var prevImg = $(".cyli-lst").children(".active").children("img");
-                        prevImg.attr("src",prevImg.attr("data-nsrc"));
-                        var index = $(this).index();
-                        $this.children("img").attr("src",$this.children("img").attr("data-asrc"));
-                        $(".cyli-lst").find(".z-niu").remove(); 
-                        $(".cyli-lst li").removeClass("active").eq(i).addClass("active").append($niu);
-                        $("#tip1").html(arrP2.sm[i]);
-                        $("#tip2").html(arrP2.yp[i]);
-                        $("#tip3").html(arrP2.gg[i]);
-                        $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake");                   
-                    },800);
+                    setTimeout(function(){
+                        var i=0;
+                        var timer = setInterval(function(){
+                            if(i<9){
+                                i++;
+                            }else{
+                                i=0;
+                                clearInterval(timer);
+                            }
+                            var $this = $(".cyli-lst li").eq(i);
+                            var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
+                            var prevImg = $(".cyli-lst").children(".active").children("img");
+                            prevImg.attr("src",prevImg.attr("data-nsrc"));
+                            var index = $(this).index();
+                            $this.children("img").attr("src",$this.children("img").attr("data-asrc"));
+                            $(".cyli-lst").find(".z-niu").remove(); 
+                            $(".cyli-lst li").removeClass("active").eq(i).addClass("active").append($niu);
+                            $("#tip1").html(arrP2.sm[i]);
+                            $("#tip2").html(arrP2.yp[i]);
+                            $("#tip3").html(arrP2.gg[i]);
+                            $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake"); 
+                            $(".cyli-lst").addClass("reflect");                 
+                        },800);
+                    },1400);      
                     flag1=false;
                 }
                 break;
                 case 8:
-                $(".yellow03 .md-box").removeClass("hidden").addClass("box-slide-mup");
+                setTimeout(function(){
+                	$(".yellow03 .md-box").removeClass("hidden").addClass("box-slide-mup");
+                },200);
                 break;
                 case 9:
                 $(".part3-container .part3-statu-img").addClass("box-shake");
+                $(".part3-container .slide-l").addClass("cyleft");
+        		$(".part3-container .slide-r").addClass("cyright");
                 setTimeout(function(){
                     $(".part3-container .part3-statu-img").removeClass("box-shake");
                 },650);
                 if(flag2){
-                    var i=0;
+                    setTimeout(function(){
+                         var i=0;
                     var timer = setInterval(function(){
                         if(i<4){
                             i++;
@@ -190,7 +203,6 @@ $(document).ready(function(){
                         var acNode = $this.closest("div").children(".node-ac");
                         var oldIndex = $this.closest("div").attr("data-index");
                         var index = $this.attr("data-index");
-                        console.log(index);
                         acNode.children("h3").html(acNode.attr("p"+index));
                         acNode.removeClass("node"+oldIndex).addClass("node"+index);
                         $this.removeClass("node"+index).addClass("node"+oldIndex);
@@ -232,6 +244,7 @@ $(document).ready(function(){
                             $(".part3-container .part3-statu-img").removeClass("box-shake");
                         },650); 
                         },800);
+                    },800);
                     flag2=false;
                 }                 
                 break;  
@@ -254,19 +267,17 @@ $(document).ready(function(){
                 },650);
             },50);  
         }
-    });
+    });  
     setTimeout(function(){
-        $(".b-txt .cfpl-txt").removeClass("hidden").addClass("box-slide-down");
+        $(".b-txt .dfzq-txt").removeClass("hidden").addClass("box-slide-up");
         setTimeout(function(){
-            $(".b-txt .dfzq-txt").removeClass("hidden").addClass("box-slide-up");
-            setTimeout(function(){
-                  $(".s-logo").removeClass("hidden").addClass("box-pop-in"); 
-            },200);
-        },600);
-    },600);
+              $(".s-logo").removeClass("hidden").addClass("box-pop-in"); 
+        },200);
+    },800);
     setTimeout(function(){
         $(".swiper-slide").addClass("visiable");
-    },400);    
+    },400);
+    $(".wrap-bm-arrow").addClass("cyup");
 }).on("click",".cyli-lst li",function(){
     var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
 	var prevImg = $(".cyli-lst").children(".active").children("img");

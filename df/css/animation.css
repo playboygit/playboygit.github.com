@@ -108,18 +108,25 @@
 	100%{transform:translate(0,0);opacity:1;}
 }
 /*上升*/
-/* @-webkit-keyframes fadeUp{0%{-webkit-transform:translate(0,0);opacity:1;}100%{-webkit-transform:translate(0,-100%);opacity:1;}}
-@-moz-keyframes fadeUp{0%{-moz-transform:-moz-translate(0,0;opacity:1;}100%{-moz-transform:-moz-translate(0,-100%);opacity:1;}}
-@-o-keyframes fadeUp{0%{-o-transform:translate(0,0);opacity:1;}100%{-o-transform:translate(0,-100%);opacity:1;}}
-@-ms-keyframes fadeUp{0%{-ms-transform:translate(0,0);opacity:1;}100%{-ms-transform:translate(0,-100%);opacity:1;}}
-@keyframes fadeUp{0%{transform:translate(0,0);opacity:1;}100%{transform:translate(0,-100%);opacity:1;}} */
-@-webkit-keyframes fadeUp{0%{-webkit-transform:translate(0,0);}100%{-webkit-transform:translate(0,-100%);}}
+@-webkit-keyframes fadeUp{0%{-webkit-transform:translateY(700px);}100%{-webkit-transform:translateY(-600px);}}
+@-webkit-keyframes cyleft{0%{-webkit-transform:translateX(80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(80%);opacity:0.5;}}
+@-webkit-keyframes cyright{0%{-webkit-transform:translateX(-80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(-80%);opacity:0.5;}}
+@-webkit-keyframes cyup{0%{-webkit-transform:translateY(100%);opacity:0.5;}50%{-webkit-transform:translateY(0);opacity:1;}100%{-webkit-transform:translateY(100%);opacity:0.5;}}
 .box-goUp{
-	-webkit-animation:fadeUp 15s ease-out;
-    -moz-animation:fadeUp 15s ease-out;
-    -o-animation:fadeUp 15s ease-out;
-    -ms-animation:fadeUp 15s ease-out;
-    animation:fadeUp 15s ease-out;
+	-webkit-animation:fadeUp 25s ease-out infinite;
+    -moz-animation:fadeUp 25s ease-out infinite;
+    -o-animation:fadeUp 25s ease-out infinite;
+    -ms-animation:fadeUp 25s ease-out infinite;
+    animation:fadeUp 25s ease-out infinite;
+}
+.cyleft{
+    -webkit-animation:cyleft 1.2s ease-out infinite;
+}
+.cyright{
+    -webkit-animation:cyright 1.2s ease-out infinite;
+}
+.cyup{
+    -webkit-animation:cyup 1s ease-out infinite;
 }
 .box-mshake{
 	-webkit-animation:mshake .6s ease-out;
