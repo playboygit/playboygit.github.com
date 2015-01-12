@@ -170,10 +170,16 @@ $(document).ready(function(){
                             $("#tip1").html(arrP2.sm[i]);
                             $("#tip2").html(arrP2.yp[i]);
                             $("#tip3").html(arrP2.gg[i]);
+<<<<<<< HEAD
                             $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake"); 
                             $(".cyli-lst").addClass("reflect");                 
                         },800);
                     },1400);      
+=======
+                            $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake");                   
+                        },800);
+                    },800);      
+>>>>>>> origin/master
                     flag1=false;
                 }
                 break;
