@@ -26,12 +26,47 @@ $(document).ready(function(){
         grabCursor: true,
         onSlideChangeEnd:function(swiper){
             switch(swiper.activeIndex-1){
+                case 0:
+                    $(".last .slideUp").addClass("hidden").removeClass("box-slide-up");
+                    $(".arrow-lst").removeClass("hidden").addClass("box-goup");
+                    $(".b-txt .cfpl-txt").removeClass("hidden").addClass("box-slide-up");
+                    $(".red-bg .md-box").addClass("hidden").removeClass("box-slide-mup");
+                    setTimeout(function(){
+                        $(".b-txt .dfzq-txt").removeClass("hidden").addClass("box-slide-up");
+                        
+                        setTimeout(function(){
+                              $(".s-logo").removeClass("hidden").addClass("box-pop-in"); 
+                        },200);
+                    },800);
+                break;
+                case 11:
+                    $(".last .slideUp").addClass("hidden").removeClass("box-slide-up");
+                    $(".arrow-lst").removeClass("hidden").addClass("box-goup");
+                    $(".b-txt .cfpl-txt").removeClass("hidden").addClass("box-slide-up");
+                    $(".red-bg .md-box").addClass("hidden").removeClass("box-slide-mup");
+                    setTimeout(function(){
+                        $(".b-txt .dfzq-txt").removeClass("hidden").addClass("box-slide-up");
+                        setTimeout(function(){
+                              $(".s-logo").removeClass("hidden").addClass("box-pop-in"); 
+                        },200);
+                    },800);
+                break;
                 case 1:
+                    $(".arrow-lst").addClass("hidden").removeClass("box-goup");
+                    $(".b-txt .dfzq-txt").addClass("hidden").removeClass("box-slide-up");
+                    $(".b-txt .cfpl-txt").addClass("hidden").removeClass("box-slide-up");
+                    $(".s-logo").addClass("hidden").removeClass("box-pop-in"); 
+                    $(".reda1 .slideDown1").addClass("hidden").removeClass("box-slide-down");
+                $(".reda1 .slideDown2").addClass("hidden").removeClass("box-slide-down");
+                $(".reda1 .slideDown3").addClass("hidden").removeClass("box-slide-mdown"); 
                 setTimeout(function(){
                 	$(".red-bg .md-box").removeClass("hidden").addClass("box-slide-mup");
                 },200);
                 break;
                 case 2:
+                $(".red-bg .md-box").addClass("hidden").removeClass("box-slide-mup");
+                $(".reda2 .slideDown2").addClass("hidden").removeClass("box-slide-down");
+                $(".reda2 .slideDown3").addClass("hidden").removeClass("box-slide-down");
                 setTimeout(function(){
                     $(".reda1 .slideDown1").removeClass("hidden").addClass("box-slide-down");
                     setTimeout(function(){
@@ -43,6 +78,11 @@ $(document).ready(function(){
                 },50);
                 break;
                 case 3:
+                $(".reda1 .slideDown1").addClass("hidden").removeClass("box-slide-down");
+                $(".reda1 .slideDown2").addClass("hidden").removeClass("box-slide-down");
+                $(".reda1 .slideDown3").addClass("hidden").removeClass("box-slide-mdown");
+                $(".redb1 .slideDown1").addClass("hidden").removeClass("box-slide-down");
+                $(".redb1 .slideDown2").addClass("hidden").removeClass("box-slide-down"); 
                     setTimeout(function(){
                         $(".reda2 .slideDown2").removeClass("hidden").addClass("box-slide-down");
                         setTimeout(function(){
@@ -51,6 +91,9 @@ $(document).ready(function(){
                     },200);
                 break;
                 case 4:
+                $(".reda2 .slideDown2").addClass("hidden").removeClass("box-slide-down");
+                $(".reda2 .slideDown3").addClass("hidden").removeClass("box-slide-down");
+                $(".redb2 .slideDown2").addClass("hidden").removeClass("box-slide-down");
                 setTimeout(function(){
                     $(".redb1 .slideDown1").removeClass("hidden").addClass("box-slide-down");
                     setTimeout(function(){
@@ -59,16 +102,27 @@ $(document).ready(function(){
                 },50);
                 break;
                 case 5:
+                $(".redb1 .slideDown1").addClass("hidden").removeClass("box-slide-down");
+                $(".redb1 .slideDown2").addClass("hidden").removeClass("box-slide-down");
+                $(".blue02 .md-box").addClass("hidden").removeClass("box-slide-mup");
                     setTimeout(function(){
                         $(".redb2 .slideDown2").removeClass("hidden").addClass("box-slide-down");
                     },200);
                 break;
                 case 6:
+                $(".redb2 .slideDown2").addClass("hidden").removeClass("box-slide-down");
+                $(".part20 .tip-box-l").addClass("hidden").removeClass("box-slide-left");
+                $(".part20 .tip-box-r").addClass("hidden").removeClass("box-slide-right");
+                $(".part20 .popIn").addClass("hidden").removeClass("box-pop-in");
+                $(".part20 .part20-title").addClass("hidden").removeClass("box-fadeIn");
+                 $(".cyli-lst .z-niu").addClass("hidden").removeClass("box-mshake");
                 setTimeout(function(){
                 	$(".blue02 .md-box").removeClass("hidden").addClass("box-slide-mup");
                 },200); 
                 break;
                 case 7:
+                $(".blue02 .md-box").addClass("hidden").removeClass("box-slide-mup");
+                $(".yellow03 .md-box").addClass("hidden").removeClass("box-slide-mup");
                 setTimeout(function(){
 					$(".part20 .tip-box-l").removeClass("hidden").addClass("box-slide-left");
 					$(".part20 .tip-box-r").removeClass("hidden").addClass("box-slide-right");
@@ -110,11 +164,17 @@ $(document).ready(function(){
                 }
                 break;
                 case 8:
+                $(".part20 .tip-box-l").addClass("hidden").removeClass("box-slide-left");
+                $(".part20 .tip-box-r").addClass("hidden").removeClass("box-slide-right");
+                $(".part20 .popIn").addClass("hidden").removeClass("box-pop-in");
+                $(".part20 .part20-title").addClass("hidden").removeClass("box-fadeIn");
+                 $(".cyli-lst .z-niu").addClass("hidden").removeClass("box-mshake"); 
                 setTimeout(function(){
                 	$(".yellow03 .md-box").removeClass("hidden").addClass("box-slide-mup");
                 },200);
                 break;
                 case 9:
+                $(".yellow03 .md-box").addClass("hidden").removeClass("box-slide-mup");
                 $(".part3-container .part3-statu-img").addClass("box-shake");
                 $(".part3-container .slide-l").addClass("cyleft");
         		$(".part3-container .slide-r").addClass("cyright");
@@ -154,10 +214,18 @@ $(document).ready(function(){
                 }                 
                 break;  
                 case 10:
+                $(".arrow-lst").addClass("hidden").removeClass("box-goup");
+                $(".b-txt .dfzq-txt").addClass("hidden").removeClass("box-slide-up");
+                $(".b-txt .cfpl-txt").addClass("hidden").removeClass("box-slide-up");
+                $(".s-logo").addClass("hidden").removeClass("box-pop-in"); 
                 $(".last .slideUp").removeClass("hidden").addClass("box-slide-up");
                 $(".last .goUp").removeClass("hidden").addClass("box-goUp");
                 break; 
                 case -1:
+                $(".arrow-lst").addClass("hidden").removeClass("box-goup");
+                $(".b-txt .dfzq-txt").addClass("hidden").removeClass("box-slide-up");
+                $(".b-txt .cfpl-txt").addClass("hidden").removeClass("box-slide-up");
+                $(".s-logo").addClass("hidden").removeClass("box-pop-in"); 
                 $(".last .slideUp").removeClass("hidden").addClass("box-slide-up");
                 $(".last .goUp").removeClass("hidden").addClass("box-goUp");
                 break;          

@@ -108,7 +108,7 @@
 	100%{transform:translate(0,0);opacity:1;}
 }
 /*上升*/
-@-webkit-keyframes fadeUp{0%{-webkit-transform:translateY(700px);}100%{-webkit-transform:translateY(-600px);}}
+@-webkit-keyframes fadeUp{0%{-webkit-transform:translateY(580px);}100%{-webkit-transform:translateY(-580px);}}
 @-webkit-keyframes cyleft{0%{-webkit-transform:translateX(80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(80%);opacity:0.5;}}
 @-webkit-keyframes cyright{0%{-webkit-transform:translateX(-80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(-80%);opacity:0.5;}}
 @-webkit-keyframes cyup{0%{-webkit-transform:translateY(100%);opacity:0.5;}50%{-webkit-transform:translateY(0);opacity:1;}100%{-webkit-transform:translateY(100%);opacity:0.5;}}
@@ -117,11 +117,11 @@
     -webkit-animation:goup 0.8s ease-out;
 }
 .box-goUp{
-	-webkit-animation:fadeUp 25s ease-out infinite;
-    -moz-animation:fadeUp 25s ease-out infinite;
-    -o-animation:fadeUp 25s ease-out infinite;
-    -ms-animation:fadeUp 25s ease-out infinite;
-    animation:fadeUp 25s ease-out infinite;
+	-webkit-animation:fadeUp 22s ease-out infinite;
+    -moz-animation:fadeUp 22s ease-out infinite;
+    -o-animation:fadeUp 22s ease-out infinite;
+    -ms-animation:fadeUp 22s ease-out infinite;
+    animation:fadeUp 22s ease-out infinite;
 }
 .cyleft{
     -webkit-animation:cyleft 1.2s ease-out infinite;
