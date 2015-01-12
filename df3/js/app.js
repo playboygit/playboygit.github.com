@@ -244,16 +244,21 @@ $(document).ready(function(){
                 },650);
             },50);  
         }
-    });  
+    });
     setTimeout(function(){
-        $(".b-txt .dfzq-txt").removeClass("hidden").addClass("box-slide-up");
+        $(".loading").addClass("hide");
+        $(".arrow-lst").removeClass("hidden").addClass("box-goup");
+        $(".b-txt .cfpl-txt").removeClass("hidden").addClass("box-slide-up");
         setTimeout(function(){
-              $(".s-logo").removeClass("hidden").addClass("box-pop-in"); 
-        },200);
-    },800);
-    setTimeout(function(){
-        $(".swiper-slide").addClass("visiable");
-    },400);
+        $(".b-txt .dfzq-txt").removeClass("hidden").addClass("box-slide-up");
+            setTimeout(function(){
+                  $(".s-logo").removeClass("hidden").addClass("box-pop-in"); 
+            },200);
+        },800);
+        setTimeout(function(){
+            $(".swiper-slide").addClass("visiable");
+        },400);
+    },3000); 
     $(".wrap-bm-arrow").addClass("cyup");
 }).on("click",".cyli-lst li",function(){
     var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
