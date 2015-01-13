@@ -206,7 +206,7 @@ $(document).ready(function(){
                         setTimeout(function(){
                             $(".part3-statu-img").removeClass("box-shake");
                         },650); 
-                        },800);
+                        },1000);
                     },800);
                     flag2=false;
                 }                 
