@@ -25,6 +25,7 @@ $(document).ready(function(){
         loop:true,
         grabCursor: true,
         onSlideChangeEnd:function(swiper){
+            console.log(swiper.activeIndex);
             switch(swiper.activeIndex-1){
                 case 0:
                     $(".last .slideUp").addClass("hidden").removeClass("box-slide-up");
@@ -39,7 +40,7 @@ $(document).ready(function(){
                         },200);
                     },800);
                 break;
-                case 11:
+                case 26:
                     $(".last .slideUp").addClass("hidden").removeClass("box-slide-up");
                     $(".arrow-lst").removeClass("hidden").addClass("box-goup");
                     $(".b-txt .cfpl-txt").removeClass("hidden").addClass("box-slide-up");
@@ -134,7 +135,6 @@ $(document).ready(function(){
 					},800);
                 },100);                                          
                 $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake");
-                $(".cyli-lst").addClass("reflect"); 
                 if(flag1){
                     setTimeout(function(){
                         var i=0;
@@ -157,7 +157,7 @@ $(document).ready(function(){
                             $("#tip2").html(arrP2.yp[i]);
                             $("#tip3").html(arrP2.gg[i]);
                             $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake"); 
-                            $(".cyli-lst").addClass("reflect");                 
+                            /*$(".cyli-lst").addClass("reflect"); */                
                         },1000);
                     },1500);      
                     flag1=false;
@@ -175,11 +175,9 @@ $(document).ready(function(){
                 break;
                 case 9:
                 $(".yellow03 .md-box").addClass("hidden").removeClass("box-slide-mup");
-                $(".part3-container .part3-statu-img").addClass("box-shake");
-                $(".part3-container .slide-l").addClass("cyleft");
-        		$(".part3-container .slide-r").addClass("cyright");
+                $(".part3-statu-img").addClass("box-shake");
                 setTimeout(function(){
-                    $(".part3-container .part3-statu-img").removeClass("box-shake");
+                    $(".part3-statu-img").removeClass("box-shake");
                 },650);
                 if(flag2){
                     setTimeout(function(){
@@ -204,16 +202,16 @@ $(document).ready(function(){
                         if(index){
                             $("#imgsrc1").attr("src","img/3/01"+index+".png");
                         }
-                        $(".part3-container .part3-statu-img").addClass("box-shake");
+                        $(".part3-statu-img").addClass("box-shake");
                         setTimeout(function(){
-                            $(".part3-container .part3-statu-img").removeClass("box-shake");
+                            $(".part3-statu-img").removeClass("box-shake");
                         },650); 
                         },800);
                     },800);
                     flag2=false;
                 }                 
                 break;  
-                case 10:
+                case 25:
                 $(".arrow-lst").addClass("hidden").removeClass("box-goup");
                 $(".b-txt .dfzq-txt").addClass("hidden").removeClass("box-slide-up");
                 $(".b-txt .cfpl-txt").addClass("hidden").removeClass("box-slide-up");
@@ -228,21 +226,30 @@ $(document).ready(function(){
                 $(".s-logo").addClass("hidden").removeClass("box-pop-in"); 
                 $(".last .slideUp").removeClass("hidden").addClass("box-slide-up");
                 $(".last .goUp").removeClass("hidden").addClass("box-goUp");
-                break;          
+                break; 
+                case 10:
+                case 11:
+                case 12:
+                case 13:
+                case 14:
+                case 15:
+                case 16:
+                case 17:
+                case 18:
+                case 19:
+                case 20:
+                case 21:
+                case 22:
+                case 23:
+                case 24:
+                    setTimeout(function(){
+                        $(".part3-statu-img").addClass("box-shake");
+                        setTimeout(function(){
+                            $(".part3-statu-img").removeClass("box-shake");
+                        },650);
+                    },50);
+                break;         
             } 
-        }
-    });
-    var part3Swiper = new Swiper('#part3-container',{
-        mode: 'horizontal',
-        loop:false,
-        grabCursor: true,
-        onSlideChangeEnd:function(swiper){
-            setTimeout(function(){
-                $(".part3-container .part3-statu-img").addClass("box-shake");
-                setTimeout(function(){
-                    $(".part3-container .part3-statu-img").removeClass("box-shake");
-                },650);
-            },50);  
         }
     });
     setTimeout(function(){
