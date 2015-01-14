@@ -108,20 +108,16 @@
 	100%{transform:translate(0,0);opacity:1;}
 }
 /*上升*/
-@-webkit-keyframes fadeUp{0%{-webkit-transform:translateY(580px);}100%{-webkit-transform:translateY(-580px);}}
+@-webkit-keyframes fadeUp{0%{-webkit-transform:translateY(700px);}100%{-webkit-transform:translateY(-600px);}}
 @-webkit-keyframes cyleft{0%{-webkit-transform:translateX(80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(80%);opacity:0.5;}}
 @-webkit-keyframes cyright{0%{-webkit-transform:translateX(-80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(-80%);opacity:0.5;}}
 @-webkit-keyframes cyup{0%{-webkit-transform:translateY(100%);opacity:0.5;}50%{-webkit-transform:translateY(0);opacity:1;}100%{-webkit-transform:translateY(100%);opacity:0.5;}}
-@-webkit-keyframes goup{0%{-webkit-transform:translate(-50%,100%);}100%{-webkit-transform:translate(-50%,0);}}
-.box-goup{
-    -webkit-animation:goup 0.8s ease;
-}
 .box-goUp{
-	-webkit-animation:fadeUp 22s ease-out infinite;
-    -moz-animation:fadeUp 22s ease-out infinite;
-    -o-animation:fadeUp 22s ease-out infinite;
-    -ms-animation:fadeUp 22s ease-out infinite;
-    animation:fadeUp 22s ease-out infinite;
+	-webkit-animation:fadeUp 25s ease-out infinite;
+    -moz-animation:fadeUp 25s ease-out infinite;
+    -o-animation:fadeUp 25s ease-out infinite;
+    -ms-animation:fadeUp 25s ease-out infinite;
+    animation:fadeUp 25s ease-out infinite;
 }
 .cyleft{
     -webkit-animation:cyleft 1.2s ease-out infinite;
@@ -176,28 +172,28 @@
 }
 
 .box-slide-down{
-    -webkit-animation:slide-down .8s ease;
+    -webkit-animation:slide-down .8s ease-out;
     -moz-animation:slide-down .8s ease ease-out;
     -o-animation:slide-down .8s ease ease-out;
     -ms-animation:slide-down .8s ease ease-out;
     animation:slide-down .8s ease ease-out;
 }
 .box-slide-mdown{
-    -webkit-animation:slide-mdown .8s ease;
+    -webkit-animation:slide-mdown .8s ease-out;
     -moz-animation:slide-mdown .8s ease ease-out;
     -o-animation:slide-mdown .8s ease ease-out;
     -ms-animation:slide-mdown .8s ease ease-out;
     animation:slide-mdown .8s ease ease-out;
 }
 .box-slide-mup{
-    -webkit-animation:slide-mup .8s ease;
+    -webkit-animation:slide-mup .8s ease-out;
     -moz-animation:slide-mup .8s ease-out;
     -o-animation:slide-mup .8s ease-out;
     -ms-animation:slide-mup .8s ease-out;
     animation:slide-mup .8s ease-out;
 }
 .box-slide-up{
-    -webkit-animation:slide-up .8s ease;
+    -webkit-animation:slide-up .8s ease-out;
     -moz-animation:slide-up .8s ease-out;
     -o-animation:slide-up .8s ease-out;
     -ms-animation:slide-up .8s ease-out;
