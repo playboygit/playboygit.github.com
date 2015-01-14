@@ -14,56 +14,42 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head> 
 <body>
+<div class="loading"></div>
 <div class="container">
     <div class="swiper-container" id="swiper-container">
         <div class="swiper-wrapper">
         <!--封面-->
             <div class="swiper-slide item first-bg">
-                <ul class="arrow-lst">
-                    <li class="arr1 box-slide-up"><img src="img/arrow_top.png"></li>
-                    <li class="arr2 box-slide-up"><img src="img/arrow_top.png"></li>
-                    <li class="arr3 box-slide-up"><img src="img/arrow_top.png"></li>
-                    <li class="arr4 box-slide-up"><img src="img/arrow_top.png"></li>
-                    <li class="arr5 box-slide-up"><img src="img/arrow_top.png"></li>
-                    <li class="arr6 box-slide-up"><img src="img/arrow_top.png"></li>
-                </ul>
+                <div class="arrow-lst hidden">
+                </div>
                 <div class="b-txt">
-            		<div class="cfpl-txt box-slide-up"><img src="img/cfpl_txt.png"></div>
-                    <div class="dfzq-txt hidden"><img src="img/dfzq_txt.png"></div>
+            		<div class="cfpl-txt hidden"></div>
+                    <div class="dfzq-txt hidden"></div>
                 </div>
                 <p class="txt-shadow">
                 	<i class="s-logo hidden"></i>
                 </p>
-                <div class="bm-bg"></div>
                 <div class="wrap-bm-arrow">
-               		<a href="javascript:;" class="bm-arrow"></a>
                	</div>
             </div>
             <!--red-->
             <div class="swiper-slide item red-bg">
                 <div class="arrow1">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow2">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow3">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow4">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow5">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow6">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="bg01">
                     <img src="img/01.png">
                 </div>
-                <div class="md-box hidden">
-                    <img src="img/title_bg.png">
+                <div class="md-box hidden md-box1">
                     <div class="red_btxt"><img src="img/red_btxt.png"></div>
                     <div class="md-trr"><img src="img/person.png"></div>
                 </div>
@@ -71,7 +57,6 @@
                     <img src="img/bm_img.png">
                 </div>
                 <div class="wrap-bm-arrow">
-                    <a href="javascript:;" class="bm-arrow"></a>
                 </div>
             </div>
             <!--A1-->
@@ -86,8 +71,7 @@
                 </div>
             	<div class="wrap-part1">
 					<div class="left-part">
-						<div class="stjj slideDown1 hidden">
-                            <img src="img/a_tl.png">
+						<div class="stjj slideDown1 a_tl boxsize hidden">
                             <div class="l-tip slideDown2 hidden">
                                 <img src="img/al_txt.png">
                                 <div class="l-bm">
@@ -103,8 +87,7 @@
 						</div>
 					</div>
 					<div class="right-part">
-                        <div class="tz slideDown1 hidden">
-                            <img src="img/a_right.png">
+                        <div class="tz slideDown1 hidden a_right boxsize">
                             <div class="tz_sm slideDown2 hidden">
                                 <img src="img/a_r_img.png">
                                 <div class="tz_smtxt slideDown3 hidden">
@@ -118,7 +101,6 @@
                     </div>
             	</div>
                 <div class="wrap-bm-arrow">
-                    <a href="javascript:;" class="bm-arrow"></a>
                 </div>
             </div>
             <div class="swiper-slide item part1 reda2">
@@ -152,7 +134,7 @@
                     <div class="right-part2">
                         <div class="a2-r">
                             <img src="img/a2_r.png">
-                            <div class="a2-niu2 slideDown2 hidden">
+                            <div class="a2-niu2 slideDown3 hidden">
                                 <img src="img/a2_niu2.png" alt="">
                             </div>
                             <div class="a2-rt slideDown2 hidden">
@@ -168,7 +150,6 @@
                     </div>
                 </div>
                 <div class="wrap-bm-arrow">
-                    <a href="javascript:;" class="bm-arrow"></a>
                 </div>
             </div>
             <!--B部分-->
@@ -189,7 +170,7 @@
                 </i>
             	<div class="wrap-part1">
 					<div class="left-part">
-						<div class="stjj slideDown1 hidden">
+						<div class="stjj slideDown1 b_jbm boxsize hidden">
                             <img src="img/b_jbm.png">
                             <div class="l-tip slideDown2 hidden">
                                 <img src="img/b_ltip.png"> 
@@ -197,8 +178,7 @@
 						</div>
 					</div>
 					<div class="right-part">
-                        <div class="tz slideDown1 hidden">
-                            <img src="img/b_ldx.png">                          
+                        <div class="tz slideDown1 b_ldx boxsize hidden">                        
                             <div class="ar-txt slideDown2 hidden">
                                 <img src="img/b_rtip.png">
                             </div>
@@ -206,7 +186,6 @@
                     </div>
             	</div>
                 <div class="wrap-bm-arrow">
-                    <a href="javascript:;" class="bm-arrow"></a>
                 </div>
             </div>
             <div class="swiper-slide item part1b2 redb2">
@@ -235,34 +214,26 @@
                     </div>
                 </div>
                 <div class="wrap-bm-arrow">
-                    <a href="javascript:;" class="bm-arrow"></a>
                 </div>
             </div>
             <!--02-->
             <div class="swiper-slide item blue-bg2 blue02">
                 <div class="arrow1">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow2">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow3">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow4">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow5">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow6">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="bg01">
                     <img src="img/02.png">
                 </div>
-                <div class="md-box hidden">
-                    <img src="img/title_bg.png">
+                <div class="md-box hidden md-box1">
                     <div class="red_btxt"><img src="img/blue_btxt.png"></div>
                     <div class="md-trb"><img src="img/pencil.png"></div>
                 </div>
@@ -270,7 +241,6 @@
                     <img src="img/bm_img2.png">
                 </div>
                 <div class="wrap-bm-arrow">
-                    <a href="javascript:;" class="bm-arrow"></a>
                 </div>
             </div>
             <!--blue21-->
@@ -291,65 +261,57 @@
                     <p id="tip3">百联股份、浦东金桥</p>
                 </div>         	
                 <ul class="cyli-lst">
-                    <li class="zhu1 active">
+                    <li class="zhu1 reflect active">
                         <img data-nsrc="img/zhu1.png" data-asrc="img/zhu1_active.png" src="img/zhu1_active.png">
                         <div class="z-niu hidden">
                             <img src="img/z_niu.png">
                         </div>
                     </li>
-                    <li class="zhu2">
+                    <li class="zhu2 reflect">
                         <img data-nsrc="img/zhu2.png" data-asrc="img/zhu2_active.png" src="img/zhu2.png">
                     </li>
-                    <li class="zhu3">
+                    <li class="zhu3 reflect">
                         <img data-nsrc="img/zhu3.png" data-asrc="img/zhu3_active.png" src="img/zhu3.png">
                     </li>
-                    <li class="zhu4">
+                    <li class="zhu4 reflect">
                         <img data-nsrc="img/zhu4.png" data-asrc="img/zhu4_active.png" src="img/zhu4.png">
                     </li>
-                    <li class="zhu5">
+                    <li class="zhu5 reflect">
                         <img data-nsrc="img/zhu5.png" data-asrc="img/zhu5_active.png" src="img/zhu5.png">
                     </li>
-                    <li class="zhu6">
+                    <li class="zhu6 reflect">
                         <img data-nsrc="img/zhu6.png" data-asrc="img/zhu6_active.png" src="img/zhu6.png">
                     </li>
-                    <li class="zhu7">
+                    <li class="zhu7 reflect">
                         <img data-nsrc="img/zhu7.png" data-asrc="img/zhu7_active.png" src="img/zhu7.png">
                     </li>
-                    <li class="zhu8">
+                    <li class="zhu8 reflect">
                         <img data-nsrc="img/zhu8.png" data-asrc="img/zhu8_active.png" src="img/zhu8.png">
                     </li>
-                    <li class="zhu9">
+                    <li class="zhu9 reflect">
                         <img data-nsrc="img/zhu9.png" data-asrc="img/zhu9_active.png" src="img/zhu9.png">
                     </li>
                 </ul>
                 <div class="wrap-bm-arrow">
-                    <a href="javascript:;" class="bm-arrow"></a>
                 </div>
             </div>
             <div class="swiper-slide item part3 yellow03">
                 <div class="arrow1">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow2">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow3">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow4">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow5">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow6">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="bg01">
                     <img src="img/3/03.png">
                 </div>
-                <div class="md-box hidden">
-                    <img src="img/3/title_bg.png">
+                <div class="md-box hidden md-box2">
                     <div class="red_btxt"><img src="img/3/cover_txt.png"></div>
                     <div class="cover-tel"><img src="img/3/cover_tel.png"></div>
                 </div>
@@ -357,15 +319,14 @@
                     <img src="img/3/cover_bm.png">
                 </div>
                 <div class="wrap-bm-arrow">
-                    <a href="javascript:;" class="bm-arrow"></a>
                 </div>
             </div>
-            <div class="swiper-slide item part3b part3-container" id="part3-container">
-                <div class="swiper-wrapper">
+            <!-- <div class="swiper-slide item part3b part3-container" id="part3-container">
+                <div class="swiper-wrapper"> -->
                     <!--1-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc1" src="img/3/011.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -393,37 +354,16 @@
                                 </i>
                             </div>                           
                         </div>
-                        <div class="part3-cont">
-                            <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-31">
-                                <li class="active"><p>第一季度</p></li>
-                                <li class="active"><p>第二季度</p></li> 
-                                <li class="active"><p>第三季度</p></li> 
-                                <li class="active"><p>第四季度</p></li>     
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt31 w100" data-class="w100">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            集成电路、液晶面板     
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            通富微电、华天科技、彩虹股份、南洋科技
-                                        </p>
-                                    </div>                                  
-                                </div>                               
-                            </div>
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
                         </div>
                     </div>
                     <!--2-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc2" src="img/3/021.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu bad-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/bad_niu.png" alt=""></i>
@@ -454,38 +394,17 @@
                                     <i class="n-nm"></i>
                                 </i>                               
                             </div>                           
-                        </div>
-                        <div class="part3-cont">
-                            <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-32">
-                                <li class="active"><p>第一季度</p></li>
-                                <li class="active"><p>第二季度</p></li> 
-                                <li class=""><p>第三季度</p></li> 
-                                <li class=""><p>第四季度</p></li>     
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt32 w50" data-class="w50">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            金融信息化、互联网金融、移动支付     
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            安硕信息、长亮科技、中科金财、信雅达、润和软件、金证股份、恒生电子、新大陆
-                                        </p>
-                                    </div>                                  
-                                </div>                                
-                            </div>
-                        </div>    
+                        </div> 
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
+                        </div>   
                     </div>
                     <!--3-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc3" src="img/3/031.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -508,38 +427,17 @@
                                     <i class="n-nm"></i>
                                 </i>                               
                             </div>                           
-                        </div>
-                        <div class="part3-cont">
-                            <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-33">
-                                <li class="active"><p>第一季度</p></li>
-                                <li class=""><p>第二季度</p></li> 
-                                <li class=""><p>第三季度</p></li> 
-                                <li class=""><p>第四季度</p></li>     
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt33 w25" data-class="w25">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            通信设备、运维、网优    
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            中兴通讯
-                                        </p>
-                                    </div>                                  
-                                </div>                                
-                            </div>
-                        </div>    
+                        </div> 
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
+                        </div>   
                     </div>
                     <!--4-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc4" src="img/3/041.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -562,38 +460,17 @@
                                     <i class="n-nm"></i>
                                 </i>                               
                             </div>                           
-                        </div>
-                        <div class="part3-cont">
-                            <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-34">
-                                <li class="active"><p>第一季度</p></li>
-                                <li class="active"><p>第二季度</p></li> 
-                                <li class="active"><p>第三季度</p></li> 
-                                <li class="active"><p>第四季度</p></li>     
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt34 w100" data-class="w100">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            出版传媒、有线电视网络    
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            皖新传媒、中文传媒、中南传媒、凤凰传媒、歌华有线、人民网
-                                        </p>
-                                    </div>                                  
-                                </div>                                
-                            </div>
-                        </div>    
+                        </div> 
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
+                        </div>   
                     </div>
                     <!--5-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc5" src="img/3/051.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -616,35 +493,17 @@
                                     <i class="n-nm"></i>
                                 </i>                               
                             </div>                           
-                        </div>
-                        <div class="part3-cont">
-                            <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-35 mb5" p1="明年相关建设、国军标陆续出台" p2="直升机新型号批产" p3="上半年分类标准出台，实施">
-                                <li class="active w100"><p>明年相关建设、国军标陆续出台</p></li>    
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt35 w100" data-class="w100">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            信息化    
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            闽福发A、通光线缆、航天科技、四川九洲
-                                        </p>
-                                    </div>                                  
-                                </div>                                
-                            </div>
-                        </div>    
+                        </div> 
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
+                        </div>   
                     </div>
                     <!--6-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc6" src="img/3/061.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -671,38 +530,17 @@
                                     <i class="n-nm"></i>
                                 </i>
                             </div>                           
-                        </div>
-                        <div class="part3-cont">
-                            <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-36">
-                                <li class="active"><i></i><p>第一季度</p></li>
-                                <li class=""><i></i><p>第二季度</p></li> 
-                                <li class=""><i></i><p>第三季度</p></li> 
-                                <li class=""><i></i><p>第四季度</p></li>     
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt36 w25" data-class="w25">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            饮料    
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            山西汾酒，三全食品，张裕A
-                                        </p>
-                                    </div>                                  
-                                </div>                               
-                            </div>
+                        </div> 
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
                         </div>
                     </div>
                     <!--7-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc7" src="img/3/071.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu bad-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/bad_niu.png" alt=""></i>
@@ -725,40 +563,17 @@
                                     <i class="n-nm"></i>
                                 </i>                               
                             </div>                           
-                        </div>
-                        <div class="part3-cont">
-                        <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-37">
-                                <li class="li1 hide show"><p>第一季度</p></li>
-                                <li class="li1 active hide show"><p>第二季度</p></li> 
-                                <li class="li1 hide show"><p>第三季度</p></li> 
-                                <li class="li1 hide show"><p>第四季度</p></li>   
-                                <li class="li2 active w100 hide "><p>2015年3-4月</p></li>  
-                                <li class="li3 active w100 hide "><p>参考各公司解禁时间</p></li>
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt37 w25 left25" data-class="w25 left25">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            棉纺   
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            鲁泰A、华孚色纺、百隆东方
-                                        </p>
-                                    </div>                                  
-                                </div>                                
-                            </div>
-                        </div>    
+                        </div> 
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
+                        </div>   
                     </div>
                     <!--8-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc8" src="img/3/081.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -786,37 +601,16 @@
                                 </i>
                             </div>                           
                         </div>
-                        <div class="part3-cont">
-                        <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-38">
-                                <li class="active"><i></i><p>第一季度</p></li>
-                                <li class=""><i></i><p>第二季度</p></li> 
-                                <li class=""><i></i><p>第三季度</p></li> 
-                                <li class=""><i></i><p>第四季度</p></li>     
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt38 w25" data-class="w25">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            化学药板块   
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            恒瑞医药、恩华药业、华东医药
-                                        </p>
-                                    </div>                                  
-                                </div>                               
-                            </div>
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
                         </div>
                     </div>
                     <!--9-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc9" src="img/3/091.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -847,42 +641,17 @@
                                     <i class="n-nm"></i>
                                 </i>                               
                             </div>                           
-                        </div>
-                        <div class="part3-cont">
-                        <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-39">
-                                <li class="li1 active hide show"><p>第一季度</p></li>
-                                <li class="li1 hide show"><p>第二季度</p></li> 
-                                <li class="li1 hide show"><p>第三季度</p></li> 
-                                <li class="li1 hide show"><p>第四季度</p></li>   
-                                <li class="li2 active w100 hide "><p>2015年2月</p></li>
-                                <li class="li3 active w100 hide "><p>2015年4月</p></li> 
-                                <li class="li4 active w100 hide "><p>2015年6月</p></li>
-                                <li class="li5 active w100 hide "><p>2015年6月</p></li>
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt39 w25" data-class="w25">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            海参养殖     
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            壹桥苗业
-                                        </p>
-                                    </div>                                  
-                                </div>                                
-                            </div>
-                        </div>    
+                        </div> 
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
+                        </div>  
                     </div>
                     <!--10-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc10" src="img/3/101.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -913,35 +682,17 @@
                                     <i class="n-nm"></i>
                                 </i>                               
                             </div>                           
-                        </div>
-                        <div class="part3-cont">
-                        <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-310 mb5">
-                                <li class="active w100 hide show"><p>依据主题演进时点</p></li>  
-                                <li class="active w100 hide "><p>依据主题演进时点</p></li>
-                                <li class="active w100 hide "><p>依据主题演进时点</p></li> 
-                                <li class="active w100 hide "><p>依据主题演进时点</p></li>
-                                <li class="active w100 hide "><p>依据主题演进时点</p></li>
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt310 w100" data-class="w100">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            锦旅B股、锦江股份、锦江酒店、中青旅、宋城演艺
-                                        </p>
-                                    </div>                                  
-                                </div>                                
-                            </div>
-                        </div>    
+                        </div>  
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
+                        </div>  
                     </div>
                     <!--11-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc11" src="img/3/111.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -972,39 +723,17 @@
                                     <i class="n-nm"></i>
                                 </i>                               
                             </div>                           
-                        </div>
-                        <div class="part3-cont">
-                        <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-311 mb5">
-                                <li class="active w100 hide show"><p>2014年11月底</p></li>  
-                                <li class="active w100 hide "><p>2015年3月</p></li>
-                                <li class="active w100 hide "><p>2014年11月底</p></li> 
-                                <li class="active w100 hide "><p>2015年3月</p></li>
-                                <li class="active w100 hide "><p>2014年11月底</p></li>
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt311 w100" data-class="w100">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1 hide">
-                                            <span class="cont-name">受益板块：</span>
-                                            房地产营销    
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            招商地产、万科A、华夏幸福
-                                        </p>
-                                    </div>                                  
-                                </div>                                
-                            </div>
-                        </div>    
+                        </div> 
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
+                        </div>   
                     </div>
                     <!--12-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc12" src="img/3/121.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -1032,37 +761,16 @@
                                 </i>
                             </div>                           
                         </div>
-                        <div class="part3-cont">
-                        <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-312">
-                                <li class="active"><i></i><p>第一季度</p></li>
-                                <li class=""><i></i><p>第二季度</p></li> 
-                                <li class=""><i></i><p>第三季度</p></li> 
-                                <li class=""><i></i><p>第四季度</p></li>     
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt312 w25" data-class="w25">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            证券  
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            国元证券，光大证券
-                                        </p>
-                                    </div>                                  
-                                </div>                               
-                            </div>
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
                         </div>
                     </div>
                     <!--13-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc13" src="img/3/131.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -1094,37 +802,16 @@
                                 </i>                               
                             </div>                           
                         </div>
-                        <div class="part3-cont">
-                        <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-313">
-                                <li class="active"><p>第一季度</p></li>
-                                <li class=""><p>第二季度</p></li> 
-                                <li class=""><p>第三季度</p></li> 
-                                <li class=""><p>第四季度</p></li>    
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt313 w25" data-class="w25">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            工业4.0、汽车拆解、高铁、水表、通航     
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            新松机器人、天奇股份、华昌达、亚威股份、博深工具、三川股份、新天科技、威海广泰
-                                        </p>
-                                    </div>                                  
-                                </div>                                
-                            </div>
-                        </div>    
+                           <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
+                        </div>
                     </div>
                     <!--14-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc14" src="img/3/141.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu bad-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/bad_niu.png" alt=""></i>
@@ -1152,37 +839,16 @@
                                 </i>
                             </div>                           
                         </div>
-                        <div class="part3-cont">
-                        <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-314">
-                                <li class="active"><i></i><p>第一季度</p></li>
-                                <li class="active"><i></i><p>第二季度</p></li> 
-                                <li class=""><i></i><p>第三季度</p></li> 
-                                <li class=""><i></i><p>第四季度</p></li>     
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt314 w50" data-class="w50">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            零部件   
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            隆基机械、金固股份、德联集团
-                                        </p>
-                                    </div>                                  
-                                </div>                               
-                            </div>
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
                         </div>
                     </div>
                     <!--15-->
-                    <div class="swiper-slide item">
+                    <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc15" src="img/3/151.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu bad-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/bad_niu.png" alt=""></i>
@@ -1202,37 +868,16 @@
                                 </i>
                             </div>                           
                         </div>
-                        <div class="part3-cont">
-                        <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-315">
-                                <li class="active"><i></i><p>第一季度</p></li>
-                                <li class=""><i></i><p>第二季度</p></li> 
-                                <li class=""><i></i><p>第三季度</p></li> 
-                                <li class=""><i></i><p>第四季度</p></li>     
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt315 w25" data-class="w25">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            天然气  
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            胜利股份
-                                        </p>
-                                    </div>                                  
-                                </div>                               
-                            </div>
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
                         </div>
                     </div>
                     <!--16-->
-                   <div class="swiper-slide item">
+                   <div class="swiper-slide item part3b">
                         <div class="part3-top">
-                            <img src="img/3/part3_bg.png">
+                            <img id="imgsrc16" src="img/3/161.png">
                             <div class="part3-top-title">
                                 <i class="part3-statu good-txt"></i>
                                 <i class="part3-statu-img"><img src="img/3/good_niu.png" alt=""></i>
@@ -1264,62 +909,26 @@
                                 </i>                               
                             </div>                           
                         </div>
-                        <div class="part3-cont">
-                        <i class="i-line1"></i>
-                            <i class="i-line2"></i>
-                            <i class="i-line3"></i>
-                            <i class="i-line4"></i>
-                            <ul class="cont-top cont-316">
-                                <li class="active"><p>第一季度</p></li>
-                                <li class="active"><p>第二季度</p></li> 
-                                <li class="active"><p>第三季度</p></li> 
-                                <li class="active"><p>第四季度</p></li>    
-                            </ul>
-                            <div class="cont-view">
-                                <div class="wrap-cont-txt wrap-cont-txt316 w100" data-class="w100">
-                                    <div class="wrap-ptxt">
-                                        <p class="cont-txt1">
-                                            <span class="cont-name">受益板块：</span>
-                                            光伏、风电    
-                                        </p>
-                                        <p class="cont-txt2">
-                                            <span class="cont-name">推荐公司：</span>
-                                            粤水电、云南盐化、福建南纺、甘肃电投
-                                        </p>
-                                    </div>                                  
-                                </div>                                
-                            </div>
+                        <i class="part3-btxt">
+                            <img src="img/3/p3_txt.png">
+                        </i>
+                        <div class="wrap-bm-arrow">
                         </div>    
                     </div>
-                </div>
-                <i class="slide-l"></i>
-                <i class="slide-r"></i>
-                <i class="part3-btxt">
-                    <img src="img/3/p3_txt.png">
-                </i>
-                <div class="wrap-bm-arrow">
-                    <a href="javascript:;" class="bm-arrow"></a>
-                </div>
-            </div>
             <!--封底-->
             <div class="swiper-slide item last">
-                <div class="arrow1 goUp hidden">
-                    <img src="img/s_arrow_top.png">
+                <!-- <img src="img/3/last.jpg"> -->
+                <div class="arrow1 goUp hidden"> 
                 </div>
                 <div class="arrow2 goUp hidden">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow3 goUp hidden">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow4 goUp hidden">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow5 goUp hidden">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <div class="arrow6 goUp hidden">
-                    <img src="img/s_arrow_top.png">
                 </div>
                 <i class="last-share"><img src="img/3/last_share.png" alt=""></i>
                 <ul class="last-title">
@@ -1329,7 +938,6 @@
                 <div class="last-bm">
                     <img src="img/3/last_bm.png" alt="">
                 </div>
-                <div class="bm-bg"></div>
             </div>
         </div>
     </div>
