@@ -14,7 +14,7 @@ var arrP2={
         "百联股份、浦东金桥、锦江股份","青松建化、八一钢铁、上港集团、宁波港","地产、基建、智慧城市","机器人、汇川技术、长荣股份、光韵达","荣盛发展、廊坊发展、华夏幸福"]
 };
 var flag1 = true;
-var flag2 = true;
+var flagArr = [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true];
 $(document).ready(function(){
     var height = screen.height;
     var size = $(".swiper-wrapper .item").size();
@@ -142,24 +142,25 @@ $(document).ready(function(){
                             if(i<9){
                                 i++;
                             }else{
-                                i=0;
                                 clearInterval(timer);
-                            }
-                            var $this = $(".cyli-lst li").eq(i);
-                            var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
-                            var prevImg = $(".cyli-lst").children(".active").children("img");
-                            prevImg.attr("src",prevImg.attr("data-nsrc"));
-                            var index = $(this).index();
-                            $this.children("img").attr("src",$this.children("img").attr("data-asrc"));
-                            $(".cyli-lst").find(".z-niu").remove(); 
-                            $(".cyli-lst li").removeClass("active").eq(i).addClass("active").append($niu);
-                            $("#tip1").html(arrP2.sm[i]);
-                            $("#tip2").html(arrP2.yp[i]);
-                            $("#tip3").html(arrP2.gg[i]);
-                            $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake"); 
-                            /*$(".cyli-lst").addClass("reflect"); */                
-                        },1000);
-                    },1500);      
+                            } 
+                            if(i<9){
+                                console.log("part2"+i)
+                                var $this = $(".cyli-lst li").eq(i);
+                                var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
+                                var prevImg = $(".cyli-lst").children(".active").children("img");
+                                prevImg.attr("src",prevImg.attr("data-nsrc"));
+                                var index = $(this).index();
+                                $this.children("img").attr("src",$this.children("img").attr("data-asrc"));
+                                $(".cyli-lst").find(".z-niu").remove(); 
+                                $(".cyli-lst li").removeClass("active").eq(i).addClass("active").append($niu);
+                                $("#tip1").html(arrP2.sm[i]);
+                                $("#tip2").html(arrP2.yp[i]);
+                                $("#tip3").html(arrP2.gg[i]);
+                                $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake"); 
+                            }             
+                        },3000);
+                    },1000);      
                     flag1=false;
                 }
                 break;
@@ -179,37 +180,8 @@ $(document).ready(function(){
                 setTimeout(function(){
                     $(".part3-statu-img").removeClass("box-shake");
                 },650);
-                if(flag2){
-                    setTimeout(function(){
-                    var i=0;
-                    var timer = setInterval(function(){
-                        if(i<4){
-                            i++;
-                        }else{
-                            i=1;
-                            clearInterval(timer);
-                        }
-                        var $this = $(".slide31 .node").eq(i); 
-                        var acNode = $this.closest("div").children(".node-ac");
-                        var oldIndex = $this.closest("div").attr("data-index");
-                        var index = $this.attr("data-index");
-                        acNode.children("h3").html(acNode.attr("p"+index));
-                        acNode.removeClass("node"+oldIndex).addClass("node"+index);
-                        $this.removeClass("node"+index).addClass("node"+oldIndex);
-                        $this.attr("data-index",oldIndex);
-                        acNode.attr("data-index",index);
-                        $this.closest("div").attr("data-index",index);
-                        if(index){
-                            $("#imgsrc1").attr("src","img/3/01"+index+".png");
-                        }
-                        $(".part3-statu-img").addClass("box-shake");
-                        setTimeout(function(){
-                            $(".part3-statu-img").removeClass("box-shake");
-                        },650); 
-                        },1000);
-                    },800);
-                    flag2=false;
-                }                 
+                switchPart3(swiper.activeIndex-1);
+                               
                 break;  
                 case 25:
                 $(".arrow-lst").addClass("hidden").removeClass("box-goup");
@@ -242,29 +214,33 @@ $(document).ready(function(){
                 case 22:
                 case 23:
                 case 24:
-                    setTimeout(function(){
-                        $(".part3-statu-img").addClass("box-shake");
-                        setTimeout(function(){
-                            $(".part3-statu-img").removeClass("box-shake");
-                        },650);
-                    },50);
+                switchPart3(swiper.activeIndex-1);
                 break;         
             } 
         }
     });
     setTimeout(function(){
-        $(".loading").addClass("hide");
-        $(".arrow-lst").removeClass("hidden").addClass("box-goup");
-        $(".b-txt .cfpl-txt").removeClass("hidden").addClass("box-slide-up");
-        setTimeout(function(){
-        $(".b-txt .dfzq-txt").removeClass("hidden").addClass("box-slide-up");
-            setTimeout(function(){
-                  $(".s-logo").removeClass("hidden").addClass("box-pop-in"); 
-            },200);
-        },800);
-        setTimeout(function(){
-            $(".swiper-slide").addClass("visiable");
-        },400);
+        var img = new Image();
+        img.onload=function(){
+            var timer = setInterval(function() {
+                if (img.complete) {
+                    $(".loading").addClass("hide");
+                    $(".arrow-lst").removeClass("hidden").addClass("box-goup");
+                    $(".b-txt .cfpl-txt").removeClass("hidden").addClass("box-slide-up");
+                    setTimeout(function(){
+                    $(".b-txt .dfzq-txt").removeClass("hidden").addClass("box-slide-up");
+                        setTimeout(function(){
+                              $(".s-logo").removeClass("hidden").addClass("box-pop-in"); 
+                        },200);
+                    },800);
+                    setTimeout(function(){
+                        $(".swiper-slide").addClass("visiable");
+                    },400);
+                    clearInterval(timer);
+                }
+            }, 50);
+        }
+        img.src="img/first_bg.jpg";  
     },3000); 
     $(".wrap-bm-arrow").addClass("cyup");
 }).on("click",".cyli-lst li",function(){
@@ -290,6 +266,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc1").attr("src","img/3/01"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide32 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -301,6 +281,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc2").attr("src","img/3/02"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide33 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -312,6 +296,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc3").attr("src","img/3/03"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide34 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -323,6 +311,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc4").attr("src","img/3/04"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide35 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -335,6 +327,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc5").attr("src","img/3/05"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide36 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -346,6 +342,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc6").attr("src","img/3/06"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide37 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -357,6 +357,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc7").attr("src","img/3/07"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide38 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -368,6 +372,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc8").attr("src","img/3/08"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide39 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -379,6 +387,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc9").attr("src","img/3/09"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide310 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -390,6 +402,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc10").attr("src","img/3/10"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide311 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -401,6 +417,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc11").attr("src","img/3/11"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide312 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -412,6 +432,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
    $("#imgsrc12").attr("src","img/3/12"+index+".png");
+   $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide313 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -423,6 +447,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc13").attr("src","img/3/13"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide314 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -434,6 +462,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc14").attr("src","img/3/14"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide315 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -445,6 +477,10 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc15").attr("src","img/3/15"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 }).on("click",".slide316 .node",function(){
     var acNode = $(this).closest("div").children(".node-ac");
     var oldIndex = $(this).closest("div").attr("data-index");
@@ -456,4 +492,60 @@ $(document).ready(function(){
     acNode.attr("data-index",index);
     $(this).closest("div").attr("data-index",index);
     $("#imgsrc16").attr("src","img/3/16"+index+".png");
+    $(".part3-statu-img").addClass("box-shake");
+    setTimeout(function(){
+        $(".part3-statu-img").removeClass("box-shake");
+    },650);
 });
+
+function switchPart3(index){
+    var tempIndex = index-9;
+    var tempLindex = tempIndex+1;
+    if(flagArr[tempIndex]){
+        setTimeout(function(){
+        var i=0;
+        var length = $(".slide3"+tempLindex+" .node").size();
+        console.log(length);
+        var timer = setInterval(function(){
+            if(i<length){
+                i++;
+                var $this = $(".slide3"+tempLindex+" .node").eq(i); 
+                var acNode = $this.closest("div").children(".node-ac");
+                var oldIndex = $this.closest("div").attr("data-index");
+                var index = $this.attr("data-index");
+                acNode.children("h3").html(acNode.attr("p"+index));
+                if(length==4){
+                    acNode.removeClass("node"+oldIndex).addClass("node"+index);
+                    $this.removeClass("node"+index).addClass("node"+oldIndex);
+                }else if(length==2){
+                    acNode.removeClass("nodes"+oldIndex).addClass("nodes"+index);
+                    $this.removeClass("nodes"+index).addClass("nodes"+oldIndex);
+                }else if(length==3){
+                    acNode.removeClass("node-"+oldIndex).addClass("node-"+index);
+                    $this.removeClass("node-"+index).addClass("node-"+oldIndex);
+                }else if(length==5){
+                    acNode.removeClass("node_"+oldIndex).addClass("node_"+index);
+                    $this.removeClass("node_"+index).addClass("node_"+oldIndex);
+                }
+                $this.attr("data-index",oldIndex);
+                acNode.attr("data-index",index);
+                $this.closest("div").attr("data-index",index);
+                if(index){
+                    if(tempLindex<10){
+                        $("#imgsrc"+tempLindex).attr("src","img/3/0"+tempLindex+""+index+".png");
+                    }else{
+                        $("#imgsrc"+tempLindex).attr("src","img/3/"+tempLindex+""+index+".png");
+                    }  
+                }
+                $(".part3-statu-img").addClass("box-shake");
+                setTimeout(function(){
+                    $(".part3-statu-img").removeClass("box-shake");
+                },650); 
+            }else{
+                clearInterval(timer);
+            }
+            },3000);
+        },1000);
+        flagArr[tempIndex]=false;
+    }
+}
