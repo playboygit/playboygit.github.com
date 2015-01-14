@@ -111,14 +111,18 @@
 @-webkit-keyframes fadeUp{0%{-webkit-transform:translateY(580px);}100%{-webkit-transform:translateY(-580px);}}
 @-webkit-keyframes cyleft{0%{-webkit-transform:translateX(80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(80%);opacity:0.5;}}
 @-webkit-keyframes cyright{0%{-webkit-transform:translateX(-80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(-80%);opacity:0.5;}}
-@-webkit-keyframes cyup{0%{-webkit-transform:translateY(100%);opacity:0.5;}50%{-webkit-transform:translateY(0);opacity:1;}100%{-webkit-transform:translateY(100%);opacity:0.5;}}
+@-webkit-keyframes cyup{0%{-webkit-transform:translateY(100%);opacity:0.3;}70%{-webkit-transform:translateY(0);opacity:1;}100%{-webkit-transform:translateY(100%);opacity:0.3;}}
 @-webkit-keyframes goup{0%{-webkit-transform:translate(-50%,100%);}100%{-webkit-transform:translate(-50%,0);}}
 .box-goup{
     -webkit-animation:goup 1.2s ease;
+    -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .box-goUp{
 	-webkit-animation:fadeUp 22s ease-out infinite;
     animation:fadeUp 22s ease-out infinite;
+    -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .cyleft{
     -webkit-animation:cyleft 1.2s ease-out infinite;
@@ -127,7 +131,9 @@
     -webkit-animation:cyright 1.2s ease-out infinite;
 }
 .cyup{
-    -webkit-animation:cyup 1s ease-out infinite;
+    -webkit-animation:cyup 1s ease infinite;
+    -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .box-mshake{
 	-webkit-animation:mshake .6s ease-out;
