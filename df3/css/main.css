@@ -16,7 +16,7 @@
 .part3b{}
 .part3{background-image: url(../img/3/part_03.png);}
 .last{background-image: url(../img/3/last.jpg);} 
-.arrow-lst{width: 55.9%;padding-bottom:74.5%;background-image: url(../img/first_top.png);background-size: contain;position: absolute;background-position: center top;background-repeat: no-repeat;top: 12%;left:50%;-webkit-transform:translate(-50%,0);z-index: 44;}
+.arrow-lst{width: 55.9%;padding-bottom:74.5%;/* background-image: url(../img/first_top.png); */background-size: contain;position: absolute;background-position: center top;background-repeat: no-repeat;top: 9%;left:50%;-webkit-transform:translate(-50%,0);z-index: 44;}
 .b-txt{position: absolute;width:60.8%;top: 38%;left:50%;-webkit-transform:translate(-50%,-50%);z-index: 555;}
 .cfpl-txt{background-image: url(../img/cfpl_txt.png);padding-bottom: 46%;background-size: contain;background-repeat: no-repeat;background-position: center top;}
 .dfzq-txt{background-image: url(../img/dfzq_txt.png);padding-bottom: 28%;background-size: contain;background-repeat: no-repeat;background-position: center top;}
