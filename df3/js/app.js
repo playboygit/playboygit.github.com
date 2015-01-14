@@ -242,7 +242,7 @@ $(document).ready(function(){
         }
         img.src="img/first_bg.jpg";  
     },3000); 
-    $(".wrap-bm-arrow").addClass("cyup");
+    /*$(".wrap-bm-arrow").addClass("cyup");*/
 }).on("click",".cyli-lst li",function(){
     var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
 	var prevImg = $(".cyli-lst").children(".active").children("img");
