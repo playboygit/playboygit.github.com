@@ -16,14 +16,14 @@
 .part3b{}
 .part3{background-image: url(../img/3/part_03.png);}
 .last{background-image: url(../img/3/last.jpg);} 
-.arrow-lst{width: 55.9%;padding-bottom:74.5%;background-image: url(../img/first_top.png);background-size: contain;position: relative;background-repeat: no-repeat;overflow:hidden;top: 12%;left:50%;-webkit-transform:translate(-50%,0);z-index: 444;}
+.arrow-lst{width: 55.9%;padding-bottom:74.5%;background-image: url(../img/first_top.png);background-size: contain;position: relative;background-position: center top;background-repeat: no-repeat;overflow:hidden;top: 12%;left:50%;-webkit-transform:translate(-50%,0);z-index: 444;}
 .b-txt{position: absolute;width:60.8%;top: 12%;left:50%;margin-top:46%;-webkit-transform:translate(-50%,-50%);z-index: 555;}
 .cfpl-txt{background-image: url(../img/cfpl_txt.png);padding-bottom: 46%;background-size: contain;background-repeat: no-repeat;background-position: center top;}
 .dfzq-txt{background-image: url(../img/dfzq_txt.png);padding-bottom: 28%;background-size: contain;background-repeat: no-repeat;background-position: center top;}
 .md-shadow{position: absolute;z-index:39;background-image: url(../img/md_shadow.png);background-size: contain;height: 68px;width: 100%;bottom:23%;left: 0;}
 .txt-shadow{position: absolute;z-index:45;width: 100%;left:0;bottom:14%;text-align: center;}
 .txt-shadow .s-logo{width: 61px;height: 45px;background-image: url(../img/logo_txt.png);}
-.wrap-bm-arrow{position: absolute;z-index:666;bottom: 4%;left:47%;-webkit-transform:translate(-50%,0);background-image: url(../img/arrow_bm.png);background-size: contain;width: 16px;height: 8px;}
+.wrap-bm-arrow{position: absolute;z-index:666;bottom: 4%;left:47%;-webkit-transform:translate(-50%,0);background-image: url(../img/arrow_bm.png);background-size: contain;background-repeat: no-repeat;width: 16px;height: 8px;}
 /*01 &02*/
 .bg01{width: 57%;position: absolute;left: 0;top:25%;}
 .md-box{width: 59.7%;position: absolute;left: 50%;top: 50%;-webkit-transform:translate(-50%,-50%);z-index:333;}
@@ -44,8 +44,8 @@
 
 .a_tl{padding-bottom: 41%;background-image: url(../img/a_tl.png);}
 .b_jbm{padding-bottom: 41%;background-image: url(../img/b_jbm.png);}
-.a_right{padding-bottom: 163%;background-image: url(../img/a_right.png);}
-.b_ldx{padding-bottom: 106%;background-image: url(../img/b_ldx.png);}
+.a_right{padding-bottom: 165%;background-image: url(../img/a_right.png);}
+.b_ldx{padding-bottom: 107%;background-image: url(../img/b_ldx.png);}
 /*part2*/
 .part2{}
 .tip-box{position: relative;width: 85%;margin-top: 35px;}

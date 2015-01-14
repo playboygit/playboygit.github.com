@@ -114,13 +114,10 @@
 @-webkit-keyframes cyup{0%{-webkit-transform:translateY(100%);opacity:0.5;}50%{-webkit-transform:translateY(0);opacity:1;}100%{-webkit-transform:translateY(100%);opacity:0.5;}}
 @-webkit-keyframes goup{0%{-webkit-transform:translate(-50%,100%);}100%{-webkit-transform:translate(-50%,0);}}
 .box-goup{
-    -webkit-animation:goup 0.8s ease;
+    -webkit-animation:goup 1.2s ease;
 }
 .box-goUp{
 	-webkit-animation:fadeUp 22s ease-out infinite;
-    -moz-animation:fadeUp 22s ease-out infinite;
-    -o-animation:fadeUp 22s ease-out infinite;
-    -ms-animation:fadeUp 22s ease-out infinite;
     animation:fadeUp 22s ease-out infinite;
 }
 .cyleft{
@@ -134,76 +131,45 @@
 }
 .box-mshake{
 	-webkit-animation:mshake .6s ease-out;
-    -moz-animation:mshake .6s ease-out;
-    -o-animation:mshake .6s ease-out;
-    -ms-animation:mshake .6s ease-out;
     animation:mshake .6s ease-out;
 }
 .box-shake{
 	-webkit-animation:shake .6s ease-out;
-    -moz-animation:shake .6s ease-out;
-    -o-animation:shake .6s ease-out;
-    -ms-animation:shake .6s ease-out;
     animation:shake .6s ease-out;
 }
 .box-fadeIn{
 	-webkit-animation:fadeIn .6s ease-out;
-    -moz-animation:fadeIn .6s ease-out;
-    -o-animation:fadeIn .6s ease-out;
-    -ms-animation:fadeIn .6s ease-out;
     animation:fadeIn .6s ease-out;
 }
 .box-pop-in{
 	-webkit-animation:popup-int .4s ease-out;
-    -moz-animation:popup-int .4s ease-out;
-    -o-animation:popup-int .4s ease-out;
-    -ms-animation:popup-int .4s ease-out;
     animation:popup-int .4s ease-out;
 }
 .box-slide-left{
     -webkit-animation:slide-left .8s ease-out;
-    -moz-animation:slide-left .8s ease-out;
-    -o-animation:slide-left .8s ease-out;
-    -ms-animation:slide-left .8s ease-out;
     animation:slide-left .8s ease-out;
 }
 .box-slide-right{
     -webkit-animation:slide-right .8s ease-out;
-    -moz-animation:slide-right .8s ease-out;
-    -o-animation:slide-right .8s ease-out;
-    -ms-animation:slide-right .8s ease-out;
     animation:slide-right .8s ease-out;
 }
 
 .box-slide-down{
-    -webkit-animation:slide-down .8s ease;
-    -moz-animation:slide-down .8s ease ease-out;
-    -o-animation:slide-down .8s ease ease-out;
-    -ms-animation:slide-down .8s ease ease-out;
-    animation:slide-down .8s ease ease-out;
+    -webkit-animation:slide-down 1s ease;
+    animation:slide-down 1s ease ease-out;
 }
 .box-slide-mdown{
-    -webkit-animation:slide-mdown .8s ease;
-    -moz-animation:slide-mdown .8s ease ease-out;
-    -o-animation:slide-mdown .8s ease ease-out;
-    -ms-animation:slide-mdown .8s ease ease-out;
-    animation:slide-mdown .8s ease ease-out;
+    -webkit-animation:slide-mdown 1s ease;
+    animation:slide-mdown 1s ease;
 }
 .box-slide-mup{
-    -webkit-animation:slide-mup .8s ease;
-    -moz-animation:slide-mup .8s ease-out;
-    -o-animation:slide-mup .8s ease-out;
-    -ms-animation:slide-mup .8s ease-out;
-    animation:slide-mup .8s ease-out;
+    -webkit-animation:slide-mup 1s ease;
+    animation:slide-mup 1s ease-out;
 }
 .box-slide-up{
-    -webkit-animation:slide-up .8s ease;
-    -moz-animation:slide-up .8s ease-out;
-    -o-animation:slide-up .8s ease-out;
-    -ms-animation:slide-up .8s ease-out;
-    animation:slide-up .8s ease-out;
+    -webkit-animation:slide-up 1s ease;
+    animation:slide-up 1s ease-out;
 }
-
 
 /*模块动画*/
 /*向左滑动致消失*/
@@ -219,34 +185,6 @@
 @-o-keyframes mp-slide-left-s{0%{-o-transform:translate(0,0);opacity:1;left:250px;}90%{-o-transform:translate(-10%,0);opacity:1;left:225px;}100%{-o-transform:translate(-100%,0);left:0px;opacity:0;}}
 @-ms-keyframes mp-slide-left-s{0%{-ms-transform:translate(0,0);opacity:1;left:250px;}90%{-ms-transform:translate(-10%,0);opacity:1;left:225px;}100%{-ms-transform:translate(-100%,0);left:0px;opacity:0;}}
 @keyframes mp-slide-left-s{0%{transform:translate(0,0);opacity:1;left:250px;}90%{transform:translate(-10%,0);opacity:1;left:225px;}100%{transform:translate(-100%,0);left:0px;opacity:0;}}
-
-
-.full .west-panel{-webkit-animation:slide-left-e .5s ease-out;
--moz-animation:slide-left-e .5s ease-out;
--o-animation:slide-left-e .5s ease-out;
--ms-animation:slide-left-e .5s ease-out;
-animation:slide-left-e .5s ease-out;}
-
-
-.west-panel{-webkit-animation:slide-right .5s ease-out;
--moz-animation:slide-right .5s ease-out;
--o-animation:slide-right .5s ease-out;
--ms-animation:slide-right .5s ease-out;
-animation:slide-right .5s ease-out;}
-
-.full .main-panel{-webkit-animation:mp-slide-left-s .5s ease-out;
--moz-animation:mp-slide-left-s .5s ease-out;
--o-animation:mp-slide-left-s .5s ease-out;
--ms-animation:mp-slide-left-s .5s ease-out;
-animation:mp-slide-left-s .5s ease-out;
-}
-
-.main-panel{-webkit-animation:popup-int .5s ease-out;
-	-moz-animation:popup-int .5s ease-out;
-	-o-animation:popup-int .5s ease-out;
-	-ms-animation:popup-int .5s ease-out;
-	animation:popup-int .5s ease-out;
-}
 
 /*菜单背景移动*/
 @-webkit-keyframes mn-slide-down-s{0%{}90%{-webkit-transform:translate(-10%,0);opacity:1;left:225px;}100%{-webkit-transform:translate(-100%,0);left:0px;opacity:0;}}
