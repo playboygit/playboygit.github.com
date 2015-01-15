@@ -506,7 +506,6 @@ function switchPart3(index){
         setTimeout(function(){
         var i=0;
         var length = $(".slide3"+tempLindex+" .node").size();
-        console.log(length);
         var timer = setInterval(function(){
             if(i<length){
                 i++;
@@ -538,15 +537,15 @@ function switchPart3(index){
                         $("#imgsrc"+tempLindex).attr("src","img/3/"+tempLindex+""+index+".png");
                     }  
                 }
-                $(".part3-statu-img").addClass("box-shake");
-                setTimeout(function(){
-                    $(".part3-statu-img").removeClass("box-shake");
-                },650); 
             }else{
                 clearInterval(timer);
             }
             },3000);
         },1000);
+        $(".part3-statu-img").addClass("box-shake");
+        setTimeout(function(){
+            $(".part3-statu-img").removeClass("box-shake");
+        },650); 
         flagArr[tempIndex]=false;
     }
 }
