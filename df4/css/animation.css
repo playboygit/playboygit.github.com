@@ -13,14 +13,14 @@
 @keyframes popup-out{0%{transform:scale(1);opacity:0;}90%{transform:scale(.5);opacity:1;}100%{transform:scale(0);opacity:0;}}
 
 /*掉落效果*/
-@-webkit-keyframes slide-down{0%{-webkit-transform:translate(0,-100%);opacity:1;}100%{-webkit-transform:translate(0,0);opacity:1;}}
+@-webkit-keyframes slide-down{0%{-webkit-transform:translate(0,-50%);opacity:0;}100%{-webkit-transform:translate(0,0);opacity:1;}}
 @-moz-keyframes slide-down{0%{-moz-transform:-moz-translate(0,-100%);opacity:0;}100%{-moz-transform:-moz-translate(0,0);opacity:1;}}
 @-o-keyframes slide-down{0%{-o-transform:translate(0,-100%);opacity:0;}100%{-o-transform:translate(0,0);opacity:1;}}
 @-ms-keyframes slide-down{0%{-ms-transform:translate(0,-100%);opacity:0;}100%{-ms-transform:translate(0,0);opacity:1;}}
 @keyframes slide-down{0%{transform:translate(0,-100%);opacity:0;}100%{transform:translate(0,0);opacity:1;}}
 
 /*上浮效果*/
-@-webkit-keyframes slide-up{0%{-webkit-transform:translate(0,100%);opacity:1;}100%{-webkit-transform:translate(0,0);opacity:1;}}
+@-webkit-keyframes slide-up{0%{-webkit-transform:translate(0,50%);opacity:0;}100%{-webkit-transform:translate(0,0);opacity:1;}}
 @-moz-keyframes slide-up{0%{-moz-transform:-moz-translate(0,100%);opacity:1;}100%{-moz-transform:-moz-translate(0,0);opacity:1;}}
 @-o-keyframes slide-up{0%{-o-transform:translate(0,100%);opacity:1;}100%{-o-transform:translate(0,0);opacity:1;}}
 @-ms-keyframes slide-up{0%{-ms-transform:translate(0,100%);opacity:1;}100%{-ms-transform:translate(0,0);opacity:1;}}
@@ -40,13 +40,13 @@
 @-ms-keyframes slide-right{0%{-ms-transform:translate(-100%,0);opacity:0;}100%{-ms-transform:translate(0,0);opacity:1;}}
 @keyframes slide-right{0%{transform:translate(-100%,0);opacity:0;}100%{transform:translate(0,0);opacity:1;}}
 /*中间上浮效果*/
-@-webkit-keyframes slide-mup{0%{-webkit-transform:translate(-50%,50%);opacity:1;}100%{-webkit-transform:translate(-50%,-50%);opacity:1;}}
+@-webkit-keyframes slide-mup{0%{-webkit-transform:translate(-50%,50%);opacity:0;}100%{-webkit-transform:translate(-50%,-50%);opacity:1;}}
 @-moz-keyframes slide-mup{0%{-moz-transform:-moz-translate(-50%,50%);opacity:1;}100%{-moz-transform:-moz-translate(-50%,-50%);opacity:1;}}
 @-o-keyframes slide-mup{0%{-o-transform:translate(-50%,50%);opacity:1;}100%{-o-transform:translate(-50%,-50%);opacity:1;}}
 @-ms-keyframes slide-mup{0%{-ms-transform:translate(-50%,50%);opacity:1;}100%{-ms-transform:translate(-50%,-50%);opacity:1;}}
 @keyframes slide-mup{0%{transform:translate(-50%,50%);opacity:1;}100%{transform:translate(-50%,-50%);opacity:1;}}
 /*中间下降效果*/
-@-webkit-keyframes slide-mdown{0%{-webkit-transform:translate(-50%,-100%);opacity:1;}100%{-webkit-transform:translate(-50%,0);opacity:1;}}
+@-webkit-keyframes slide-mdown{0%{-webkit-transform:translate(-50%,-100%);opacity:0;}100%{-webkit-transform:translate(-50%,0);opacity:1;}}
 @-moz-keyframes slide-mdown{0%{-moz-transform:-moz-translate(-50%,-100%);opacity:1;}100%{-moz-transform:-moz-translate(-50%,0);opacity:1;}}
 @-o-keyframes slide-mdown{0%{-o-transform:translate(-50%,-100%);opacity:1;}100%{-o-transform:translate(-50%,0);opacity:1;}}
 @-ms-keyframes slide-mdown{0%{-ms-transform:translate(-50%,-100%);opacity:1;}100%{-ms-transform:translate(-50%,0);opacity:1;}}
@@ -110,7 +110,7 @@
 /*上升*/
 @-webkit-keyframes fadeUp{0%{-webkit-transform:translateY(550px);}100%{-webkit-transform:translateY(-550px);}}
 @-webkit-keyframes cyup{0%{-webkit-transform:translate(-50%,100%);opacity:1;}50%{-webkit-transform:translateY(-50%,0);opacity:1;}100%{-webkit-transform:translateY(-50%,100%);opacity:1;}}
-@-webkit-keyframes goup{0%{-webkit-transform:translate(-50%,100%);opacity:1;}100%{-webkit-transform:translate(-50%,0);opacity:1;}}
+@-webkit-keyframes goup{0%{-webkit-transform:translate(-50%,50%);opacity:0;}100%{-webkit-transform:translate(-50%,0);opacity:1;}}
 .box-goup{
     -webkit-animation:goup 1.5s linear;
 }
