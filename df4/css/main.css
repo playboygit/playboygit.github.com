@@ -23,7 +23,7 @@
 .md-shadow{position: absolute;z-index:39;background-image: url(../img/md_shadow.png);background-size: contain;height: 68px;width: 100%;bottom:23%;left: 0;}
 .txt-shadow{position: absolute;z-index:45;width: 100%;left:0;bottom:14%;text-align: center;}
 .txt-shadow .s-logo{width: 61px;height: 45px;background-image: url(../img/logo_txt.png);}
-.wrap-bm-arrow{position: absolute;z-index:9999;bottom: 15px;left:48%;-webkit-transform:translate(-50%,0);background-image: url(../img/arrow_bm.png);background-size: contain;background-repeat: no-repeat;width: 16px;height: 8px;}
+.wrap-bm-arrow{position: fixed;z-index:9999;bottom: 15px;left:48%;-webkit-transform:translate(-50%,0);background-image: url(../img/arrow_bm.png);background-size: contain;background-repeat: no-repeat;width: 16px;height: 8px;}
 /*01 &02*/
 .bg01{width: 57%;position: absolute;left: 0;top:25%;}
 .md-box{width: 59.7%;position: absolute;left: 50%;top: 50%;-webkit-transform:translate(-50%,-50%);z-index:333;}
