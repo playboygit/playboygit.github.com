@@ -16,8 +16,8 @@
 .part3b{}
 .part3{background-image: url(../img/3/part_03.png);}
 .last{background-image: url(../img/3/last.jpg);} 
-.arrow-lst{width: 55.9%;padding-bottom:74.5%;background-image: url(../img/first_top.png); background-size: contain;position: absolute;background-position: center top;background-repeat: no-repeat;top: 9%;left:50%;-webkit-transform:translate(-50%,0);z-index: 44;}
-.b-txt{position: absolute;width:60.8%;top: 40%;left:50%;-webkit-transform:translate(-50%,-50%);z-index: 555;}
+.arrow-lst{width: 55.9%;padding-bottom:74.5%;background-image: url(../img/first_top.png); background-size: contain;position: absolute;background-position: center top;background-repeat: no-repeat;top: 10%;left:50%;-webkit-transform:translate(-50%,0);z-index: 44;}
+.b-txt{position: absolute;width:60.8%;top: 41%;left:50%;-webkit-transform:translate(-50%,-50%);z-index: 555;}
 .cfpl-txt{background-image: url(../img/cfpl_txt.png);padding-bottom: 46%;background-size: contain;background-repeat: no-repeat;background-position: center top;}
 .dfzq-txt{background-image: url(../img/dfzq_txt.png);padding-bottom: 28%;background-size: contain;background-repeat: no-repeat;background-position: center top;}
 .md-shadow{position: absolute;z-index:39;background-image: url(../img/md_shadow.png);background-size: contain;height: 68px;width: 100%;bottom:23%;left: 0;}
@@ -121,6 +121,7 @@
 .good-txt{background-image: url(../img/3/good_txt.png);}
 .bad-txt{background-image: url(../img/3/bad_txt.png);}
 .part3-statu-img{width: 16%;position: absolute;right: -3%;top: -22%;z-index: 999;}
+.part3-statu-bad-img{width: 12%;right:0;}
 .part3-slide{width:62%;position:absolute;left: 50%;-webkit-transform:translate(-50%,0);top: 40%;}
 .part3-slide>i{position: absolute;-webkit-transform:translate(-50%,0);cursor: pointer;z-index: 777;}
 .part3-slide .node-nm{width: 14.1%;padding-bottom: 18px;z-index:80;}
