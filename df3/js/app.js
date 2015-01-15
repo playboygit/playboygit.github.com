@@ -236,7 +236,7 @@ $(document).ready(function(){
                     setTimeout(function(){
                         $(".swiper-slide").addClass("visiable");
                     },400);
-                    $(".wrap-bm-arrow").addClass("cyup");
+                    /*$(".wrap-bm-arrow").addClass("cyup");*/
                     clearInterval(timer);
                 }
             }, 50);
