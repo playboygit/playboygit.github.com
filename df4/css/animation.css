@@ -108,7 +108,7 @@
 	100%{transform:translate(0,0);opacity:1;}
 }
 /*上升*/
-@-webkit-keyframes fadeUp{0%{-webkit-transform:translateY(580px);}100%{-webkit-transform:translateY(-580px);}}
+@-webkit-keyframes fadeUp{0%{-webkit-transform:translateY(550px);}100%{-webkit-transform:translateY(-550px);}}
 @-webkit-keyframes cyleft{0%{-webkit-transform:translateX(80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(80%);opacity:0.5;}}
 @-webkit-keyframes cyright{0%{-webkit-transform:translateX(-80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(-80%);opacity:0.5;}}
 @-webkit-keyframes cyup{0%{-webkit-transform:translate(-50%,100%);opacity:0;}50%{-webkit-transform:translateY(-50%,0);opacity:1;}100%{-webkit-transform:translateY(-50%,100%);opacity:0;}}
@@ -121,14 +121,10 @@
           animation-fill-mode: both;
 }
 .box-goUp{
-	-webkit-animation:fadeUp 22s;
-    animation:fadeUp 22s;
-    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	-webkit-animation:fadeUp 22s ease;
+    animation:fadeUp 22s ease;
             -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-    -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
 }
 .cyleft{
     -webkit-animation:cyleft 1.2s;
@@ -145,13 +141,9 @@
           animation-iteration-count: infinite;
 }
 .cyup{
-    -webkit-animation:cyup 1.2s;
-    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-animation:cyup 1.2s ease;
             -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-    -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
 }
 .box-mshake{
 	-webkit-animation:mshake .6s;
