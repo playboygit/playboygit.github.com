@@ -117,6 +117,7 @@ $(document).ready(function(){
                 $(".part20 .popIn").addClass("hidden").removeClass("box-pop-in");
                 $(".part20 .part20-title").addClass("hidden").removeClass("box-fadeIn");
                  $(".cyli-lst .z-niu").addClass("hidden").removeClass("box-mshake");
+                $(".cyli-lst").removeClass("reflect");
                 setTimeout(function(){
                 	$(".blue02 .md-box").removeClass("hidden").addClass("box-slide-mup");
                 },200); 
@@ -124,6 +125,7 @@ $(document).ready(function(){
                 case 7:
                 $(".blue02 .md-box").addClass("hidden").removeClass("box-slide-mup");
                 $(".yellow03 .md-box").addClass("hidden").removeClass("box-slide-mup");
+                $(".cyli-lst").addClass("reflect");
                 setTimeout(function(){
 					$(".part20 .tip-box-l").removeClass("hidden").addClass("box-slide-left");
 					$(".part20 .tip-box-r").removeClass("hidden").addClass("box-slide-right");
@@ -157,10 +159,10 @@ $(document).ready(function(){
                                 $("#tip2").html(arrP2.yp[i]);
                                 $("#tip3").html(arrP2.gg[i]);
                                 $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake"); 
-                                $(".cyli-lst").removeClass("reflect");
+                                /*$(".cyli-lst").removeClass("reflect");
                                 setTimeout(function(){
                                     $(".cyli-lst").addClass("reflect");
-                                },200);
+                                },200);*/
                             }             
                         },3000);
                     },1000);      
@@ -173,6 +175,7 @@ $(document).ready(function(){
                 $(".part20 .popIn").addClass("hidden").removeClass("box-pop-in");
                 $(".part20 .part20-title").addClass("hidden").removeClass("box-fadeIn");
                  $(".cyli-lst .z-niu").addClass("hidden").removeClass("box-mshake"); 
+                 $(".cyli-lst").removeClass("reflect");
                 setTimeout(function(){
                 	$(".yellow03 .md-box").removeClass("hidden").addClass("box-slide-mup");
                 },200);
