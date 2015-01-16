@@ -58,16 +58,15 @@
 .reflect{-webkit-box-reflect:below -10px -webkit-linear-gradient(transparent,transparent 50%,rgba(255,255,255,.5));}
 .cyli-lst>li{width: 8%;position:absolute;bottom:0;cursor: pointer;}
 .cyli-lst .z-niu{width: 164%;position: absolute;top: 6px;-webkit-transform:translate(-50%,-100%);left: 50%;}
-.cyli-lst .zhu1{left: 2.8%;z-index: 34;}
-.cyli-lst .zhu2{left: 13.6%;z-index: 35;}
-.cyli-lst .zhu3{left: 24.4%;z-index: 36;}
-.cyli-lst .zhu4{left: 35.2%;z-index: 37;}
-.cyli-lst .zhu5{left: 46%;z-index: 38;}
-.cyli-lst .zhu6{left: 56.8%;z-index: 39;}
+.cyli-lst .zhu1{left: 2.8%;z-index: 40;}
+.cyli-lst .zhu2{left: 13.6%;z-index: 40;}
+.cyli-lst .zhu3{left: 24.4%;z-index: 40;}
+.cyli-lst .zhu4{left: 35.2%;z-index: 40;}
+.cyli-lst .zhu5{left: 46%;z-index: 40;}
+.cyli-lst .zhu6{left: 56.8%;z-index:40;}
 .cyli-lst .zhu7{left: 67.2%;z-index: 40;}
-.cyli-lst .zhu8{left: 78%;z-index: 41;}
-.cyli-lst .zhu9{left: 89%;z-index: 42;}
-.cyli-lst>li img{-webkit-transform:scale(1);}
+.cyli-lst .zhu8{left: 78%;z-index: 40;}
+.cyli-lst .zhu9{left: 89%;z-index: 40;}
 /*part1 left: 50%;-webkit-transform:translate(-50%,0);*/
 .wrap-part1{width: 100%;height: 100%;position: relative;}
 .wrap-part1>div{width: 50%;height: 100%;-webkit-box-sizing:border-box;position: absolute;top: 0;bottom: 0;z-index:10;}
