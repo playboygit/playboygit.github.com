@@ -148,9 +148,7 @@ $(document).ready(function(){
                             } 
                             if(i<9){
                                 $(".cyli-lst").removeClass("reflect");
-                                setTimeout(function(){
-                                    $(".cyli-lst").addClass("reflect");
-                                },300);
+                                
                                 var $this = $(".cyli-lst li").eq(i);
                                 var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
                                 var prevImg = $(".cyli-lst").children(".active").children("img");
@@ -163,10 +161,9 @@ $(document).ready(function(){
                                 $("#tip2").html(arrP2.yp[i]);
                                 $("#tip3").html(arrP2.gg[i]);
                                 $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake"); 
-                                /*$(".cyli-lst").removeClass("reflect");
-                                setTimeout(function(){
+                                //setTimeout(function(){
                                     $(".cyli-lst").addClass("reflect");
-                                },200);*/
+                                //},200);
                             }             
                         },3000);
                     },1000);      
@@ -242,7 +239,7 @@ $(document).ready(function(){
                         setTimeout(function(){
                               $(".s-logo").removeClass("hidden").addClass("box-pop-in"); 
                         },200);
-                    },800);
+                    },400);
                     setTimeout(function(){
                         $(".swiper-slide").addClass("visiable");
                     },400);
