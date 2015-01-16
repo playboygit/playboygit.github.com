@@ -26,6 +26,7 @@
 .wrap-bm-arrow{position: absolute;z-index:9998;bottom: 8px;left:50%;-webkit-transform:translate(-50%,0);background-image: url(../img/arrow_bm.gif);background-size: contain;background-repeat: no-repeat;width: 16px;height: 17px;}
 /*01 &02*/
 .bg01{width: 57%;position: absolute;left: 0;top:25%;}
+.blue02{padding-left:4px;width: 100%;}
 .md-box{width: 59.7%;position: absolute;left: 50%;top: 50%;-webkit-transform:translate(-50%,-50%);z-index:333;}
 .md-box1{background-image:url(../img/title_bg.png);padding-bottom: 32%;background-size: contain;background-repeat: no-repeat;background-position: center top;}
 .md-box2{background-image:url(../img/3/title_bg.png);padding-bottom: 40%;background-size: contain;background-repeat: no-repeat;background-position: center top;}
