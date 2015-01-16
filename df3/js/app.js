@@ -161,9 +161,9 @@ $(document).ready(function(){
                                 $("#tip2").html(arrP2.yp[i]);
                                 $("#tip3").html(arrP2.gg[i]);
                                 $(".cyli-lst .z-niu").removeClass("hidden").addClass("box-mshake"); 
-                                //setTimeout(function(){
+                                setTimeout(function(){
                                     $(".cyli-lst").addClass("reflect");
-                                //},200);
+                                },200);
                             }             
                         },3000);
                     },1000);      
@@ -243,7 +243,6 @@ $(document).ready(function(){
                     setTimeout(function(){
                         $(".swiper-slide").addClass("visiable");
                     },400);
-                    /*$(".wrap-bm-arrow").addClass("cyup");*/
                     clearInterval(timer);
                 }
             }, 50);
