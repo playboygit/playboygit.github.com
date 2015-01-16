@@ -67,7 +67,7 @@
 .cyli-lst .zhu7{left: 67.2%;z-index: 40;}
 .cyli-lst .zhu8{left: 78%;z-index: 40;}
 .cyli-lst .zhu9{left: 89%;z-index: 40;}
-.cyli-lst .active{z-index:999;}
+.cyli-lst .active{z-index:39;}
 /*part1 left: 50%;-webkit-transform:translate(-50%,0);*/
 .wrap-part1{width: 100%;height: 100%;position: relative;}
 .wrap-part1>div{width: 50%;height: 100%;-webkit-box-sizing:border-box;position: absolute;top: 0;bottom: 0;z-index:10;}
