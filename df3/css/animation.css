@@ -112,7 +112,10 @@
 @-webkit-keyframes cyright{0%{-webkit-transform:translateX(-80%);opacity:0.5;}50%{-webkit-transform:translateX(0);opacity:1;}100%{-webkit-transform:translateX(-80%);opacity:0.5;}}
 @-webkit-keyframes cyup{0%{-webkit-transform:translateY(20px);opacity:0;}60%{-webkit-transform:translateY(0px);opacity:1;}100%{-webkit-transform:translateY(0px);opacity:0;}}
 @-webkit-keyframes goup{0%{-webkit-transform:translate(-50%,50%);}100%{-webkit-transform:translate(-50%,0);}}
-
+@-webkit-keyframes mup{0%{-webkit-transform:translate(-50%,50%);}100%{-webkit-transform:translate(-50%,0);}}
+.box-mup{
+  -webkit-animation:mup 1s linear;
+}
 .box-goup{
     -webkit-animation:goup 1.2s;
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);

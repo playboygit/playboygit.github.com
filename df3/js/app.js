@@ -28,7 +28,7 @@ $(document).ready(function(){
             console.log(swiper.activeIndex);
             switch(swiper.activeIndex-1){
                 case 0:
-                    $(".last .slideUp").addClass("hidden").removeClass("box-slide-up");
+                    $(".last .slideUp").addClass("hidden").removeClass("box-mup");
                     $(".arrow-lst").removeClass("hidden").addClass("box-goup");
                     $(".b-txt .cfpl-txt").removeClass("hidden").addClass("box-slide-up");
                     $(".red-bg .md-box").addClass("hidden").removeClass("box-slide-mup");
@@ -41,7 +41,7 @@ $(document).ready(function(){
                     },800);
                 break;
                 case 26:
-                    $(".last .slideUp").addClass("hidden").removeClass("box-slide-up");
+                    $(".last .slideUp").addClass("hidden").removeClass("box-mup");
                     $(".arrow-lst").removeClass("hidden").addClass("box-goup");
                     $(".b-txt .cfpl-txt").removeClass("hidden").addClass("box-slide-up");
                     $(".red-bg .md-box").addClass("hidden").removeClass("box-slide-mup");
@@ -144,6 +144,7 @@ $(document).ready(function(){
                             if(i<9){
                                 i++;
                             }else{
+
                                 clearInterval(timer);
                             } 
                             if(i<9){
@@ -194,7 +195,7 @@ $(document).ready(function(){
                 $(".b-txt .dfzq-txt").addClass("hidden").removeClass("box-slide-up");
                 $(".b-txt .cfpl-txt").addClass("hidden").removeClass("box-slide-up");
                 $(".s-logo").addClass("hidden").removeClass("box-pop-in"); 
-                $(".last .slideUp").removeClass("hidden").addClass("box-slide-up");
+                $(".last .slideUp").removeClass("hidden").addClass("box-mup");
                 $(".last .goUp").removeClass("hidden").addClass("box-goUp");
                 break; 
                 case -1:
@@ -202,7 +203,7 @@ $(document).ready(function(){
                 $(".b-txt .dfzq-txt").addClass("hidden").removeClass("box-slide-up");
                 $(".b-txt .cfpl-txt").addClass("hidden").removeClass("box-slide-up");
                 $(".s-logo").addClass("hidden").removeClass("box-pop-in"); 
-                $(".last .slideUp").removeClass("hidden").addClass("box-slide-up");
+                $(".last .slideUp").removeClass("hidden").addClass("box-mup");
                 $(".last .goUp").removeClass("hidden").addClass("box-goUp");
                 break; 
                 case 10:
