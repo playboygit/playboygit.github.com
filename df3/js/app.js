@@ -147,6 +147,10 @@ $(document).ready(function(){
                                 clearInterval(timer);
                             } 
                             if(i<9){
+                                $(".cyli-lst").removeClass("reflect");
+                                setTimeout(function(){
+                                    $(".cyli-lst").addClass("reflect");
+                                },300);
                                 var $this = $(".cyli-lst li").eq(i);
                                 var $niu = $('<div class="z-niu hidden"><img src="img/z_niu.png"></div>');
                                 var prevImg = $(".cyli-lst").children(".active").children("img");
