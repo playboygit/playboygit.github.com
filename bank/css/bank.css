@@ -40,4 +40,4 @@ textarea{width: 100%;border: none;overflow: hidden;resize: none;}
 .commit-box{background-color: #aa312c;font-size: 18px;color:#f7ca4e;text-align: center;height: 50px;line-height: 50px;cursor: pointer;border-top: 1px solid #fd524b;border-bottom: 2px solid #872723;}
 .commit-tel{border-top: none;}
 .tel-box{padding: 12px 8px;}
-.tel-box>input{border: none;background-color: #fffaca;width: 100%;padding: 12px 6px;height: 40px;box-sizing:border-box;-webkit-box-sizing:border-box;line-height: 40px;font-size: 16px;color: #222;}
+.tel-box>input{border: none;background-color: #fffaca;width: 100%;padding: 12px 6px;height: 40px;box-sizing:border-box;-webkit-box-sizing:border-box;line-height: 16px;font-size: 16px;color: #222;}
