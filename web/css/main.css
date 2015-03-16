@@ -1,13 +1,13 @@
 .wrap{width: 1000px;margin: 0 auto;}
-.title{height: 31px;background:url(../img/topBg.gif) repeat-x;}
-.title .left{padding-left:20px;height: 31px;line-height: 31px;font-size: 12px;color: #999;}
-.title .right{padding-right:20px;height: 31px;line-height: 31px;font-size: 12px;color: #999;}
+.title{height: 29px;background:url(../img/topBg.gif) repeat-x;}
+.title .left{padding-left:20px;height: 29px;line-height: 29px;font-size: 12px;color: #999;}
+.title .right{padding-right:20px;height: 29px;line-height: 29px;font-size: 12px;color: #999;}
 .title .right a{font-size: 12px;color: #999;}
 .title .right a:hover{color: #fff;}
 .logo-area{height: 90px;}
 .logo{width: 130px;height: 73px;margin-top: 9px;margin-left: 15px;background: url(../img/logo.png);}
 .wrap-nav{background-color: #f6611f;}
-.wrap-nav li{float: left;height: 40px;width: 141px;border-right:1px solid #e45218;position: relative;}
+.wrap-nav li{float: left;height: 40px;width: 142px;border-right:1px solid #e45218;position: relative;}
 .wrap-nav li a{display: block;height: 40px;line-height: 40px;font-size: 16px;text-align: center;color: #fff;}
 .child-list{display:none;position: absolute;top: 99%;z-index:999;left: 0;background-color: #bfbfbf;}
 .wrap-nav .child-list li{border-right:none;height: 26px;}
@@ -28,7 +28,7 @@
 .r-txt p span{font-weight: bold;}
 .wrap-bm .right{width: 480px;height: 270px;margin-left: 20px;}
 .l-img{position: relative;top: 60px;left: 16px;}
-.footer p{color: #396492;font-size: 14px;text-align: center;line-height: 24px;background-color: #031835;}
+.footer p{color: #396492;font-size: 12px;text-align: center;line-height: 24px;background-color: #031835;}
 
 .content{background-color: #fff;padding: 20px 0;}
 .left-cont{width:220px;}
@@ -72,5 +72,5 @@
 .bold{font-weight: bold;}
 /*fix*/
 .theme-default .nivo-controlNav{position: absolute;z-index: 900;right: 50px;bottom: 0;}
-.nivo-main-image{width: 1000px!important;height: 400px!important;}
+.nivo-main-image{width: 100%!important;height: 400px!important;}
 .nivo-directionNav{display: none!important;}
