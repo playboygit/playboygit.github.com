@@ -1,6 +1,11 @@
 $(document).ready(function(){
 	$(window).load(function() {
-        $('#slider').nivoSlider();
+        if($("#slider").size()==0) return false;
+        $('#slider').nivoSlider({
+             slices: 0, //effect为切片效果时的数量  
+            boxCols: 0, //effect为格子效果时的列  
+            boxRows: 0 //effect为格子效果时的行
+        });
     });
 }).on("mouseenter",".wrap-nav .nav-item",function(){
 	$(this).children(".child-list").slideDown(200);
