@@ -41,3 +41,6 @@ textarea{width: 100%;border: none;overflow: hidden;resize: none;}
 .commit-tel{border-top: none;}
 .tel-box{padding: 12px 8px;}
 .tel-box>input{border: none;background-color: #fffaca;width: 100%;padding: 12px 6px;height: 40px;box-sizing:border-box;-webkit-box-sizing:border-box;line-height: 16px;font-size: 16px;color: #222;}
+.copyright{text-align: center;font-size: 12px;color: #FCD450;margin-top: 25px;margin-bottom: 20px;}
+.copyright a{font-size: 12px;color: #FCD450;}
+.copyright2{position: absolute;bottom: 20px;margin-bottom: 0;width: 100%;max-width: 750px;}
