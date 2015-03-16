@@ -52,8 +52,8 @@
 .title-r a:hover{text-decoration: underline;}
 .title-l{padding-left: 20px;line-height: 28px;height: 28px;width:70px;color: #2d648f;border-bottom: 2px solid #69CBF1;position: relative;}
 .wrap-right-list{background-color: #FAFDFF;border:1px solid #D3E1ED;border-top: none;}
-.product-list{padding-right: 37px;padding-bottom: 40px;}
-.product-list li{margin-left: 36px;float: left;margin-top: 36px;}
+.product-list{padding-right: 20px;padding-bottom: 30px;}
+.product-list li{margin-left: 20px;float: left;margin-top: 20px;}
 .product-list li img{border:1px solid #ccc;}
 .pro_name{text-align: center;word-break:break-all;line-height: 24px;}
 .pro_name a{color: #000;font-size: 12px;}
