@@ -15,7 +15,9 @@
 .wrap-nav .child-list li a:hover{text-decoration: underline;}
 .wrap-nav .last{border-right:none;}
 .wrap-nav a:hover{background-color: #215797;}
-.wrap-slide{height: 400px;position: relative;z-index:10;overflow: hidden;}
+.wrap-slide{height: 572px;position: relative;z-index:10;overflow: hidden;}
+.part-wrap{height:200px;}
+.part-wrap img{width:100%;}
 /*.wrap-bm{margin-top: 15px;margin-bottom: 10px;background-color: #f0f0f0;padding: 20px 0;}*/
 .wrap-bm{background: url(../img/indexContent.gif) no-repeat;position: relative;height: 269px;margin-top: 10px;margin-bottom: 10px;}
 .wrap-bm .left{width: 480px;margin-left: 20px;}
@@ -33,10 +35,10 @@
 .content{background-color: #fff;padding: 20px 0;}
 .left-cont{width:220px;}
 .left-title{border-bottom:1px solid #D3E1ED;color: #333;background-color: #FAFDFF;text-indent: 20px;height: 30px;line-height: 30px;font-size: 14px;}
-.left-list .left-title1{width:225px;height: 37px;line-height:37px;font-size:14px;font-weight: bold;position: relative;left:-8px;color:#fff;background: url(../img/leftti.png) no-repeat;}
-.left-list{background-color: #FAFDFF;border: 1px solid #D3E1ED;padding-top: 10px;}
+.left-list .left-title1{width:225px;height: 37px;line-height:32px;font-size:14px;font-weight: bold;position: relative;left:-22px;color:#fff;background: url(../img/leftti.png) no-repeat;}
+.left-list{background-color: #FAFDFF;border: 1px solid #D3E1ED;padding-top: 10px;padding-left: 15px;padding-bottom: 5px;}
 .left-list li{padding-left: 18px;background: url(../img/li.gif) no-repeat 7px 11px;}
-.left-list li a{color: #666;font-size: 12px;height: 28px;line-height: 28px;display: block;}
+.left-list li a{color: #666;font-size: 14px;height: 28px;line-height: 28px;display: block;}
 .left-list li a:hover{text-decoration: underline;}
 .left-list .last{border-bottom: none;}
 .left-contact{background-color: #FAFDFF;border: 1px solid #D3E1ED;margin-top: 20px;}
@@ -72,5 +74,5 @@
 .bold{font-weight: bold;}
 /*fix*/
 .theme-default .nivo-controlNav{position: absolute;z-index: 900;right: 50px;bottom: 0;}
-.nivo-main-image{width: 100%!important;height: 400px!important;}
+.nivo-main-image{width: 100%!important;height: 572px!important;}
 .nivo-directionNav{display: none!important;}
