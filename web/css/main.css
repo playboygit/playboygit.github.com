@@ -16,7 +16,7 @@
 .wrap-nav .child-list li a:hover{text-decoration: underline;}
 .wrap-nav .last{border-right:none;}
 .wrap-nav a:hover{background-color: #215797;}
-.wrap-slide{height: 572px;position: relative;z-index:10;overflow: hidden;}
+.wrap-slide{height: 280px;position: relative;z-index:10;overflow: hidden;}
 .part-wrap{height:200px;}
 .part-wrap img{width:100%;}
 /*.wrap-bm{margin-top: 15px;margin-bottom: 10px;background-color: #f0f0f0;padding: 20px 0;}*/
@@ -125,6 +125,6 @@
 .pt15{padding-top: 15px;}
 .mt10{margin-top: 10px;}
 .mt15{margin-top: 15px;}
-.theme-default .nivo-controlNav{position: absolute;z-index: 900;right: 50px;bottom: 0;}
-.nivo-main-image{width: 100%!important;height: 572px!important;}
+.theme-default .nivo-controlNav{position: absolute;z-index: 900;right: 50px;bottom: 0;display: none!important;}
+.nivo-main-image{width: 100%!important;height: 280px!important;}
 .nivo-directionNav{display: none!important;}
