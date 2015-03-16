@@ -4,8 +4,9 @@
 .title .right{padding-right:20px;height: 29px;line-height: 29px;font-size: 12px;color: #999;}
 .title .right a{font-size: 12px;color: #999;}
 .title .right a:hover{color: #fff;}
-.logo-area{height: 90px;}
-.logo{width: 130px;height: 73px;margin-top: 9px;margin-left: 15px;background: url(../img/logo.png);}
+.phone-gif{float: right;width: 153px;height: 35px;background: url(../img/phone.gif) no-repeat;text-indent: -10000px;position: relative;top: -50px;z-index:20;}
+.logo-area{height: 90px;overflow: hidden;}
+.logo{width: 130px;height: 73px;margin-top: 9px;margin-left: 15px;background: url(../img/logo.png) no-repeat;text-indent: -10000px;}
 .wrap-nav{background-color: #f6611f;}
 .wrap-nav li{float: left;height: 40px;width: 142px;border-right:1px solid #e45218;position: relative;}
 .wrap-nav li a{display: block;height: 40px;line-height: 40px;font-size: 16px;text-align: center;color: #fff;}
