@@ -46,7 +46,7 @@
 .left-contact .tl{font-weight: bold;border-bottom: 1px solid #D3E1ED;}
 .right-cont{width: 755px;margin-left: 15px;}
 .right-title{border:1px solid #D3E1ED;color: #fff;background-color: #FAFDFF;height: 30px;}
-.title-r{line-height: 30px;height: 30px;color: #333;margin-right:20px;}
+.title-r{line-height: 30px;height: 30px;color: #333;margin-right:20px;font-size: 12px;}
 .title-r a{font-size: 12px;color: #666;}
 .title-r a:hover{text-decoration: underline;}
 .title-l{padding-left: 20px;line-height: 28px;height: 28px;width:70px;color: #2d648f;border-bottom: 2px solid #69CBF1;position: relative;}
