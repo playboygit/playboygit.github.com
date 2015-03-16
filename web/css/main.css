@@ -31,7 +31,7 @@
 .r-txt p span{font-weight: bold;}
 .wrap-bm .right{width: 480px;height: 270px;margin-left: 20px;}
 .l-img{position: relative;top: 60px;left: 16px;}
-.footer p{color: #396492;font-size: 12px;text-align: center;line-height: 24px;background-color: #031835;}
+.footer p{color: #396492;font-size: 12px;text-align: center;line-height: 28px;background-color: #031835;}
 
 .content{background-color: #fff;padding: 20px 0;}
 .left-cont{width:230px;}
@@ -73,6 +73,18 @@
 .child-lst li a{color: #1f3a87;height: 24px;line-height: 24px;font-size: 12px;}
 .child-lst li a:hover{color: #fc6321!important;}
 .bold{font-weight: bold;}
+.wrap-img{padding: 35px 15px;text-align: center;}
+.foot2{margin-top: 60px;}
+
+.wrap-c{padding: 25px 0;}
+.left-c{width: 350px;border-right:1px solid #cbcbcb;}
+.right-c{padding-left: 50px;width: 320px;}
+.wrap-c .red{color: #d83610;font-size: 16px;}
+.wrap-c p{font-size: 12px;height: 26px;line-height: 26px;padding-left:18px;color: #666;}
+.ban-list{margin: 15px 0 30px 15px; }
+.ban-list li{float: left;margin-right: 14px;}
+.ban-list li p{font-size: 12px;height: 26px;line-height: 26px;text-align: center;color: #666;}
+.ban-list li img{border:1px solid #cbcbcb;}
 /*fix*/
 .theme-default .nivo-controlNav{position: absolute;z-index: 900;right: 50px;bottom: 0;}
 .nivo-main-image{width: 100%!important;height: 572px!important;}
