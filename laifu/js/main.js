@@ -51,7 +51,8 @@ $(document).ready(function(){
     }
     $("#team-sal-img").attr("src","images/team/t"+curIndex+".png");
     imgBig($(".team-temp"));
-}).on("click","#enrm-next",function(){
+}).on("click","#enrm-next",function(e){
+    e.stopPropagation();
     if(!e_flag) return false;
     e_flag = false;
     e_index++;
@@ -88,7 +89,8 @@ $(document).ready(function(){
         $("#roll"+o).prev(".enrm-txt").html($("#roll"+o).prev(".enrm-txt").attr("pk"));
     }
     $("#enrm-pro").css("left",(119.5*e_index)+"px");
-}).on("click","#enrm-prev",function(){
+}).on("click","#enrm-prev",function(e){
+    e.stopPropagation();
     if(!e_flag) return false;
     e_flag = false;
     e_index--;
