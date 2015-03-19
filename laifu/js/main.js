@@ -242,6 +242,12 @@ $(document).ready(function(){
 }).on("mouseleave",".ser-arr",function(){
     initSer();
 }).on("click",".news-part",function(){
+    var index = $(this).attr("data-index");
+    if(index){
+        $(".news-list li").removeClass("active").eq(index-1).addClass("active");
+    }else{
+        $(".news-list li").removeClass("active").eq(0).addClass("active");
+    }
     $("#pop-news").show();
 }).on("click",".news-list li",function(){
     var index = $(this).index();
@@ -257,6 +263,11 @@ $(document).ready(function(){
 }).on("click",".menu a",function(){
     $(".menu a").removeClass("active");
     $(this).addClass("active");
+}).on("click","#close-tip",function(e){
+    e.stopPropagation();
+    $(".foot-tip").addClass("hide");
+}).on("click",".footer",function(){
+    $(".foot-tip").removeClass("hide");
 });
 
 function initSer(){
