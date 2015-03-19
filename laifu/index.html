@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible"content="IE=edge,chrome=1">
     <title>莱馥生命科技</title>
     <meta name="keywords" content="莱馥生命科技" />
     <meta name="description" content="莱馥生命科技" />
@@ -117,15 +118,25 @@
 	<div class="ser-tr"></div>
 	<div class="ser-girl">
 		<i class="i1 point"></i>
-		<i class="i2 point"></i>
+		<i class="i2 point2"></i>
 		<i class="i3 point"></i>
-		<i class="i4 point"></i>
+		<i class="i4 point2"></i>
 		<i class="i5 point"></i>
 		<i class="i6 point"></i>
-		<i class="i7 point"></i>
+		<i class="i7 point2"></i>
 		<i class="i8 point"></i>
-		<i class="i9 point"></i>
+		<i class="i9 point2"></i>
 		<i class="i10 point"></i>
+		<i class="b1 point2"></i>
+		<i class="b2 point"></i>
+		<i class="b3 point2"></i>
+		<i class="b4 point"></i>
+		<i class="b5 point"></i>
+		<i class="b6 point2"></i>
+		<i class="b7 point"></i>
+		<i class="b8 point"></i>
+		<i class="b9 point2"></i>
+		<i class="b10 point"></i>
 	</div>
 	<div class="ser-slide">
 		<div class="ser-sleft">
@@ -234,6 +245,9 @@
 	<div class="t-hill"></div>
 </div>
 <div class="footer">
+	<div class="footer-baidu" id="footerBaidu">
+		
+	</div>
     <div class="foot-tip">
         <div class="wrap-adr">
             <div class="adr-top"></div>
@@ -389,10 +403,68 @@
 </div>
 <script src="js/jquery-1.7.2.min.js"></script>
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&amp;ak=VxSjE9CwGV12s0vC752MRMa6&amp;services=&amp;t=20150206152115"></script>
 <script src="js/video.js"></script>
 <script src="js/main.js"></script>
  <script>
     videojs.options.flash.swf = "js/video-js.swf";
  </script>
+<script type="text/javascript">
+    var map;
+    //创建和初始化地图函数：
+    function initMap() {
+        createMap(); //创建地图
+        setMapEvent(); //设置地图事件
+        addMapControl(); //向地图添加控件
+        addMapOverlay(); //向地图添加覆盖物
+    }
+    function createMap() {
+        map = new BMap.Map("footerBaidu");
+        map.centerAndZoom(new BMap.Point(121.520401,31.154117), 19);
+    }
+    function setMapEvent() {
+        map.enableKeyboard();
+        map.enableDragging();
+        map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target, window) {
+        target.addEventListener("click", function() {
+            target.openInfoWindow(window);
+        });
+    }
+    function addMapOverlay() {
+        var markers = [
+{ content: "地址：", title: "我的位置", imageOffset: { width: -46, height: -21 }, position: { lat: 32.485998, lng: 118.61778} }
+];
+        for (var index = 0; index < markers.length; index++) {
+            var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
+            var marker = new BMap.Marker(point, { icon: new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png", new BMap.Size(20, 25), {
+                imageOffset: new BMap.Size(markers[index].imageOffset.width, markers[index].imageOffset.height)
+            })
+            });
+            var label = new BMap.Label(markers[index].title, { offset: new BMap.Size(25, 5) });
+            var opts = {
+                width: 200,
+                title: markers[index].title,
+                enableMessage: false
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
+            marker.setLabel(label);
+            addClickHandler(marker, infoWindow);
+            map.addOverlay(marker);
+        };
+    }
+    //向地图添加控件
+    function addMapControl() {
+        var scaleControl = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_TOP_RIGHT });
+        scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+        map.addControl(scaleControl);
+        var navControl = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+        map.addControl(navControl);
+        var overviewControl = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: true });
+        map.addControl(overviewControl);
+    }
+    initMap();
+  </script>
 </body>
 </html>
