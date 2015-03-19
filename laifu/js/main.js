@@ -1,5 +1,4 @@
 var e_flag = true;
-var enrmArr = ["单人病房","单人病房","360°展厅","单人病房","单人病房"];
 var e_index = 0;
 var e_aflag = false;
 var t_flag = true;
@@ -10,9 +9,61 @@ var teamArr = {
         "3美国匹兹堡大学医疗中心美容教授，国际脂肪干细胞治疗与科学联合会创立者之一，董事会成员",
         "4美国匹兹堡大学医疗中心美容教授，国际脂肪干细胞治疗与科学联合会创立者之一，董事会成员",
         "5美国匹兹堡大学医疗中心美容教授，国际脂肪干细胞治疗与科学联合会创立者之一，董事会成员"]
-}
+};
+var newsArr = {
+    title:["医学工程中心GMP实验室揭牌仪式隆重召开1",
+    "医学工程中心GMP实验室揭牌仪式隆重召开2",
+    "医学工程中心GMP实验室揭牌仪式隆重召开3",
+    "医学工程中心GMP实验室揭牌仪式隆重召开4",
+    "医学工程中心GMP实验室揭牌仪式隆重召开5",
+    "医学工程中心GMP实验室揭牌仪式隆重召开6",
+    "医学工程中心GMP实验室揭牌仪式隆重召开7",
+    ],
+    cont:["1莱馥生命科技是中国第一家与政府、中科院、大学、公立三甲医院紧密合作来打造国际最先进、国内最高水准干细胞转化医学平台的高科技民营公司。莱馥生命科技是中国第一家与政府、中科院、大学、公立三甲医院紧密合作来打造国际最先进、国内最高水准干细胞转化医学平台的高科技民营公司。莱馥生命科技是中国第一家与政府、中科院、大学、公立三甲医院紧密合作来打造国际最先进、国内最高水准干细胞转化医学平台的高科技民营公司。",
+        "2莱馥生命科技是中国第一家与政府、中科院、大学、公立三甲医院紧密合作来打造国际最先进、国内最高水准干细胞转化医学平台的高科技民营公司。",
+        "3美国匹兹堡大学医疗中心美容教授，国际脂肪干细胞治疗与科学联合会创立者之一，董事会成员国内最高水准干细胞转化医学平台的高科技民营公司。",
+        "4莱馥生命科技是中国第一家与政府、中科院、大学、公立三甲医院紧密合作来打造国际最先进、国内最高水准干细胞转化医学平台的高科技民营公司。",
+        "5美国匹兹堡大学医疗中心美容教授，国际脂肪干细胞治疗与科学联合会创立者之一，董事会成员国内最高水准干细胞转化医学平台的高科技民营公司。",
+        "6美国匹兹堡大学医疗中心美容教授，国际脂肪干细胞治疗与科学联合会创立者之一，董事会成员国内最高水准干细胞转化医学平台的高科技民营公司。",
+        "7美国匹兹堡大学医疗中心美容教授，国际脂肪干细胞治疗与科学联合会创立者之一，董事会成员国内最高水准干细胞转化医学平台的高科技民营公司。"]
+};
+var s_index = 1;
+var serArr = ["1莱馥生命科技集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。",
+            "2莱馥生命科技集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。",
+            "3莱馥生命科技集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。",
+            "4莱馥生命科技集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。",
+            "5莱馥生命科技集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。"];
+var sTimer = null;
 $(document).ready(function(){
-
+    initSer();
+    $(window).load(function(){              
+        $("#news-list").mCustomScrollbar({
+            theme:"minimal"
+        });       
+    });
+    $(window).scroll(function(){
+        var sTop = $(window).scrollTop();
+        if(sTop<880){
+            $(".menu a").removeClass("active");
+            $("#nav1").addClass("active");
+        }
+        if(sTop>=880&&sTop<1628){
+            $(".menu a").removeClass("active");
+            $("#nav2").addClass("active");
+        }
+        if(sTop>=1628&&sTop<2790){
+            $(".menu a").removeClass("active");
+            $("#nav3").addClass("active");
+        }
+        if(sTop>=2790&&sTop<3600){
+            $(".menu a").removeClass("active");
+            $("#nav4").addClass("active");
+        }
+        if(sTop>=3600){
+            $(".menu a").removeClass("active");
+            $("#nav5").addClass("active");
+        }
+    });
 }).on("click","#team-next",function(){
     if(!t_flag) return false;
     var curIndex = parseInt($("#cur-num").html(),10);
@@ -163,12 +214,64 @@ $(document).ready(function(){
     })
     return false;
 }).on("click",".pop-close",function(){
-    $(".pop-window").hide();
+    $(this).closest(".pop-window").hide();
 }).on("click",".enrm-item,.enrm-main",function(){
-    $(".pop-window").show();
+    $("#pop-video").show();
+}).on("click","#ser-next",function(){
+    s_index++;
+    if(s_index>serArr.length){
+        s_index=1;
+    }
+    $("#ser-img").fadeOut(600,function(){
+        $("#ser-img").attr("src","images/ser/s"+s_index+".png");
+        $("#ser-txt").html(serArr[s_index-1]);
+        $("#ser-img").fadeIn(600);
+    });
+}).on("click","#ser-prev",function(){
+    s_index--;
+    if(s_index<1){
+        s_index=5;
+    }
+    $("#ser-img").fadeOut(600,function(){
+        $("#ser-img").attr("src","images/ser/s"+s_index+".png");
+        $("#ser-txt").html(serArr[s_index-1]);
+        $("#ser-img").fadeIn(600);
+    });
+}).on("mouseenter",".ser-arr",function(){
+    clearInterval(sTimer);
+}).on("mouseleave",".ser-arr",function(){
+    initSer();
+}).on("click",".news-part",function(){
+    $("#pop-news").show();
+}).on("click",".news-list li",function(){
+    var index = $(this).index();
+    var sHeight = $("#mCSB_1_dragger_vertical").height();
+    var ssHeight = $("#mCSB_1_container").height();
+    var space1 = (554-sHeight)/($(".news-list li").size()-1);
+    var space2 = (ssHeight-558)/($(".news-list li").size()-1);
+    $(".news-list li").removeClass("active").eq(index).addClass("active");
+    $("#mCSB_1_dragger_vertical").animate({top:space1*index+"px"},800);
+    $("#mCSB_1_container").animate({top:-space2*index+"px"},800);
+    $("#news-h3").html(newsArr.title[index]);
+    $("#news-p").html(newsArr.cont[index]);
+}).on("click",".menu a",function(){
+    $(".menu a").removeClass("active");
+    $(this).addClass("active");
 });
 
-
+function initSer(){
+    sTimer = setInterval(function(){
+        s_index++;
+        if(s_index>serArr.length){
+            s_index=1;
+        }
+        $("#ser-img").fadeOut(600,function(){
+            $("#ser-img").attr("src","images/ser/s"+s_index+".png");
+            $("#ser-txt").html(serArr[s_index-1]);
+            $("#ser-img").fadeIn(600);
+        });
+    },4000);
+}
 
 
 function imgBig($img){

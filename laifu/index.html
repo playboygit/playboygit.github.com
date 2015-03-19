@@ -6,24 +6,24 @@
     <meta name="keywords" content="莱馥生命科技" />
     <meta name="description" content="莱馥生命科技" />
     <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
     <link href="css/video-js.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="head">
-    <div class="banner"></div>
-    <div class="top_nr">
-        <div class="top">
+	<div class="nav">
+		<div class="top">
             <div class="logo">
                 <img src="images/logo.png" width="208" height="76" />
             </div>
             <div class="menu">
-                <ul>
-                    <li><a href="#">首　页</a></li>
-                    <li><a href="#">莱馥简介</a></li>
-                    <li><a href="#">莱馥产品</a></li>
-                    <li><a href="#team">莱馥团队</a></li>
-                    <li><a href="#">莱馥环境</a></li>
+                <ul class="group">
+                    <li><a id="nav1" class="active" href="#">首　页</a></li>
+                    <li><a id="nav2" href="#ct">莱馥简介</a></li>
+                    <li><a id="nav3" href="#product">莱馥产品</a></li>
+                    <li><a id="nav4" href="#environment">莱馥环境</a></li>
+                    <li><a id="nav5" href="#team">莱馥团队</a></li>                   
                 </ul>
             </div>
             <div class="dianhua">
@@ -31,24 +31,27 @@
             </div>
             <div class="c"></div>
         </div>
+	</div> 
+    <div class="banner"></div>
+    <div class="top_nr">      
         <div class="top_nr1">
-            <div class="nr_1">
+            <div class="nr_1 group">
                 <div class="tu">
                     <img src="images/newstu1.png" width="287" height="100" />
                 </div>
                 <div class="company">
-                    <a href="#"><img src="images/newstu2.png" width="121" height="100" border="0" align="left" /></a>
-                    <p><a href="#">莱馥生命科技是中国第一家与政府、中科院、大学、公立三甲医院紧密合作来打造国际最先进、国内最高水准干细胞转化医学平台的高科技民营公司。</a></p>
+                    <a href="javascript:;" class="news-part"><img src="images/newstu2.png" width="121" height="100" border="0" align="left" /></a>
+                    <p><a href="javascript:;" class="news-part">莱馥生命科技是中国第一家与政府、中科院、大学、公立三甲医院紧密合作来打造国际最先进、国内最高水准干细胞转化医学平台的高科技民营公司。</a></p>
                 </div>
                 <div class="news">
                     <div class="news_dh">
-                        <a href="#"><img src="images/news_dh.png" width="141" height="100" border="0" /></a>
+                        <a href="javascript:;" class="news-part"><img src="images/news_dh.png" width="141" height="100" border="0" /></a>
                     </div>
                     <div class="news_nr">
                         <ul>
-                            <li><a href="#">C-Cure○RIII期临床试验启动仪式</a></li>
-                            <li><a href="#">医学工程中心GMP实验室揭牌仪式隆重召开</a></li>
-                            <li><a href="#">创建国家干细胞临床试验研究基地专家圆桌会议</a></li>
+                            <li><a href="javascript:;" class="news-part">C-Cure○RIII期临床试验启动仪式</a></li>
+                            <li><a href="javascript:;" class="news-part">医学工程中心GMP实验室揭牌仪式隆重召开</a></li>
+                            <li><a href="javascript:;" class="news-part">创建国家干细胞临床试验研究基地专家圆桌会议</a></li>
                         </ul>
                     </div>
                     <div class="c"></div>
@@ -56,27 +59,49 @@
             </div>
         </div>
     </div>
+    <div class="top-bm"></div>
 </div>
 <div id="ct">
-    <div class="ct_top"></div>
+    <div class="ct_top glint"></div>
     <div class="case">
         <div class="case_dh">
             <img src="images/anli_dh.png" width="773" height="104" />
         </div>
         <div class="case_nr">
             <ul>
-                <li> <p>莱馥集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。</p>
-                    <dl>
-                        Lai relapsed created China's first to the adult cell resources of new service system.
-                    </dl> <span><a href="#"><img src="images/jiantou.png" width="38" height="38" border="0" /></a></span> </li>
-                <li> <p>莱馥集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。</p>
-                    <dl>
-                        Lai relapsed created China's first to the adult cell resources of new service system.
-                    </dl> <span><a href="#"><img src="images/jiantou.png" width="38" height="38" border="0" /></a></span> </li>
-                <li class="ab"> <p>莱馥集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。</p>
-                    <dl>
-                        Lai relapsed created China's first to the adult cell resources of new service system.
-                    </dl> <span><a href="#"><img src="images/jiantou.png" width="38" height="38" border="0" /></a></span> </li>
+				<li> 
+				    <p>莱馥集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。</p>
+				    <dl>
+				        Lai relapsed created China's first to the adult cell resources of new service system.
+				    </dl> 
+				    <span>
+				        <a href="javascript:;" class="news-part">
+				            <img src="images/jiantou.png" width="38" height="38" border="0" />
+				        </a>
+				    </span> 
+				</li>
+				<li> 
+				    <p>莱馥集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。</p>
+				    <dl>
+				        Lai relapsed created China's first to the adult cell resources of new service system.
+				    </dl> 
+				    <span>
+				        <a href="javascript:;" class="news-part">
+				            <img src="images/jiantou.png" width="38" height="38" border="0" />
+				        </a>
+				    </span> 
+				</li>
+				<li class="ab">
+				    <p>莱馥集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。</p>
+				    <dl>
+				        Lai relapsed created China's first to the adult cell resources of new service system.
+				    </dl>
+				    <span>
+				        <a href="javascript:;" class="news-part">
+				            <img src="images/jiantou.png" width="38" height="38" border="0" />
+				        </a>
+				    </span>
+				</li>
                 <div class="c"></div>
             </ul>
         </div>
@@ -85,12 +110,35 @@
     	<div class="case-bt"></div>
     </div>
 </div>
-<div class="ser">
+<div class="ser" id="product">
 	<div class="ser-tl"></div>
 	<div class="ser-hill"></div>
 	<div class="ser-br"></div>
 	<div class="ser-tr"></div>
-	<div class="ser-girl"></div>
+	<div class="ser-girl">
+		<i class="i1 point"></i>
+		<i class="i2 point"></i>
+		<i class="i3 point"></i>
+		<i class="i4 point"></i>
+		<i class="i5 point"></i>
+		<i class="i6 point"></i>
+		<i class="i7 point"></i>
+		<i class="i8 point"></i>
+		<i class="i9 point"></i>
+		<i class="i10 point"></i>
+	</div>
+	<div class="ser-slide">
+		<div class="ser-sleft">
+			<img id="ser-img" src="images/ser/s1.png" alt="" />
+		</div>
+		<div class="ser-sright">
+			<p id="ser-txt">1莱馥生命科技集结了干细胞研发梦之队打造出了中国第一个以成人细胞资源综合存储为基础的新型服务体系。</p>
+		</div>
+		<div class="ser-arr">
+			<a href="javascript:;" id="ser-prev"></a>
+			<a href="javascript:;" id="ser-next"></a>
+		</div>
+	</div>
 	<div class="ser-center">
 		<div class="ser-title"></div>
 		<div class="ser-cont">
@@ -118,7 +166,7 @@
 		</div>
 	</div>
 </div>
-<div class="enrm">
+<div class="enrm" id="environment">
 	<div class="enrm-bm"></div>
 	<div class="enrm-tl"></div>
 	<div class="enrm-tr"></div>
@@ -284,7 +332,48 @@
         </div>
 	</div>
 </div>
-<div class="pop-window">
+<div class="pop-window" id="pop-news">
+	<div class="pop-news">
+		<div class="pop-close">X</div>
+		<div class="wrap-news-list fl" id="news-list">
+			<ul class="news-list">
+				<li class="active">
+					<img src="images/news/img1.jpg" alt="" width="150" height="90" />
+					<p>第一条新闻</p>
+				</li>
+				<li>
+					<img src="images/news/img2.jpg" alt="" width="150" height="90" />
+					<p>第二条新闻</p>
+				</li>
+				<li>
+					<img src="images/news/img3.jpg" alt="" width="150" height="90" />
+					<p>第三条新闻</p>
+				</li>
+				<li>
+					<img src="images/news/img4.jpg" alt="" width="150" height="90" />
+					<p>第四条新闻</p>
+				</li>
+				<li>
+					<img src="images/news/img5.jpg" alt="" width="150" height="90" />
+					<p>第五条新闻</p>
+				</li>
+				<li>
+					<img src="images/news/img6.jpg" alt="" width="150" height="90" />
+					<p>第六条新闻</p>
+				</li>
+				<li>
+					<img src="images/news/img7.jpg" alt="" width="150" height="90" />
+					<p>第七条新闻</p>
+				</li>
+			</ul>
+		</div>
+		<div class="wrap-news-cont fl">
+			<h3 id="news-h3">医学工程中心GMP实验室揭牌仪式隆重召开</h3>
+			<p id="news-p">莱馥生命科技是中国第一家与政府、中科院、大学、公立三甲医院紧密合作来打造国际最先进、国内最高水准干细胞转化医学平台的高科技民营公司。莱馥生命科技是中国第一家与政府、中科院、大学、公立三甲医院紧密合作来打造国际最先进、国内最高水准干细胞转化医学平台的高科技民营公司。莱馥生命科技是中国第一家与政府、中科院、大学、公立三甲医院紧密合作来打造国际最先进、国内最高水准干细胞转化医学平台的高科技民营公司。</p>
+		</div>
+	</div>
+</div>
+<div class="pop-window" id="pop-video">
 	<div class="pop-video">
 		<div class="pop-close">X</div>
 		<video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="634" height="264"
@@ -299,6 +388,7 @@
 	</div>
 </div>
 <script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="js/video.js"></script>
 <script src="js/main.js"></script>
  <script>
