@@ -245,6 +245,8 @@ $(document).ready(function(){
     var index = $(this).attr("data-index");
     if(index){
         $(".news-list li").removeClass("active").eq(index-1).addClass("active");
+        $("#news-h3").html(newsArr.title[index-1]);
+        $("#news-p").html(newsArr.cont[index-1]);
     }else{
         $(".news-list li").removeClass("active").eq(0).addClass("active");
     }
