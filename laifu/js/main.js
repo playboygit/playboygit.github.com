@@ -245,6 +245,12 @@ $(document).ready(function(){
     var index = $(this).attr("data-index");
     if(index){
         $(".news-list li").removeClass("active").eq(index-1).addClass("active");
+        var sHeight = $("#mCSB_1_dragger_vertical").height();
+        var ssHeight = $("#mCSB_1_container").height();
+        var space1 = (554-sHeight)/($(".news-list li").size()-1);
+        var space2 = (ssHeight-558)/($(".news-list li").size()-1);
+        $("#mCSB_1_dragger_vertical").css({top:space1*(index-1)+"px"});
+        $("#mCSB_1_container").css({top:-space2*(index-1)+"px"});
         $("#news-h3").html(newsArr.title[index-1]);
         $("#news-p").html(newsArr.cont[index-1]);
     }else{
