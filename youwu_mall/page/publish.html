@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="publishApp">
+<head>
+    <title>尤物</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/animation.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+<div class="container publish-container" ng-controller="publishProductCtrl">
+    <div class="logo-box publish-logo-box">
+        <a href="javascript:;" class="btn-finish fr" id="btn-finish" ng-click="publishGoods()">完成</a>
+        <a href="javascript:;" class="i-prev publish-prev" ng-click="goBack()"></a>
+        <span class="title-txt publish-title-txt">发布商品</span>
+    </div>
+    <div class="upload-box">
+        <ul id="upload-img-list" class="upload-img-list group">
+            <li>
+                <div id="add-product-image" class="btn-add-img">
+                    <img src="../img/menu/icon_add.png">
+                </div>
+            </li>
+        </ul>
+        <p class="img-limit">最多可上传9张图片</p>
+    </div>
+
+    <div class="publish-content" >
+        <div class="wrap-tb" id="publish-form">
+            <table class="tb-wap">
+                <colgroup>
+                    <col width="70">
+                </colgroup>
+                <tr>
+                    <td class="pr"><span class="wrap-td-txt">商品名称</span></td>
+                    <td class="autoHeight"><div class="wrap-lcr"><span class="areaheight" ng-bind="goods.name"></span><textarea name="product-name" require maxlengths="30" placeholder="30字以内" class="product-name" ng-model="goods.name" ></textarea></div></td>
+                </tr>
+                <tr>
+                    <td class="pr"><span class="wrap-td-txt wrap-td-info">商品描述</span></td>
+                    <td class="autoHeight"><input type="button" class="btn-tip demo-info fr" value="案例" ng-click="showTip()"><div class="auto-width"><span class="areaheight" ng-bind="goods.info"></span><textarea require name="product-info" class="product-info" ng-click="showInfo()"  ng-model="goods.info"></textarea></div></td>
+                </tr>
+                <tr>
+                    <td class="pr"><span class="wrap-td-txt">商品价格</span></td>
+                    <td><div class="price-box"><input type="button" class="btn-tip re-info fr" ng-click="rePrice($event)" value="再议"><span class="price-head">￥</span><input type="tel" require name="product-price" class="product-price short-ipt" ng-click="updateY($event)" ng-model="goods.price"></div></td>
+                </tr>
+                <tr>
+                    <td class="pr"><span class="wrap-td-txt">联系方式</span></td>
+                    <td class="autoHeight"><div class="wrap-ipt-contact"><input type="text" name="contact-way" require placeholder="例:微信号uwu_im" ng-model="goods.contact"></div></td>
+                </tr>
+                <tr class="hide">
+                    <td class="pr" colspan="2">&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="demo-info-box hide" id="demo-info-box">
+    <div class="wrap-info-box">
+        <div class="top-space"></div>
+        <div class="demo-txt-box">
+            <h3 class="demo-title">出彩的商品描述</h3>
+            <p class="demo-title-info">
+                好的商品描述应尽可能全地提供商品的基本信息，突出优势，这样能极大地减少前期与买家的沟通成本，帮助你把商品卖出去。
+            </p>
+        </div>
+        <div class="demo-txt-box new-txt-box">
+            <h3 class="demo-title2 red">新品案例</h3>
+            <div class="demo-line red-line"></div>
+            <p class="demo-txt-info">
+                奶粉是1段的，适用于0-6个月大的宝宝，营养搭配均衡。荷兰品牌，罐身正面有荷兰文，生产包装等工序均在欧洲完成，宝宝可以放心食用。价格也很实惠，比国产奶粉稍高。
+            </p>
+        </div>
+        <div class="demo-txt-box leave-txt-box">
+            <h3 class="demo-title2 green">闲置案例</h3>
+            <div class="demo-line green-line"></div>
+            <p class="demo-txt-info">
+                6月份4200买的港版土豪金，支持移动和联通4G，通话和摄像头都没有问题。手机顶部摔了一个小凹槽，上面的照片有展示，其他地方没有磨损。现在2000出，这个价格非常便宜了，有兴趣的可以联系我。
+            </p>
+        </div>
+    </div>
+    <a href="javascript:;" class="iknow-txt" id="iknow-txt">
+        <div class="img-devide"></div>
+        <i class="i-know-txt"></i>
+    </a>
+</div>
+
+<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.validateform.js"></script>
+<script type="text/javascript" src="../js/angular.min.js"></script>
+<script type="text/javascript" src="../js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="../js/lib/md5.js"></script>
+<script type="text/javascript" src="../js/lib/plupload.full.min.js"></script>
+<script type="text/javascript" src="../js/lib/exif.js"></script>
+<script type="text/javascript" src="../js/lib/util.js"></script>
+<script type="text/javascript" src="../js/fileUpload.js"></script>
+<script type="text/javascript" src="../js/module/app-publish.js"></script>
+<script type="text/javascript" src="../js/controller/app-publish-controllers.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+</body>
+</html>

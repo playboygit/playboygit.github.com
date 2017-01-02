@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html ng-app="homeApp">
+<head> 
+<title>尤物</title> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/animation.css"> 
+<link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css"> 
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head> 
+<body>
+<span id="top"></span>
+<div class="container">
+    <div class="logo-box">
+        <i class="i-logo"></i>
+        <span class="logo-txt">尤物</span>
+        <a href="javascript:;" class="login-out hide" id="login-out">退出登录</a>
+    </div>
+    <div class="nav-temp">
+        <div class="nav">
+            <ul class="nav-lst">
+                <li class="" ui-sref="home"><i class="nav-icon i-index"></i>首页</li>
+                <li ui-sref="data"><i class="nav-icon i-data"></i>数据统计</li>
+                <li ui-sref="me"><i class="nav-icon i-me"></i>我</li>
+            </ul>
+            <ul class="nav-line group">
+                <li class=""></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div class="cont-view" ui-view="">
+
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="js/jquery.validateform.js"></script>
+<script type="text/javascript" src="js/lib/md5.js"></script>
+<script type="text/javascript" src="js/lib/sha1.js"></script>
+<script type="text/javascript" src="js/lib/util.js"></script>
+<script type="text/javascript" src="js/app-home.js"></script>
+<script type="text/javascript" src="js/app-home-controllers.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+</body> 
+</html> 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="shareApp">
+<head>
+    <title>尤物</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+<div class="container" ng-controller="shareCtrl">
+    <div class="logo-box">
+        <a href="javascript:;" class="btn-success" ng-click="finishShare()">完成</a>
+        <span class="title-txt">分享</span>
+    </div>
+    <div class="copy-link-box">
+        <p class="copy-show-txt">
+            您的商品已经生成一个精美的网页，可以直接复制链接发送到各个社交平台
+        </p>
+        <div class="copy-link-bg">
+            <a href="javascript:;" class="btn-copy-link"></a>
+        </div>
+    </div>
+    <div class="wrap-tip-bottom">
+        <div class="tip-bottom"></div>
+    </div>
+    <div class="share-content">
+        <div class="content-title share-title">
+            <span class="title-line"></span>
+            <span class="title-txt">
+                也可以把您的商品发送给好友或者分享到各个社交平台
+            </span>
+        </div>
+        <div class="share-outside">
+            <div class="out-btn btn-web">
+                <a href="javascript:;"><i class="i-web-white"></i>分享给好友</a>
+            </div>
+            <div class="btn-group">
+                <span class="out-btn btn-weixin">
+                    <a href="javascript:;"><i class="i-weixin-white"></i>发送给朋友</a>
+                </span>
+                <span class="out-btn btn-friend">
+                    <a href="javascript:;"><i class="i-friend-white"></i>分享到朋友圈</a>
+                </span>
+            </div>
+            <div class="btn-group">
+                <span class="out-btn btn-qq">
+                    <a href="javascript:;"><i class="i-qq-white"></i>发送给好友</a>
+                </span>
+                <span class="out-btn btn-qz">
+                    <a href="javascript:;"><i class="i-qz-white"></i>分享到QQ空间</a>
+                </span>
+            </div>
+            <div class="out-btn btn-weibo">
+                <a href="javascript:;"><i class="i-weibo-white"></i>分享到微博</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="share-tip-box hide">
+    <div class="share-tip">
+        <img src="../img/menu/share_tip.png">
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="../js/angular.min.js"></script>
+<script type="text/javascript" src="../js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="../js/lib/util.js"></script>
+<script type="text/javascript" src="../js/module/app-share.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+</body>
+</html>
