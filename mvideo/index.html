@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>2016长江总裁课程</title>
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="page page1">
+            <div class="videobox">
+                <video class="video-box" data-index="1" id="videoIndex1" x-webkit-airplay="true" webkit-playsinline="true" autoplay="true" preload="auto" src="http://7rf3aw.com2.z0.glb.qiniucdn.com/a.mp4"></video>
+            </div>
+        </div>
+        <div class="page page2">
+            <div class="videobox">
+                <video class="video-box" data-index="2" id="videoIndex2" x-webkit-airplay="true" webkit-playsinline="true" loop="true" preload="auto" src="http://7rf3aw.com2.z0.glb.qiniucdn.com/aa.mp4"></video>
+            </div>
+        </div>
+        <div class="page page3">
+            <div class="videobox">
+                <video class="video-box" data-index="3" id="videoIndex3" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" src="http://7rf3aw.com2.z0.glb.qiniucdn.com/b.mp4"></video>
+            </div>
+        </div>
+
+        <div class="page page4">
+            <div class="videobox">
+                <video class="video-box" data-index="4" id="videoIndex4" x-webkit-airplay="true" webkit-playsinline="true" loop="true" preload="auto" src="http://7rf3aw.com2.z0.glb.qiniucdn.com/bb.mp4"></video>
+            </div>
+        </div>
+    </div>
+
+<!--     <div class="overlay" id="shareOverlay" ontouchstart="sharePop.hide()">
+        <div class="arrow"></div>
+    </div> -->
+    
+    <div class="mask">
+        为了更好的体验，请将手机/平板竖过来
+    </div>
+
+    <script src="./js/zepto.min.js"></script>
+    <script>
+    var query = function(selector) {
+        return document.querySelector(selector);
+    };
+    var browser = {
+        versions: function() {
+            var u = navigator.userAgent,
+                app = navigator.appVersion;
+            return {
+                webKit: u.indexOf('AppleWebKit') > -1,
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                weixin: u.indexOf('MicroMessenger') > -1,
+            };
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    };
+
+    //scale
+    var docHeight = document.documentElement.clientHeight, // a 
+        docWidth = document.documentElement.clientWidth; // s
+
+    function adjustCon(e, n) {
+        var t, i = docWidth / docHeight,
+            r = 320 / 504;
+        t = i > r ? docHeight / 504 : docWidth / 320, $(e).css({
+            "-webkit-transform-origin": n,
+            "transform-origin": n,
+            "-webkit-transform": "scale(" + t + ");",
+            transform: "scale(" + t + ");"
+        });
+    }
+
+    function d(e, n) {
+        var t, i = docWidth / docHeight ,
+            r = 320 / 504;
+        t = i < r ? docHeight / 504 : docWidth / 320, $(e).css({
+            "-webkit-transform-origin": n,
+            "transform-origin": n,
+            "-webkit-transform": "scale(" + t + ");",
+            transform: "scale(" + t + ");"
+        });
+    }
+
+    d(".videobox", 'center center');
+
+    var v1 = document.getElementById('videoIndex1');
+    v1.addEventListener("ended", function() {
+    	$(".page2").addClass("show-end");
+        $(".page1").hide();
+        query("#videoIndex1").pause();
+        query("#videoIndex2").play();
+    });
+    $('.page2').click(function() {
+        if (browser.versions.android) {
+            $(".video-box").attr("controls", true)
+        }
+        $(".page3").addClass("show-end");
+        $(".page2").hide();
+        query("#videoIndex2").pause();
+        query("#videoIndex3").play();
+    });
+
+    var v = document.getElementById('videoIndex3');
+    v.addEventListener("ended", function() {
+    	$(".page4").addClass("show-end");
+        $(".page3").hide();
+        query("#videoIndex3").pause();
+        query("#videoIndex4").play();
+    });
+
+    $('.page4').click(function() {
+       window.location.href = "./content.html";
+    });
+
+    //翻转的绑定
+    var checkDirect = function() {
+        if (document.body.clientWidth > document.body.clientHeight) {
+            query('.mask').style.display = 'block';
+        } else {
+            query('.mask').style.display = 'none';
+        }
+    }
+    var evt = "onorientationchanged" in window ? "orientationchanged" : "resize";
+    window.addEventListener(evt, checkDirect, false);
+    checkDirect();
+
+
+    </script>
+</body>
+
+</html>
