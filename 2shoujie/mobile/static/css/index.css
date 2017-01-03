@@ -1,0 +1,483 @@
+body{
+    background-color: #E3EEEC;
+}
+
+.container{
+    position: relative;
+    /*margin-bottom: 60px;*/
+}
+html,body,.container{min-height: 100%;}
+/******* 搜索框 **********/
+.search-box{
+    height: 40px;
+    background-color: #fff;
+    -moz-box-shadow:inset 0px -0.5px 1px rgba(0,0,0,0.25);
+    -webkit-box-shadow:inset 0px -0.5px 1px rgba(0,0,0,0.25);
+    box-shadow:inset 0px -0.5px 1px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+.input-wr{
+    padding: 8px 10px;
+}
+
+.search-icon{
+    width: 14px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.search-input input{
+    vertical-align: middle;
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+    color: #88C9BC;
+    width: 230px;
+}
+
+.search-input{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+}
+
+.search-btn{
+    float: right;
+    background-color:rgb(60,194,165);
+    width:50px;
+    height:24px;
+    line-height: 24px;
+    -moz-border-radius:12px;
+    -webkit-border-radius:12px;
+    border-radius:12px;
+    color: #fff;
+    font-size: 12px;
+    -webkit-transform: translateX(60px);
+    transform: translateX(60px);
+}
+
+.btn-show{
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition: all .1s;
+    transition: all .1s;
+}
+
+/******** 分类和商品排序 **********/
+.catg{
+    height: 32px;
+    width: 25%;
+    background-color: #3CC2A5;
+    float: left;
+    text-align: center;
+    padding: 9px 0;
+}
+
+.catg a{
+    display: block;
+}
+
+.rank-rules .catg{
+    height: 34px;
+    padding: 8px 0;
+}
+
+.catg:nth-child(2n){
+    background-color: #24B19C;
+}
+
+.nav-icons img{
+    height: 16px;
+}
+
+.catg h2{
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.catg h2 a{
+    vertical-align: baseline;
+}
+
+.rank-rules h2{
+    opacity: 1;
+}
+
+.rank-icon{
+    margin: 0 auto;
+    width: 18px;
+    height: 18px;
+    background-size: 100% auto;
+    background-position: bottom;
+}
+
+.synthe .rank-icon{
+    background-image: url(../image/synthe.png);
+}
+.credit .rank-icon{
+    background-image: url(../image/credit.png);
+}
+.i-price .rank-icon,.d-price .rank-icon{
+    background-image: url(../image/price.png);
+}
+.hot .rank-icon{
+    background-image: url(../image/hot.png);
+}
+
+.d-price .rank-icon{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.active .rank-icon{
+    background-position: top;
+}
+
+.rank-rules .active{
+    background-color: #1DA496;
+}
+
+.active h2{
+    color: #FFC500;
+}
+
+/********  其余主体   *******/
+#activities,.topic-title,.school-switch,.item-list,.hot-schools{
+    /*width: 94%;
+    margin: 0 auto;*/
+    width:94%;
+    margin-left: 3%;
+}
+
+/*****************index*****************/
+/******* 首页图片幻灯 *************/
+#activities{
+    position: relative;
+    margin: 10px auto;
+    overflow: hidden;
+    font-size: 0;
+    -moz-box-shadow:0px 0px 4px rgba(0,0,0,0.25);
+    -webkit-box-shadow:0px 0px 4px rgba(0,0,0,0.25);
+    box-shadow:0px 0px 4px rgba(0,0,0,0.25);
+}
+
+.big-photos ul{
+    white-space: nowrap;
+    -webkit-transform: matrix(1,0,0,1,0,0);
+    transform: matrix(1,0,0,1,0,0);
+    -ms-touch-action: none;
+    -webkit-backface-visibility:hidden;
+}
+
+.big-photos li{
+    display: inline-block;
+}
+
+.big-photos img{
+    width: 100%;
+}
+
+.slide-dots{
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    text-align: center;
+}
+
+.slide-dots li{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    opacity: 0.3;
+    border-radius: 4px;
+    margin: 0 2px;
+}
+.slide-dots li.active{
+    opacity: 1;
+}
+
+
+/************  话题和选择学校  *****************/
+.topic-title,.school-switch{
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    -moz-box-shadow:0px 0px 2px rgba(0,0,0,0.15);
+    -webkit-box-shadow:0px 0px 2px rgba(0,0,0,0.15);
+    box-shadow:0px 0px 2px rgba(0,0,0,0.15);
+    background-color: #fff;
+    color: #32C3A5;
+    font-size: 15px;
+}
+
+.topic-title a{
+    display: block;
+    color: inherit;
+}
+
+.topic-title img{
+    float: left;
+    width: 35px;
+    margin: 12px 10px 13px 14px;
+}
+
+.topic-title h3{
+    margin-right: 10px;
+    display: table;
+    padding: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 40px;
+}
+
+.topic-title h3 span{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.school-switch{
+    text-align: center;
+    margin: 10px auto;
+    height: 50px;
+}
+.wrap-school{
+    text-align: center;
+    position: relative;
+    -webkit-transform:translate(0,-50%);transform:translate(0,-50%);top: 50%;
+}
+.school{
+    text-align: center;
+    padding: 6px 0 5px;
+    font-size: 13px;
+}
+
+.school img{
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.school span{
+    vertical-align: middle;
+}
+
+.school-switch a{
+    font-size: 12px;
+    color: #999999;
+    position: relative;
+    top: -5px;
+}
+
+.sliding{
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+.sliding2{
+    -webkit-transition: -webkit-transform 0.8s;
+    transition: transform 0.8s;
+}
+
+/************** 商品列表 *******************/
+.items{
+    margin-top: 10px;
+}
+
+.item{
+    position: relative;
+    background-color: #fff;
+    padding: 5px;
+    height: 80px;
+    margin-bottom: 7px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    -moz-box-shadow:0px 0px 1px rgba(0,0,0,0.18);
+    -webkit-box-shadow:0px 0px 1px rgba(0,0,0,0.18);
+    box-shadow:0px 0px 1px rgba(0,0,0,0.18);
+    overflow: hidden;
+}
+
+.item>a{
+    display: block;
+}
+
+.img{
+    float: left;
+    width: 80px;
+    margin-right: 10px;
+}
+
+.img img{
+    width: 80px;
+    height: 80px;
+}
+
+.name{
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #1C826C;
+    margin-bottom: 5px;
+}
+
+.loc{
+    font-size: 14px;
+    color: #999999;
+    line-height: 1.2em;
+}
+
+.loc span{
+    background: transparent url(../image/ico_loc3.png) no-repeat;
+    background-size: auto 14px;
+    padding-left: 15px;
+}
+
+.price{
+    text-align: right;
+    position: absolute;
+    bottom: 5px;
+    right: 7px;
+    color: #EB5055;
+    font-size: 16px;
+    line-height: 1.2em;
+}
+
+.price span:before{
+    content: "￥";
+}
+
+.pages{
+    color: #3CC2A5;
+    font-size: 14px;
+    height: 32px;
+    text-align: center;
+    margin: 15px 0 15px;
+    line-height: 32px;
+}
+
+.pages a{
+    background-color: #fff;
+    display: inline-block;
+    -moz-border-radius:32px;
+    -webkit-border-radius:32px;
+    border-radius:32px;
+    -moz-box-shadow:0px 0px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow:0px 0px 1px rgba(0,0,0,0.2);
+    box-shadow:0px 0px 1px rgba(0,0,0,0.2);
+}
+
+.arrow-left,.arrow-right{
+    width: 77px;
+}
+
+.page-num{
+    width: 32px;
+    margin: 0 20px;
+}
+
+/*********** 选择学校 ******************/
+.current-school{
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 40px;
+    background: #24B19C url(../image/ico_loc.png) no-repeat 10px 12px;
+    background-size: 12px;
+    padding-left: 27px;
+}
+
+.hot-schools{
+    background-color: #fff;
+    -moz-box-shadow:0px 0px 1px rgba(0,0,0,0.25);
+    -webkit-box-shadow:0px 0px 1px rgba(0,0,0,0.25);
+    box-shadow:0px 0px 1px rgba(0,0,0,0.25);
+    margin: 10px auto;
+    font-size: 14px;
+    line-height: 39px;
+}
+
+.hot-schools h2{
+    color: #3CC2A5;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.school-items li{
+    color: #777777;
+    border-top: 1px solid #DDDDDD;
+    padding-left: 10px;
+}
+
+.school-items li a{
+    display: block;
+    background: transparent url(../image/r-arrow.png) no-repeat right center;
+    background-size: auto 12px;
+    margin-right: 10px;
+}
+
+.search-wrapper{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51,51,51,0.5);
+    z-index: 3;
+}
+
+.search-down{
+    line-height: 40px;
+    max-height: 200px;
+    color: #7C8A89;
+    overflow: auto;
+}
+
+.search-down li{
+    background-color: #E3EEEC;
+}
+
+.search-down li:nth-child(2n){
+    background-color: #D5E6E3;
+}
+
+.search-down li a{
+    display: block;
+    padding-left: 10px;
+}
+
+/*add*/
+.wrap-btn{
+    margin: 10px auto 0 auto;
+    width: 94%;
+    height: 50px;
+}
+.wrap-btn .btn{
+    display: block;
+    height:50px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    -moz-box-shadow:0px 0px 2px rgba(0,0,0,0.15);
+    -webkit-box-shadow:0px 0px 2px rgba(0,0,0,0.15);
+    box-shadow:0px 0px 2px rgba(0,0,0,0.15);
+    background-color: #fff;
+    text-align: center;
+    float: left;
+    width: calc(50% - 5px);
+}
+.wrap-btn .btn-publish{
+    margin-right: 5px;
+}
+.wrap-btn .btn-profile{
+    margin-left: 5px;
+}
+.btn>img{
+    width: 102px;
+    vertical-align: -26px;
+}

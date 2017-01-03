@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>校园二手街</title>
+    <link rel="stylesheet" href="static/css/init.min.css"/>
+    <link rel="stylesheet" href="static/css/main.min.css"/>
+    <link rel="stylesheet" href="static/css/profile.css"/>
+    <link rel="stylesheet" href="static/css/lib/animate.min.css"/>
+    <link rel="stylesheet" href="static/js/jcrop/jquery.Jcrop.min.css"/>
+    <script type="text/javascript" src="static/js/html5.js"></script>
+</head>
+<body>
+<header class="ease2">
+    <a href="#"><img class="logo ease2" src="static/image/logo.png" alt="校园二手街"/></a>
+    <div class="header-main center ease2">
+        <a href="" class="slogan">
+            <h1 class="s-main">华中科技大学校园二手街</h1>
+            <div class="s-submain">最安全方便的二手市场</div>
+            <img src="static/image/slogan.png" alt="slogan"/>
+        </a>
+        <div class="search-box-wr ease2">
+            <form class="search-box center" action="/search" method="get">
+                <button type="submit" class="search-submit">搜索</button>
+                <div class="input-wr">
+                    <img class="search-icon" src="static/image/search-icon.png" alt=""/>
+                    <div class="search-input">
+                        <input name="keyword" id="keyword" x-webkit-speech type="text" placeholder="搜索你想要的二货"/>
+                    </div>
+                </div>
+            </form>
+            <div class="search-hots center ease2">
+                <span>热门：</span>
+                <a class="hots very" href="">自行车</a>
+                <a class="hots" href="">电动车</a>
+                <a class="hots" href="">笔记本</a>
+                <a class="hots" href="">教材</a>
+            </div>
+        </div>
+        <div class="log-reg ease2">
+
+            <!--<div class="button" data-type="l">登录</div>
+            <div class="button" data-type="r">注册</div>-->
+            <div id="have_login" class="clearfix">
+                <div id="person_info" class="clearfix">
+                    <img class="avatar" src="static/image/avatar2.png" alt="头像" />
+                    <div class="person_name">马可长不大的二货</div>
+                    <a href="" target="_blank" class="grade"><img src="static/image/ico_lv.png" alt="等级显示" /></a>
+                    <a class="person_message on" href="javascript:void(0);">0</a>
+                </div>
+                <img class="login_border" src="static/image/login_border.png" alt="下划线" />
+                <div class="login_slider">
+                    <h3>嗨，<span>马可长不大的二货</span></h3>
+                    <ul >
+                        <li><a  href="javascript:void(0);">个人中心</a></li>
+                        <li><a  href="javascript:void(0);">我的收藏</a></li>
+                        <li><a  href="javascript:void(0);">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="ease2">
+    <ul>
+        <li class="blank-head"><a href="javascript:void(0);"></a></li>
+        <li class="area">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"></i>
+                <span id="college">华中科技大学</span>
+                <span class="switch">切换</span>
+            </a>
+        </li>
+        <li id="schools">
+            <ul >
+                <li id="hust" class="now_sch"><a href="javascript:void(0);">华中科大</a></li>
+                <li id="znufe" ><a href="javascript:void(0);">中南财大</a></li>
+            </ul>
+        </li>
+        <li class="category-1 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/1.png" /></i>
+                <h3>校园代步</h3>
+                <!-- <span>校园代步</span> -->
+            </a>
+            <div class="sub-nav">
+                <span><a href="">自行车</a><a href="">电动车</a></span>
+            </div>
+        </li>
+        <li class="category-2 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/2.png" /></i>
+                <h3>手机</h3>
+                <!-- <span>手机</span> -->
+            </a>
+        </li>
+        <li class="category-3 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/3.png" /></i>
+                <h3>电脑</h3>
+                <!-- <span>电脑</span> -->
+            </a>
+            <div class="sub-nav">
+                <span><a href="">iphone</a><a href="">小米</a><a href="">三星</a><a href="">魅族</a><a href="">联想</a>
+                    <a href="">自行车</a><a href="">电动车</a><a href="">网球拍</a></span>
+            </div>
+        </li>
+        <li class="category-4 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/4.png" /></i>
+                <h3>数码配件</h3>
+                <!-- <span>数码</span> -->
+            </a>
+        </li>
+        <li class="category-5 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/5.png" /></i>
+                <h3>数码</h3>
+                <!-- <span>数码配件</span> -->
+            </a>
+        </li>
+        <li class="category-6 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/6.png" /></i>
+                <h3>电器</h3>
+                <!-- <span>电器</span> -->
+            </a>
+        </li>
+        <li class="category-7 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/7.png" /></i>
+                <h3>运动健身</h3>
+                <!-- <span>图书教材</span> -->
+            </a>
+        </li>
+        <li class="category-8 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/8.png" /></i>
+                <h3>衣物伞帽</h3>
+                <!-- <span>运动健身</span> -->
+            </a>
+        </li>
+        <li class="category-9 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/9.png" /></i>
+                <h3>图书教材</h3>
+                <!-- <span>衣物伞帽</span> -->
+            </a>
+        </li>
+        <li class="category-10 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/10.png" /></i>
+                <h3>租赁</h3>
+                <!-- <span>租赁</span> -->
+            </a>
+        </li>
+        <li class="category-11 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/11.png" /></i>
+                <h3>生活娱乐</h3>
+                <!-- <span>生活娱乐</span> -->
+            </a>
+        </li>
+        <li class="category-12 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/12.png" /></i>
+                <h3>其他</h3>
+                <!-- <span>其他</span> -->
+            </a>
+        </li>
+    </ul>
+</nav>
+<div class="head-img-box hide" id="head-img-box">
+    <div class="wrap-head-img">
+        <h3 class="head-title">
+            <span>头像设置</span>
+            <a id="close-head-img" class="close-head-img" href="javascript:;">X</a>
+        </h3>
+        <div class="head-img-area">
+            <div class="wrap-img" id="wrap-img">
+                <a href="javascript:;" id="upload-person-img" class="img-attr btn-upload-img "><i>+</i>选择图片</a>
+                <p class="img-attr img-limit ">只支持JPG、PNG、GIF，大小不超过5M</p>
+                <img class="loading hide" src="static/image/loading.gif" alt="" width="28" height="28"/>
+
+            </div>
+        </div>
+        <div class="head-img-footer">
+            <a href="javascript:;" class="btn-ok" id="upload-ok">确定</a>
+            <a href="javascript:;" id="cancel-img-box" class="btn-cancel">取消</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="main center">
+        <div class="top clearfix">
+            <div id="user_msg">
+                <div class="name">我是要当海贼王的男人<img class="grade_prof" src="static/image/ico_lv.png" alt="等级显示"></div>
+                <p class="has_sell">已卖出<span>4</span>件商品</p>
+                <ul class="seller_attr">
+                    <li>华中科技大学 能源与动力学院 09级</li>
+                    <li>通过学号认证</li>
+                    <li>通过人人网认证</li>
+                </ul>
+            </div>
+            <div id="user_photo">
+                <img id="origin_ph" src="static/image/test.png" alt="头像"/>
+                <img id="change_ph"src="static/image/person_hover.png" alt="头像"/>
+            </div>
+        </div>
+        <ul id="middle_nav" class="clearfix">
+            <li class="on"><a  href="javascript:;">正在出售的商品</a></li>
+            <li class=""><a  href="javascript:;">正在求购的商品</a></li>
+        </ul>
+        <div id="my_products">
+            <div id="onsale_pro">
+                <div class="enshr_each">  
+                    <div class="enshr_info">
+                        <h2><a href="javascript:void(0);">Eight Guys 单肩腰包 小挎包 单肩腰包 小挎包 单肩腰包 小挎包</a></h2>
+                        <p>我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品</p>
+                        <div class="enshr_state"> 
+                            <span class="enshr_info_price">¥300</span>
+                            <span class="enshr_info_address">全校区</span>
+                        </div>
+                    </div>
+                    <img class="enshr_ph" src="static/image/test.png" alt="头像"/>
+                </div>
+                <div class="enshr_each">
+                    <div class="enshr_info">
+                        <h2><a href="javascript:void(0);">Eight Guys 单肩腰包 小挎包 单肩腰包 小挎包 单肩腰包 小挎包</a></h2>
+                        <p>我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品</p>
+                        <div class="enshr_state">
+                            <span class="enshr_info_price">¥300</span>
+                            <span class="enshr_info_address">全校区</span>
+                        </div>
+                    </div>
+                    <img class="enshr_ph" src="static/image/test.png" alt="头像"/>
+                </div>
+                <div class="enshr_each">
+                    <div class="enshr_info">
+                        <h2><a href="javascript:void(0);">Eight Guys 单肩腰包 小挎包 单肩腰包 小挎包 单肩腰包 小挎包</a></h2>
+                        <p>我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品</p>
+                        <div class="enshr_state">
+                            <span class="enshr_info_price">¥300</span>
+                            <span class="enshr_info_address">全校区</span>
+                        </div>
+                    </div>
+                    <img class="enshr_ph" src="static/image/test.png" alt="头像"/>
+                </div>
+                <div class="enshr_each">
+                    <div class="enshr_info">
+                        <h2><a href="javascript:void(0);">Eight Guys 单肩腰包 小挎包 单肩腰包 小挎包 单肩腰包 小挎包</a></h2>
+                        <p>我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品我发布的商品</p>
+                        <div class="enshr_state">
+                            <span class="enshr_info_price">¥300</span>
+                            <span class="enshr_info_address">全校区</span>
+                        </div>
+                    </div>
+                    <img class="enshr_ph" src="static/image/test.png" alt="头像"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<aside>
+    <a class="release-button" href="##">我要发布</a>
+    <div class="helped">
+        <span class="helpers">99999</span>
+    </div>
+    <div class="qrcode-wr">
+        <img src="static/image/new_web_qrcode.png" alt="下载APP二维码">
+    </div>
+    <h2 class="qqgroup">用户交流群: 178906768</h2>
+    <div class="fl-wrapper clearfix">
+        <div class="wx-follow">
+            <a href="" class="fl-icon"><img src="static/image/weixin-fl.png" /></a>
+            <div class="wx-fl-qrcode">
+                <p>关注我</p><img src="static/image/wx-fl-qrcode.png" /><p>校园二手街</p>
+                <div class="dc-dot"></div>
+            </div>
+        </div>
+        <div class="sina-follow">
+            <a href="" class="fl-icon"><img src="static/image/sina-fl.png" /></a>
+        </div>
+    </div>
+</aside>
+<footer>
+    <img class="footer-tri" src="static/image/footer-tri.png" alt=""/>
+    <div class="friend-links">
+        <div class="links-title center">友情链接</div>
+        <ul class="links-wr center">
+            <li class="first"><a href="http://www.hust.edu.cn/" target="_blank" class="links">华中科技大学</a></li>
+            <li><a href="http://www.hustonline.net" target="_blank" class="links">华中大在线</a></li>
+            <li><a href="http://ik.hustonline.net/" target="_blank" class="links">iKnow问答</a></li>
+            <li><a href="http://www.weapp.me" target="_blank" class="links">桌游助手</a></li>
+            <li><a href="http://app.hustonline.net/" target="_blank" class="links">大软坊</a></li>
+            <li><a href="http://suta.im/" target="_blank" class="links">苏塔</a></li>
+        </ul>
+    </div>
+    <div class="site-msg line1"><a class="report">鄂ICP备12345667号</a><span class="power">&nbsp;Powered by <a
+            href="www.bingyan.net">冰岩作坊</a></span></div>
+    <div class="site-msg line2"><span class="copy">&copy;2014易橙网络&nbsp;</span><a class="about" href="/about">关于我们</a><a
+            class="contact"
+            href="/contact">联系我们</a></div>
+</footer>
+
+<div class="login-cover">
+    <div class="login-wr">
+        <div class="login-header">
+            <img class="login-logo" src="static/image/logo.png" alt="logo"/>
+            <p class="site-name">校园二手街</p>
+            <div id="renren-button">人人网登陆</div>
+        </div>
+        <div class="login-form-container">
+            <form action="">
+                <span class="input-name" data-value="账号"><input class="input-class" type="text" id="user-name" name="user-name"/></span>
+                <span class="input-name" data-value="密码"><input class="input-class" type="password" name="pw" id="pw"/></span>
+                <p class="ex clearfix">
+                    <label class="rem-wr" for="rem">
+                        <input id="rem" name="rem" type="checkbox"/>
+                        <span>记住我</span>
+                    </label>
+                    <a class="forget" href="javascript:void(0);">忘记密码</a>
+                </p>
+                <a href="##"><button class="submit" type="button">登陆二手街</button></a>
+            </form>
+            <a class="reg" href="javascript:void(0);">马上注册</a>
+        </div>
+        <a class="close" href="javascript:void(0);">关闭</a>
+    </div>
+</div>
+
+<div class="reg-cover">
+    <div class="reg-wr">
+        <div class="reg-header">
+            <img class="login-logo" src="static/image/logo.png" alt="logo"/>
+            <p class="site-name">校园二手街</p>
+        </div>
+        <div class="reg-form-container">
+            <form action="">
+                <span class="input-name" data-value="用户名"><input class="input-class" type="text" id="uname" name="uname"/></span>
+                <span class="input-name" data-value="邮箱"><input class="input-class" type="email" id="email" name="email"/></span>
+                <span class="input-name" data-value="密码"><input class="input-class" type="password" id="passw" name="passw"/></span>
+                <span class="input-name" data-value="确认密码"><input class="input-class" type="password" id="cpassw" name="cpassw"/></span>
+                <a href="##"><button type="button" class="submit">注册二手街</button></a>
+            </form>
+            <a class="log" href="javascript:void(0);">立即登录</a>
+        </div>
+        <a class="close" href="javascript:void(0);">关闭</a>
+    </div>
+</div>
+<script src="static/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="static/js/plupload/plupload.full.min.js"></script>
+<script type="text/javascript" src="static/js/plupload/i18n/zh_CN.js"></script>
+<script type="text/javascript" src="static/js/qiniu.min.js"></script>
+<script type="text/javascript" src="static/js/jcrop/jquery.Jcrop.min.js"></script>
+<script src="static/js/profile.js"></script>
+<script src="static/js/common.js"></script>
+<script src="static/js/add.js"></script>
+</body>
+</html>

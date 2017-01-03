@@ -1,0 +1,446 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>校园二手街</title>
+    <link rel="stylesheet" href="static/css/init.min.css"/>
+    <link rel="stylesheet" href="static/css/main.css"/>
+    <link rel="stylesheet" href="static/css/sear.css"/>
+    <link rel="stylesheet" href="static/css/lib/module.min.css"/>
+    <link rel="stylesheet" href="static/css/lib/animate.min.css"/>
+    <script type="text/javascript" src="static/js/html5.js"></script>
+</head>
+<body>
+<header class="ease2">
+    <a href="#"><img class="logo ease2" src="static/image/logo.png" alt="校园二手街"/></a>
+    <div class="header-main center ease2">
+        <a href="" class="slogan">
+            <h1 class="s-main">华中科技大学校园二手街</h1>
+            <div class="s-submain">最安全方便的二手市场</div>
+            <img src="static/image/slogan.png" alt="slogan"/>
+        </a>
+        <div class="search-box-wr ease2">
+            <form class="search-box center" action="/search" method="get">
+                <button type="submit" class="search-submit">搜索</button>
+                <div class="input-wr">
+                    <img class="search-icon" src="static/image/search-icon.png" alt=""/>
+                    <div class="search-input">
+                        <input name="keyword" id="keyword" x-webkit-speech type="text" placeholder="搜索你想要的二货"/>
+                    </div>
+                </div>
+            </form>
+            <div class="search-hots center ease2">
+                <span>热门：</span>
+                <a class="hots very" href="">自行车</a>
+                <a class="hots" href="">电动车</a>
+                <a class="hots" href="">笔记本</a>
+                <a class="hots" href="">教材</a>
+            </div>
+        </div>
+        <div class="log-reg ease2">
+
+            <!--<div class="button" data-type="l">登录</div>
+            <div class="button" data-type="r">注册</div>-->
+            <div id="have_login" class="clearfix">
+                <div id="person_info" class="clearfix">
+                    <img class="avatar" src="static/image/avatar2.png" alt="头像" />
+                    <div class="person_name">马可长不大的二货</div>
+                    <a href="" target="_blank" class="grade"><img src="static/image/ico_lv.png" alt="等级显示" /></a>
+                    <a class="person_message on" href="javascript:void(0);">0</a>
+                </div>
+                <img class="login_border" src="static/image/login_border.png" alt="下划线" />
+                <div class="login_slider">
+                    <h3>嗨，<span>马可长不大的二货</span></h3>
+                    <ul >
+                        <li><a  href="javascript:void(0);">个人中心</a></li>
+                        <li><a  href="javascript:void(0);">我的收藏</a></li>
+                        <li><a  href="javascript:void(0);">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="ease2">
+    <ul>
+        <li class="blank-head"><a href="javascript:void(0);"></a></li>
+        <li class="area">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"></i>
+                <span id="college">华中科技大学</span>
+                <span class="switch">切换</span>
+            </a>
+        </li>
+        <li id="schools">
+            <ul >
+                <li id="hust" class="now_sch"><a href="javascript:void(0);">华中科大</a></li>
+                <li id="znufe" ><a href="javascript:void(0);">中南财大</a></li>
+            </ul>
+        </li>
+        <li class="category-1 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/1.png" /></i>
+                <h3>校园代步</h3>
+                <!-- <span>校园代步</span> -->
+            </a>
+            <div class="sub-nav">
+                <span><a href="">自行车</a><a href="">电动车</a></span>
+            </div>
+        </li>
+        <li class="category-2 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/2.png" /></i>
+                <h3>手机</h3>
+                <!-- <span>手机</span> -->
+            </a>
+        </li>
+        <li class="category-3 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/3.png" /></i>
+                <h3>电脑</h3>
+                <!-- <span>电脑</span> -->
+            </a>
+            <div class="sub-nav">
+                <span><a href="">iphone</a><a href="">小米</a><a href="">三星</a><a href="">魅族</a><a href="">联想</a>
+                    <a href="">自行车</a><a href="">电动车</a><a href="">网球拍</a></span>
+            </div>
+        </li>
+        <li class="category-4 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/4.png" /></i>
+                <h3>数码配件</h3>
+                <!-- <span>数码</span> -->
+            </a>
+        </li>
+        <li class="category-5 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/5.png" /></i>
+                <h3>数码</h3>
+                <!-- <span>数码配件</span> -->
+            </a>
+        </li>
+        <li class="category-6 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/6.png" /></i>
+                <h3>电器</h3>
+                <!-- <span>电器</span> -->
+            </a>
+        </li>
+        <li class="category-7 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/7.png" /></i>
+                <h3>运动健身</h3>
+                <!-- <span>图书教材</span> -->
+            </a>
+        </li>
+        <li class="category-8 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/8.png" /></i>
+                <h3>衣物伞帽</h3>
+                <!-- <span>运动健身</span> -->
+            </a>
+        </li>
+        <li class="category-9 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/9.png" /></i>
+                <h3>图书教材</h3>
+                <!-- <span>衣物伞帽</span> -->
+            </a>
+        </li>
+        <li class="category-10 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/10.png" /></i>
+                <h3>租赁</h3>
+                <!-- <span>租赁</span> -->
+            </a>
+        </li>
+        <li class="category-11 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/11.png" /></i>
+                <h3>生活娱乐</h3>
+                <!-- <span>生活娱乐</span> -->
+            </a>
+        </li>
+        <li class="category-12 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/12.png" /></i>
+                <h3>其他</h3>
+                <!-- <span>其他</span> -->
+            </a>
+        </li>
+    </ul>
+</nav>
+<div class="container">
+<div class="main center">
+    <div class="category-name">自行车</div>
+    <hr size="1" color="#4BC0A5"/>
+    <div class="rank-by clearfix" data-cur="1">
+        <div class="rank-title-wr">
+            <a href="http://hust.2shoujie.com/classes/2?page=1&order_by=1">
+                <div class="rank-title default" data-rank="1">默认</div>
+            </a>
+            <a href="http://hust.2shoujie.com/classes/2?page=1&order_by=2">
+                <div class="rank-title cred" data-rank="3">信用</div>
+            </a>
+            <a class="pr rank-title-price" href="http://hust.2shoujie.com/classes/2?page=1&order_by=4">
+                <div class="rank-title pri " data-rank="4">
+                    价格
+                </div>
+                <!--升序order为up，降序order为down-->
+                <span id="up_down" order="up" class="price-up"></span>
+            </a>
+            <a href="http://hust.2shoujie.com/classes/2?page=1&order_by=5">
+                <div class="rank-title hot" data-rank="5">热度</div>
+            </a>
+        </div>
+        <div class="wave ease2"></div>
+    </div>
+    <div class="item-list">
+        <ul class="items clearfix">
+            <li class="item">
+                <a href="#" class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新发生大幅的萨芬iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                    <div class="school"><span>本校本校本校本校本校</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a href="#" class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+
+            <li class="item">
+                <a href="#" class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a href="#" class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a href="#" class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item">
+                <a class="img"><img src="static/image/test.png" alt="test"/></a>
+                <div class="info">
+                    <div class="price">88888</div>
+                    <div class="name"><a href="javascript:void(0);">9成新iPhone5</a></div>
+                    <div class="department"><span>计算机</span></div>
+                    <div class="place"><span>沁苑</span></div>
+                </div>
+            </li>
+            <li class="item fixed"></li>
+            <li class="item fixed"></li>
+            <li class="item fixed"></li>
+        </ul>
+    </div>
+    <div class="pages">
+        <a class="page-arrow arrow-left" href="javascript:void(0);">上一页</a>
+        <a class="page-num" href="javascript:void(0);">1</a>
+        <a class="page-num cur" href="javascript:void(0);">2</a>
+        <a class="page-num" href="javascript:void(0);">3</a>
+        <span class="page-emit">...</span>
+        <a class="page-num" href="javascript:void(0);">4</a>
+        <a class="page-arrow arrow-right" href="javascript:void(0);">下一页</a>
+    </div>
+</div>
+</div>
+<aside>
+    <a class="release-button" href="##">我要发布</a>
+    <div class="helped">
+        <span class="helpers">99999</span>
+    </div>
+    <div class="qrcode-wr">
+        <img src="static/image/new_web_qrcode.png" alt="下载APP二维码">
+    </div>
+    <h2 class="qqgroup">用户交流群: 178906768</h2>
+    <div class="fl-wrapper clearfix">
+        <div class="wx-follow">
+            <a href="" class="fl-icon"><img src="static/image/weixin-fl.png" /></a>
+            <div class="wx-fl-qrcode">
+                <p>关注我</p><img src="static/image/wx-fl-qrcode.png" /><p>校园二手街</p>
+                <div class="dc-dot"></div>
+            </div>
+        </div>
+        <div class="sina-follow">
+            <a href="" class="fl-icon"><img src="static/image/sina-fl.png" /></a>
+        </div>
+    </div>
+</aside>
+<footer>
+    <img class="footer-tri" src="static/image/footer-tri.png" alt=""/>
+    <div class="friend-links">
+        <div class="links-title center">友情链接</div>
+        <ul class="links-wr center">
+            <li class="first"><a href="http://www.hust.edu.cn/" target="_blank" class="links">华中科技大学</a></li>
+            <li><a href="http://www.hustonline.net" target="_blank" class="links">华中大在线</a></li>
+            <li><a href="http://ik.hustonline.net/" target="_blank" class="links">iKnow问答</a></li>
+            <li><a href="http://www.weapp.me" target="_blank" class="links">桌游助手</a></li>
+            <li><a href="http://app.hustonline.net/" target="_blank" class="links">大软坊</a></li>
+            <li><a href="http://suta.im/" target="_blank" class="links">苏塔</a></li>
+        </ul>
+    </div>
+    <div class="site-msg line1"><span class="report">鄂ICP备12345667号</span><span class="power">&nbsp;Powered by <a
+            href="www.bingyan.net">冰岩作坊</a></span></div>
+    <div class="site-msg line2"><span class="copy">&copy;2014易橙网络&nbsp;</span><a class="about" href="/about">关于我们</a><a
+            class="contact"
+            href="/contact">联系我们</a></div>
+</footer>
+
+<script src="static/js/jquery-1.7.2.min.js"></script>
+<script src="static/js/common.min.js"></script>
+<script src="static/js/sear.min.js"></script>
+<script src="static/js/add.min.js"></script>
+<script src="static/js/trick.js"></script>
+</body>
+</html>

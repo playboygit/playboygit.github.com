@@ -1,0 +1,376 @@
+.main {
+    padding: 50px 0 20px;
+}
+
+.rule-wrapper,.identify-wrapper{
+    width: 960px;
+}
+
+.l-triangle,.r-triangle{
+    width:0;
+    position: absolute;
+    -webkit-transform: rotate(.1deg);
+}
+
+.l-triangle{
+    top: 0;
+    left: -128px;
+    border-right: 64px solid #00ad90;
+    border-bottom: 84px solid #00ad90;
+    border-top: 84px solid transparent;
+    border-left: 64px solid transparent;
+}
+.r-triangle{
+    top: 0;
+    right: -128px;
+    border-right: 64px solid transparent;
+    border-bottom: 84px solid #00ad90;
+    border-top: 84px solid transparent;
+    border-left: 64px solid #00ad90;
+}
+
+.rule-hd,.identify-hd{
+    width: 664px;
+    height: 168px;
+    background-color: #00ad90;
+    text-align: center;
+}
+
+.rule-hd h2,.identify-hd h2{
+    text-indent: -999em;
+    width: 100%;
+    height: 121px;
+    background: transparent no-repeat center 20px;
+    padding-top: 20px;
+}
+
+.rule-hd h2{
+    background-image: url(../image/pubrule-hd.png);
+}
+.rule-hd .point-rule{
+    background-image: url(../image/point_rule.png);
+}
+.rule-hd .point-detail{
+    background-image: url(../image/point_detail.png);
+}
+.rules{
+    width: 920px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #fff;
+    border-spacing: 0;
+    vertical-align: middle;
+    border-bottom: 4px solid #00ae90;
+    table-layout: fixed;
+}
+.rules-link{
+    font-size: 14px;
+    color: #fff;
+    margin-right: 30px;
+    float: right;
+    margin-top: 4px;
+}
+.rules .rules-title{
+    color: #fff;
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 130px;
+}
+.rules thead{
+    color: #fff;
+    background-color: #44c1a5;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.rules td,.rules th{
+    width: 50%;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    color: #666;
+}
+.rules th{
+    color: #fff;
+}
+.rules tr{
+    position: relative;
+    height: 60px;
+}
+.rules tr:nth-child(2n){
+    background-color: #f6f9f9;
+}
+
+.r-rule{
+    border-right: 1px solid #dee8e8;
+}
+
+.rules .r-rule,.rules .r-punishment{
+    width: 46%;
+    padding: 0 2%;
+}
+
+.rules .r-order{
+    position: absolute;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    color: #fff;
+    margin: 18px 0 18px -12px;
+    border-radius: 12px;
+    background-color: #64cbb3;
+}
+
+.rules thead .r-order{
+    width: 0;
+}
+
+.identify-hd h2{
+    background-image: url(../image/identify-hd.png);
+}
+
+.idtf-content{
+    margin: 0 auto;
+    padding-bottom: 30px;
+    width: 920px;
+    background-color: #fff;
+}
+
+.idtf-steps{
+    list-style: none;
+    height: 60px;
+    background-color: #44c1a5;
+    padding-left:70px ;
+    color: #fff;
+}
+
+.idtf-steps li{
+    float: left;
+    width: 218px;
+    line-height: 60px;
+}
+
+li.divide-l{
+    width: 31px;
+    height: 100%;
+    background: transparent url(../image/idtf-divide.png) no-repeat;
+    margin-right: 50px;
+}
+
+span.idtf-o{
+    display: inline-block;
+    *display: inline;
+    zoom:1;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #fff;
+    line-height: 32px;
+    text-align: center;
+    color: #3cc2a5;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+span.idtf-step{
+    font-size: 18px;
+    vertical-align: middle;
+    padding-left: 12px;
+}
+
+.std_input_info{
+    width: 430px;
+    margin: 0 auto;
+}
+
+.std_input{
+    margin-top: 40px;
+    margin-left: 40px;
+    height: 23px;
+    font-size: 14px;
+}
+
+.std_input span {
+    width: 88px;
+    line-height: 100%;
+    text-align: right;
+    vertical-align: middle;
+    border-right: 1px solid #00ae90;
+    padding-right: 12px;
+    color: #00ae90;
+}
+
+.std_input input{
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    height: 100%;
+    vertical-align: middle;
+    padding-left: 8px;
+    font: inherit;
+    color: #444444;
+}
+
+.idtf-photo{
+    width: 100%;
+    padding: 30px 0;
+    margin-top: 40px;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.upload-target{
+    position: relative;
+    height: 60px;
+    width: 430px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upload-target .upload-tip{
+    /*width: 120px;*/
+    height: 30px;
+    margin: 15px 0;
+    padding-left: 50px;
+    display: inline-block;
+    *display: inline;
+    zoom:1;
+    background: transparent url(../image/upload-photo.png) no-repeat;
+    line-height: 30px;
+    color: #00ae90;
+    font-size: 16px;
+    text-align: left;
+}
+
+.uploading{
+    color: #C7C7C7;
+    font-size: 14px;
+}
+
+.uploading img{
+    vertical-align: middle;
+    padding: 0 3px 3px 0;
+}
+
+.upload-target div#upload{
+    position: absolute !important;
+    top: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.upload-target #SWFUpload_0{
+    position: static !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0;
+    cursor: pointer;
+}
+
+#upload-button{
+    position: absolute !important;
+    top: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1;
+}
+
+#unique_img{
+    width: 430px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 1.5px rgba(0,0,0,0.34);
+}
+
+.photo-area{
+    padding: 5px;
+    font-size: 0;
+}
+
+.photo-area img{
+    max-width: 420px;
+}
+
+.delete-photo{
+    width: 46px;
+    height: 46px;
+    background: transparent url(../image/photo-del.png) no-repeat;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+.delete-photo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -999em;
+}
+
+#identify-btn{
+    width: 380px;
+    height: 56px;
+    margin: 30px auto 0;
+    background: transparent url(../image/identify-bt.png) no-repeat center;
+}
+
+#identify-btn a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-indent: -99em;
+}
+
+.succeed-container{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(0,0,0,0.34);
+}
+
+.idtf-succeed{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -40px 0 0 -200px;
+    width: 400px;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.34);
+    text-align: center;
+    padding: 35px 0;
+}
+
+.idtf-succeed span{
+    font-size: 14px;
+    color: #444444;
+}
+
+.suc-tip{
+    width: 100px;
+    height: 30px;
+    margin: 0 auto 20px;
+    background: transparent url(../image/identify_suc.png) no-repeat;
+    padding-left: 45px;
+}
+.suc-tip span{
+    line-height: 30px;
+    font-size: 20px;
+    color: #00bd9b;
+}
+
+.file-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    cursor: pointer;
+}

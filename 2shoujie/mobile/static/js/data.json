@@ -1,0 +1,56 @@
+{
+    "code": 0,
+    "msg": "成功",
+    "data": {
+        "goods_list": {
+            "on_shelf": [
+                /*{
+                    "goods_id": "113330",
+                    "goods_name": "000",
+                    "goods_price": "99999",
+                    "goods_release_time": "2015-03-17 14:57:20",
+                    "goods_image": "http://ershou.u.qiniudn.com/Wap_1426575546826_o_19gj8eme7qcq1hu7nkf1sj71cli9?imageView2/5/w/140/h/140"
+                },
+                {
+                    "goods_id": "113325",
+                    "goods_name": "33333",
+                    "goods_price": "33",
+                    "goods_release_time": "2015-03-16 20:33:11",
+                    "goods_image": "http://ershou.u.qiniudn.com/Web_1426509315596_o_19gh99fga1vs0hj81tnq1l9ncg19?imageView2/5/w/140/h/140"
+                },
+                {
+                    "goods_id": "113324",
+                    "goods_name": "22222",
+                    "goods_price": "22222",
+                    "goods_release_time": "2015-03-16 19:29:40",
+                    "goods_image": "http://ershou.u.qiniudn.com/Web_1426505500982_o_19gh5l29jlo9df3kbr1ugq1s039?imageView2/5/w/140/h/140"
+                },
+                {
+                    "goods_id": "113307",
+                    "goods_name": "4444",
+                    "goods_price": "444",
+                    "goods_release_time": "2015-03-11 14:37:20",
+                    "goods_image": "http://ershou.u.qiniudn.com/Web_1426055662723_o_19g3ol34083mief182diehk2l9?imageView2/5/w/140/h/140"
+                }*/
+            ],
+            "off_shelf": [
+                {
+                    "goods_id": "113307",
+                    "goods_name": "4444",
+                    "goods_price": "444",
+                    "goods_release_time": "2015-03-11 14:37:20",
+                    "goods_image": "http://ershou.u.qiniudn.com/Web_1426055662723_o_19g3ol34083mief182diehk2l9?imageView2/5/w/140/h/140"
+                }
+            ],
+            "sold": [
+                {
+                    "goods_id": "113307",
+                    "goods_name": "4444",
+                    "goods_price": "444",
+                    "goods_release_time": "2015-03-11 14:37:20",
+                    "goods_image": "http://ershou.u.qiniudn.com/Web_1426055662723_o_19g3ol34083mief182diehk2l9?imageView2/5/w/140/h/140"
+                }
+            ]
+        }
+    }
+}

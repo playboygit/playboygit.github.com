@@ -1,0 +1,440 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>校园二手街</title>
+    <link rel="stylesheet" href="static/css/init.min.css"/>
+    <link rel="stylesheet" href="static/css/main.min.css"/>
+    <link rel="stylesheet" href="static/css/release.css"/>
+    <script type="text/javascript" src="static/js/html5.js"></script>
+</head>
+<body>
+<header class="ease2">
+    <a href="#"><img class="logo ease2" src="static/image/logo.png" alt="校园二手街"/></a>
+    <div class="header-main center ease2">
+        <a href="" class="slogan">
+            <h1 class="s-main">华中科技大学校园二手街</h1>
+            <div class="s-submain">最安全方便的二手市场</div>
+            <img src="static/image/slogan.png" alt="slogan"/>
+        </a>
+        <div class="search-box-wr ease2">
+            <form class="search-box center" action="/search" method="get">
+                <button type="submit" class="search-submit">搜索</button>
+                <div class="input-wr">
+                    <img class="search-icon" src="static/image/search-icon.png" alt=""/>
+                    <div class="search-input">
+                        <input name="keyword" id="keyword" x-webkit-speech type="text" placeholder="搜索你想要的二货"/>
+                    </div>
+                </div>
+            </form>
+            <div class="search-hots center ease2">
+                <span>热门：</span>
+                <a class="hots very" href="">自行车</a>
+                <a class="hots" href="">电动车</a>
+                <a class="hots" href="">笔记本</a>
+                <a class="hots" href="">教材</a>
+            </div>
+        </div>
+        <div class="log-reg ease2">
+
+            <!--<div class="button" data-type="l">登录</div>
+            <div class="button" data-type="r">注册</div>-->
+            <div id="have_login" class="clearfix">
+                <div id="person_info" class="clearfix">
+                    <img class="avatar" src="static/image/avatar2.png" alt="头像" />
+                    <div class="person_name">马可长不大的二货</div>
+                    <a href="" target="_blank" class="grade"><img src="static/image/ico_lv.png" alt="等级显示" /></a>
+                    <a class="person_message on" href="javascript:void(0);">0</a>
+                </div>
+                <img class="login_border" src="static/image/login_border.png" alt="下划线" />
+                <div class="login_slider">
+                    <h3>嗨，<span>马可长不大的二货</span></h3>
+                    <ul >
+                        <li><a  href="javascript:void(0);">个人中心</a></li>
+                        <li><a  href="javascript:void(0);">我的收藏</a></li>
+                        <li><a  href="javascript:void(0);">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="ease2">
+    <ul>
+        <li class="blank-head"><a href="javascript:void(0);"></a></li>
+        <li class="area">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"></i>
+                <span id="college">华中科技大学</span>
+                <span class="switch">切换</span>
+            </a>
+        </li>
+        <li id="schools">
+            <ul >
+                <li id="hust" class="now_sch"><a href="javascript:void(0);">华中科大</a></li>
+                <li id="znufe" ><a href="javascript:void(0);">中南财大</a></li>
+            </ul>
+        </li>
+        <li class="category-1 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/1.png" /></i>
+                <h3>校园代步</h3>
+                <!-- <span>校园代步</span> -->
+            </a>
+            <div class="sub-nav">
+                <span><a href="">自行车</a><a href="">电动车</a></span>
+            </div>
+        </li>
+        <li class="category-2 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/2.png" /></i>
+                <h3>手机</h3>
+                <!-- <span>手机</span> -->
+            </a>
+        </li>
+        <li class="category-3 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/3.png" /></i>
+                <h3>电脑</h3>
+                <!-- <span>电脑</span> -->
+            </a>
+            <div class="sub-nav">
+                <span><a href="">iphone</a><a href="">小米</a><a href="">三星</a><a href="">魅族</a><a href="">联想</a>
+                    <a href="">自行车</a><a href="">电动车</a><a href="">网球拍</a></span>
+            </div>
+        </li>
+        <li class="category-4 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/4.png" /></i>
+                <h3>数码配件</h3>
+                <!-- <span>数码</span> -->
+            </a>
+        </li>
+        <li class="category-5 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/5.png" /></i>
+                <h3>数码</h3>
+                <!-- <span>数码配件</span> -->
+            </a>
+        </li>
+        <li class="category-6 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/6.png" /></i>
+                <h3>电器</h3>
+                <!-- <span>电器</span> -->
+            </a>
+        </li>
+        <li class="category-7 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/7.png" /></i>
+                <h3>运动健身</h3>
+                <!-- <span>图书教材</span> -->
+            </a>
+        </li>
+        <li class="category-8 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/8.png" /></i>
+                <h3>衣物伞帽</h3>
+                <!-- <span>运动健身</span> -->
+            </a>
+        </li>
+        <li class="category-9 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/9.png" /></i>
+                <h3>图书教材</h3>
+                <!-- <span>衣物伞帽</span> -->
+            </a>
+        </li>
+        <li class="category-10 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/10.png" /></i>
+                <h3>租赁</h3>
+                <!-- <span>租赁</span> -->
+            </a>
+        </li>
+        <li class="category-11 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/11.png" /></i>
+                <h3>生活娱乐</h3>
+                <!-- <span>生活娱乐</span> -->
+            </a>
+        </li>
+        <li class="category-12 catg">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"><img src="static/image/category/12.png" /></i>
+                <h3>其他</h3>
+                <!-- <span>其他</span> -->
+            </a>
+        </li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="main center">
+        <img class="release-icon-main" src="static/image/release-icon.png" alt=""/>
+        <div class="wave-fluid"></div>
+        <div class="release-title">发布商品</div>
+          <div class="upload-wr">
+            <div class="clone-target">
+                <div class="photo">
+                    <div><img src="" alt=""/></div>
+                    <span class="close"></span>
+                </div>
+            </div>
+            <div class="photo-area init-up">
+                <div class="upload-area"  id="upload-area">
+                    <!--<div class="photo"><div><img width="140" height="140" src="" alt="" url="" class="image"></div><span class="close"></span></div>-->
+                    <div id="upload"><span class="up-bg"></span><span class="up-img-bg"><i></i></span></div>
+                </div>
+                <div class="photo-caution"><span>最多上传四张图片，支持jpg、png、gif格式</span></div>
+            </div>
+          </div>
+        <div class="form-wr">
+            <form action="">
+                <div class="form-must-wr">
+                    <div class="form-item l goods-title">
+                        <div class="form-key"><span>商品名称</span></div>
+                        <div class="form-value">
+                            <div class="form-input-wr">
+                                <input type="text" id="title" name="title" placeholder="最多25个字"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item xl goods-desc">
+                        <div class="form-key"><span>商品详情</span></div>
+                        <div class="form-value">
+                            <div class="form-input-wr">
+                                <textarea name="desc" id="desc" placeholder="至少15个字"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item l goods-title">
+                        <div class="form-key"><span>交易地点</span></div>
+                        <div class="form-value">
+                            <div class="form-input-wr">
+                                <input type="text" id="trade_place" name="trade_place" placeholder="宿舍、教学楼、食堂等" value="全校区"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item m goods-price">
+                        <div class="form-key"><span>价格</span></div>
+                        <div class="form-value">
+                            <div class="form-input-wr">
+                                <input class="price" type="text" id="price" name="price"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item m goods-cat">
+                        <div class="form-key"><span>分类</span></div>
+                        <div class="form-value">
+                            <div class="form-input-wr"><span>请选择</span>
+                            <input type="hidden" id="cat" name="cat" value="" /></div>
+                            <ul class="select">
+                                <li pk="item1" value="1"><span>校园代步</span></li>
+                                <li pk="item2" value="4"><span>手机</span></li>
+                                <li pk="item3" value="5"><span>电脑</span></li>
+                                <li pk="item4" value="15"><span>数码配件</span></li>
+                                <li pk="item5" value="23"><span>数码</span></li>
+                                <li pk="item6" value="30"><span>电器</span></li>
+                                <li pk="item7" value="39"><span>运动健身</span></li>
+                                <li pk="item8" value="45"><span>衣物伞帽</span></li>
+                                <li pk="item9" value="59"><span>图书教材</span></li>
+                                <li pk="item10" value="10"><span>租赁</span></li>
+                                <li pk="item11" value="11"><span>生活娱乐</span></li>
+                                <li pk="item12" value="12"><span>其他</span></li>
+                            </ul>
+                        </div>
+                        <div class="form-value-l hide">
+                            <div class="form-input-l-wr">
+                                <span>请选择</span>
+                                <input type="hidden" id="cat_l" name="cat_l" value=""/>
+                            </div>
+                            <ul class="select hide">
+                                <li class="item1 hide" value="2"><span>自行车</span></li>
+                                <li class="item1 hide" value="3"><span>电动车</span></li>
+
+                                <li class="item3 hide" value="6"><span>笔记本</span></li>
+                                <li class="item3 hide" value="7"><span>台式机</span></li>
+
+                                <li class="item4 hide" value="8"><span>耳机</span></li>
+                                <li class="item4 hide" value="9"><span>移动硬盘</span></li>
+                                <li class="item4 hide" value="10"><span>键盘</span></li>
+                                <li class="item4 hide" value="11"><span>鼠标</span></li>
+                                <li class="item4 hide" value="12"><span>充电器</span></li>
+                                <li class="item4 hide" value="13"><span>显示器</span></li>
+                                <li class="item4 hide" value="14"><span>其他</span></li>
+
+                                <li class="item5 hide" value="15"><span>mp3/mp4</span></li>
+                                <li class="item5 hide" value="15"><span>相机</span></li>
+                                <li class="item5 hide" value="15"><span>单反</span></li>
+                                <li class="item5 hide" value="15"><span>游戏机</span></li>
+                                <li class="item5 hide" value="15"><span>平板</span></li>
+                                <li class="item5 hide" value="15"><span>其他</span></li>
+
+                                <li class="item6 hide" value="23"><span>电扇</span></li>
+                                <li class="item6 hide" value="23"><span>台灯</span></li>
+                                <li class="item6 hide" value="23"><span>洗衣机</span></li>
+                                <li class="item6 hide" value="23"><span>电吹风</span></li>
+                                <li class="item6 hide" value="23"><span>电水壶</span></li>
+                                <li class="item6 hide" value="23"><span>空调</span></li>
+                                <li class="item6 hide" value="23"><span>电视</span></li>
+                                <li class="item6 hide" value="23"><span>其他</span></li>
+
+                                <li class="item7 hide" value="30"><span>篮球</span></li>
+                                <li class="item7 hide" value="30"><span>足球</span></li>
+                                <li class="item7 hide" value="30"><span>球拍</span></li>
+                                <li class="item7 hide" value="30"><span>哑铃</span></li>
+                                <li class="item7 hide" value="30"><span>轮滑</span></li>
+                                <li class="item7 hide" value="30"><span>其他</span></li>
+
+                                <li class="item8 hide" value="39"><span>上衣</span></li>
+                                <li class="item8 hide" value="39"><span>裤子</span></li>
+                                <li class="item8 hide" value="39"><span>背包</span></li>
+                                <li class="item8 hide" value="39"><span>雨伞</span></li>
+                                <li class="item8 hide" value="39"><span>鞋</span></li>
+                                <li class="item8 hide" value="39"><span>帽子</span></li>
+                                <li class="item8 hide" value="39"><span>其他</span></li>
+
+                                <li class="item9 hide" value="45"><span>教材</span></li>
+                                <li class="item9 hide" value="45"><span>考研</span></li>
+                                <li class="item9 hide" value="45"><span>托福/雅思/GRE</span></li>
+                                <li class="item9 hide" value="45"><span>课外书</span></li>
+                                <li class="item9 hide" value="45"><span>其他</span></li>
+
+                                <li class="item10 hide" value="59"><span>租房</span></li>
+                                <li class="item10 hide" value="59"><span>服装</span></li>
+                                <li class="item10 hide" value="59"><span>道具</span></li>
+                                <li class="item10 hide" value="59"><span>其他</span></li>
+
+                                <li class="item11 hide" value="71"><span>乐器</span></li>
+                                <li class="item11 hide" value="71"><span>日常用品</span></li>
+                                <li class="item11 hide" value="71"><span>虚拟账号</span></li>
+                                <li class="item11 hide" value="71"><span>会员卡</span></li>
+                                <li class="item11 hide" value="71"><span>其他</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-item m goods-discount">
+                        <div class="form-key"><span>讲价</span></div>
+                        <div class="form-value">
+                            <div class="form-input-wr">
+                                <span class="yes sel" data-value="1">可小刀</span>
+                                <span class="no" data-value="0">不可刀</span>
+                                <input type="hidden" id="discount" name="discount" value="1"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-contact">联系方式</div>
+                <div class="form-least">（至少选填一项）</div>
+                <hr class="form-sep-form clear" size="1" color="#D0E0E2"/>
+                <div class="form-select">
+                    <div class="form-item m">
+                        <div class="form-key"><span>手机</span></div>
+                        <div class="form-value">
+                            <div class="form-input-wr">
+                                <input type="tel" id="tel" name="tel"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item m">
+                        <div class="form-key"><span>QQ</span></div>
+                        <div class="form-value">
+                            <div class="form-input-wr">
+                                <input type="text" id="qq" name="qq"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<p class="form-tip">您发布的商品将于15天后下架</p>-->
+                <div class="form-share-wr">
+                    <label for="form-share" />
+                    <input id="form-share" name="share" type="checkbox" checked="on"/>
+                    <span>我同意&nbsp;<a href="http://www.2shoujie.com/publish_rule" target="_blank">商品发布规则</a></span>
+                </div>
+                <button type="button" class="form-submit" onclick="release();">马上发布</button>
+            </form>
+        </div>
+    </div>
+</div>
+<aside>
+    <a class="release-button" href="##">我要发布</a>
+    <div class="helped">
+        <span class="helpers">99999</span>
+    </div>
+    <div class="qrcode-wr">
+        <img src="static/image/new_web_qrcode.png" alt="下载APP二维码">
+    </div>
+    <h2 class="qqgroup">用户交流群: 178906768</h2>
+    <div class="fl-wrapper clearfix">
+        <div class="wx-follow">
+            <a href="" class="fl-icon"><img src="static/image/weixin-fl.png" /></a>
+            <div class="wx-fl-qrcode">
+                <p>关注我</p><img src="static/image/wx-fl-qrcode.png" /><p>校园二手街</p>
+                <div class="dc-dot"></div>
+            </div>
+        </div>
+        <div class="sina-follow">
+            <a href="" class="fl-icon"><img src="static/image/sina-fl.png" /></a>
+        </div>
+    </div>
+</aside>
+<footer>
+    <img class="footer-tri" src="static/image/footer-tri.png" alt=""/>
+    <div class="friend-links">
+        <div class="links-title center">友情链接</div>
+        <ul class="links-wr center">
+            <li class="first"><a href="http://www.hust.edu.cn/" target="_blank" class="links">华中科技大学</a></li>
+            <li><a href="http://www.hustonline.net" target="_blank" class="links">华中大在线</a></li>
+            <li><a href="http://ik.hustonline.net/" target="_blank" class="links">iKnow问答</a></li>
+            <li><a href="http://www.weapp.me" target="_blank" class="links">桌游助手</a></li>
+            <li><a href="http://app.hustonline.net/" target="_blank" class="links">大软坊</a></li>
+            <li><a href="http://suta.im/" target="_blank" class="links">苏塔</a></li>
+        </ul>
+    </div>
+    <div class="site-msg line1">
+        <span class="report">鄂ICP备12345667号</span>
+        <span class="power">&nbsp;Powered by <a href="http://www.2shoujie.com/contact" target="_blank">易橙网络</a></span>
+    </div>
+    <div class="site-msg line2">
+        <!--<span class="copy">&copy;2014易橙网络&nbsp;</span>-->
+        <a class="about" id="fd_footer" href="javascript:void(0);">意见反馈</a>
+        <a class="contact" href="http://www.2shoujie.com/contact" target="_blank">联系我们</a>
+        <a class="contact" href="http://www.2shoujie.com/join_us" target="_blank">加入我们</a>
+    </div>
+</footer>
+
+<!-- 点发布提醒下载客户端 -->
+<div class="download_guide hidden">
+    <div class="pop_wrapper vertical_center">
+        <em class="close ico"><span class="visually_hidden">关闭</span></em>
+        <a class="ico btn_continue" href="" title=""><span class="visually_hidden">继续访问</span></a>
+        <div class="checkbox_holder">
+            <input id="never_remind" type="checkbox"/>
+            <label for="never_remind">不再提醒</label>
+        </div>
+    </div>
+</div>
+
+<!-- 点发布后提示学校信息  -->
+<div class="school_guide close-container hidden">
+    <div class="pop_wrapper vertical_center">
+        <div class="col-icon"></div>
+        <em class="close-ico"><span class="visually_hidden">关闭</span></em>
+        <h4>检测到当前学校与所填学校不同</h4>
+        <span class="col-tip">请选择发布地点</span>
+        <div class="verify-school">
+            <a class="cur-school" href="">华中科技大学</a>
+            <div class="or-tip">or</div>
+            <a class="certi-school" href="">华中科技大学文华学院</a>
+        </div>
+    </div>
+</div>
+    <script src="static/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="static/js/plupload/plupload.full.min.js"></script>
+    <script type="text/javascript" src="static/js/plupload/i18n/zh_CN.js"></script>
+    <script type="text/javascript" src="static/js/qiniu.min.js"></script>
+    <script src="static/js/common.min.js"></script>
+    <script src="static/js/add.min.js"></script>
+    <script src="static/js/release.js"></script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>个人主页</title>
+    <link rel="stylesheet" href="static/css/init.min.css"/>
+    <link rel="stylesheet" href="static/css/main.min.css"/>
+    <link rel="stylesheet" href="static/css/profile.min.css"/>
+	<link rel="stylesheet" href="static/css/account_level.min.css"/>
+    <link rel="stylesheet" href="static/css/lib/animate.min.css"/>
+</head>
+<body>
+<header class="ease2">
+    <a href="#"><img class="logo ease2" src="static/image/logo.png" alt="校园二手街"/></a>
+    <div class="header-main center ease2">
+        <a href="" class="slogan">
+            <h1 class="s-main">华中科技大学校园二手街</h1>
+            <div class="s-submain">最安全方便的二手市场</div>
+            <img src="static/image/slogan.png" alt="slogan"/>
+        </a>
+        <div class="search-box-wr ease2">
+            <form class="search-box center" action="/search" method="get">
+                <button type="submit" class="search-submit">搜索</button>
+                <div class="input-wr">
+                    <img class="search-icon" src="static/image/search-icon.png" alt=""/>
+                    <div class="search-input">
+                        <input name="keyword" id="keyword" x-webkit-speech type="text" placeholder="搜索你想要的二货"/>
+                    </div>
+                </div>
+            </form>
+            <div class="search-hots center ease2">
+                <span>热门：</span>
+                <a class="hots very" href="">自行车</a>
+                <a class="hots" href="">电动车</a>
+                <a class="hots" href="">笔记本</a>
+                <a class="hots" href="">教材</a>
+            </div>
+        </div>
+        <div class="log-reg ease2">
+
+            <!--<div class="button" data-type="l">登录</div>
+            <div class="button" data-type="r">注册</div>-->
+            <div id="have_login" class="clearfix">
+                <div id="person_info" class="clearfix">
+                    <img class="avatar" src="static/image/avatar2.png" alt="头像" />
+                    <div class="person_name">马可长不大的二货</div>
+                    <a href="" target="_blank" class="grade"><img src="static/image/ico_lv.png" alt="等级显示" /></a>
+                    <a class="person_message on" href="javascript:void(0);">0</a>
+                </div>
+                <img class="login_border" src="static/image/login_border.png" alt="下划线" />
+                <div class="login_slider">
+                    <h3>嗨，<span>马可长不大的二货</span></h3>
+                    <ul >
+                        <li><a  href="javascript:void(0);">个人中心</a></li>
+                        <li><a  href="javascript:void(0);">我的收藏</a></li>
+                        <li><a  href="javascript:void(0);">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="ease2">
+    <ul>
+        <li class="blank-head"><a href="javascript:void(0);"></a></li>
+        <li class="area">
+            <a href="javascript:void(0);">
+                <i class="nav-icons"></i>
+                <span id="college">华中科技大学</span>
+                <span class="switch">切换</span>
+            </a>
+        </li>
+        <li id="schools">
+            <ul >
+                <li id="hust" class="now_sch">
+                    <a href="" title="校园二手街-华中科技大学">华中科技大学</a>
+                </li>
+                <li id="znufe" >
+                    <a href="" title="校园二手街-中南财经政法大学">中南财经政法大学</a>
+                </li>
+                <li id="scuec" >
+                    <a href="" title="校园二手街-中南民族大学">中南民族大学</a>
+                </li>
+            </ul>
+        </li>
+        <li class="category-1 catg">
+            <a href="" title="校园代步">
+                <i class="nav-icons"><img src="static/image/category/1.png"/></i>
+                <h3>校园代步</h3>
+            </a>
+            <div class="sub-nav">
+                <span>
+                     <a href="">自行车</a>
+                     <a href="">电动车</a>
+                </span>
+            </div>
+        </li>
+        <li class="category-2 catg">
+            <a href="" title="手机">
+                <i class="nav-icons"><img src="static/image/category/2.png"/></i>
+                <h3>手机</h3>
+            </a>
+        </li>
+        <li class="category-3 catg">
+            <a href="" title="电脑">
+                <i class="nav-icons"><img src="static/image/category/3.png"/></i>
+                <h3>电脑</h3>
+            </a>
+            <div class="sub-nav">
+                <span>
+                    <a href="">笔记本</a>
+                    <a href="">台式机</a>
+                </span>
+            </div>
+        </li>
+        <li class="category-4 catg">
+            <a href="" title="数码配件">
+                <i class="nav-icons"><img src="static/image/category/4.png"/></i>
+                <h3>数码配件</h3>
+            </a>
+            <div class="sub-nav">
+                <span>
+                    <a href="">耳机</a>
+                    <a href="">移动硬盘</a>
+                    <a href="">键盘</a>
+                    <a href="">鼠标</a>
+                    <a href="">充电器</a>
+                    <a href="">显示器</a>
+                    <a href="">其他</a>
+                </span>
+            </div>
+        </li>
+        <li class="category-5 catg">
+            <a href="" title="数码">
+                <i class="nav-icons"><img src="static/image/category/5.png"/></i>
+                <h3>数码</h3>
+            </a>
+            <div class="sub-nav">
+                <span>
+                    <a href="">mp3/mp4</a>
+                    <a href="">相机</a>
+                    <a href="">单反</a>
+                    <a href="">游戏机</a>
+                    <a href="">平板</a>
+                    <a href="">其他</a>
+                </span>
+            </div>
+        </li>
+        <li class="category-6 catg">
+            <a href="" title="电器">
+                <i class="nav-icons"><img src="static/image/category/6.png"/></i>
+                <h3>电器</h3>
+            </a>
+            <div class="sub-nav">
+                <span>
+                    <a href="">电扇</a>
+                    <a href="">台灯</a>
+                    <a href="">洗衣机</a>
+                    <a href="">电吹风</a>
+                    <a href="">电水壶</a>
+                    <a href="">空调</a>
+                    <a href="">电视</a>
+                    <a href="">其他</a>
+                </span>
+            </div>
+        </li>
+        <li class="category-7 catg">
+            <a href="" title="运动健身">
+                <i class="nav-icons"><img src="static/image/category/7.png"/></i>
+                <h3>运动健身</h3>
+            </a>
+        </li>
+        <li class="category-8 catg">
+            <a href="" title="衣物伞帽">
+                <i class="nav-icons"><img src="static/image/category/8.png"/></i>
+                <h3>衣物伞帽</h3>
+            </a>
+        </li>
+        <li class="category-9 catg">
+            <a href="" title="图书教材">
+                <i class="nav-icons"><img src="static/image/category/9.png"/></i>
+                <h3>图书教材</h3>
+            </a>
+        </li>
+        <li class="category-10 catg">
+            <a href="" title="租赁">
+                <i class="nav-icons"><img src="static/image/category/10.png"/></i>
+                <h3>租赁</h3>
+            </a>
+        </li>
+        <li class="category-11 catg">
+            <a href="" title="生活娱乐">
+                <i class="nav-icons"><img src="static/image/category/11.png"/></i>
+                <h3>生活娱乐</h3>
+            </a>
+        </li>
+        <li class="category-12 catg">
+            <a href="" title="其他">
+                <i class="nav-icons"><img src="static/image/category/12.png"/></i>
+                <h3>其他</h3>
+            </a>
+        </li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="main center">
+        <div class="top clearfix">
+            <div id="user_msg">
+                <a class="about_level" href="javascript:void(0);" target="_blank">等级有什么用？</a>
+                <div class="name">
+                    我是要当海贼王的男人
+                    <img class="grade_prof" src="static/image/ico_lv.png" alt="等级显示">
+                </div>
+                <div id="need_value"></div>
+                <div id="got_value"></div>
+                <img id="grade_value_btn" src="static/image/grade_value_btn.png" alt="等级显示">
+                <ul id="value_box">
+                    <li>当前等级 : <span>13</span></li>
+                    <li>当前经验 : <span>800</span></li>
+                    <li>升级还需 : <span>400</span></li>
+                </ul>
+            </div>
+            <div id="user_photo">
+                <img id="origin_ph" src="static/image/avatar2.png" alt="头像"/>
+                <img id="change_ph" src="static/image/avatar2.png" alt="头像"/>
+            </div>
+        </div>
+		<div class="mt_50">
+                <div class="title_wrapper">
+                    <h2 class="level_title mb_10">各等级积分一览</h2>
+                </div>
+                <ul class="mt_20 level_list">
+                    <!-- 判断为当前等级时添加level_active这个类和下面注释的div -->
+                    <li class="level_item btg level_active">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv1.png"/>
+                        <p class="mt_20 level_num">0</p>
+                        <!-- 当前等级时增加append这个div -->
+                        <div class="level_active_point">
+                            <!-- 使用动态头像 -->
+                            <img class="active_portrait" src="http://ershou.u.qiniudn.com/iOS_avatar_1398568875_76"/>
+                        </div> 
+                    </li>
+                    <li class="level_item btg">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv1.png"/>
+                        <p class="mt_20 level_num">10</p>
+                    </li>
+                    <li class="level_item btg">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv1.png"/>
+                        <p class="mt_20 level_num">25</p>
+                    </li>
+                    <li class="level_item btg">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv1.png"/>
+                        <p class="mt_20 level_num">45</p>
+                    </li>
+                    <li class="level_item bty_light">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv5.png"/>
+                        <p class="mt_20 level_num">70</p>
+                    </li>
+                    <li class="level_item bty_light">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv5.png"/>
+                        <p class="mt_20 level_num">100</p>
+                    </li>
+                    <li class="level_item bty_light">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv5.png"/>
+                        <p class="mt_20 level_num">175</p>
+                    </li>
+                    <li class="level_item bty">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv10.png"/>
+                        <p class="mt_20 level_num">270</p>
+                    </li>
+                    <li class="level_item bty">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv10.png"/>
+                        <p class="mt_20 level_num">450</p>
+                    </li>
+                    <li class="level_item bty">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv10.png"/>
+                        <p class="mt_20 level_num">675</p>
+                    </li>
+                    <li class="level_item btr_dark">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv13.png"/>
+                        <p class="mt_20 level_num">1000</p>
+                    </li>
+                    <li class="level_item btr_dark">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv13.png"/>
+                        <p class="mt_20 level_num">1600</p>
+                    </li>
+                    <li class="level_item btr_dark">
+                        <img class="mt_20 ico_level" src="http://ershou.u.qiniudn.com/ico_lv13.png"/>
+                        <p class="mt_20 level_num">2300</p>
+                    </li>
+                    <li class="level_item btr">
+                        <img class="mt_20 ico_level_max" src="http://ershou.u.qiniudn.com/ico_lv14.png"/>
+                        <p class="mt_20 level_num">3000</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt_50">
+                <div class="title_wrapper mb_10">
+                    <h2 class="level_title mb_10">等级高的好处</h2>
+                </div>
+                <div class="level_benefit">
+                    <p>— 发布的商品更容易排在首页及搜索结果前列。</p>
+                    <p>— 每天可发布商品数量的上限随着等级的提高而增加。</p>
+                    <p>— 用户等级将会被直接显示，等级越高标识越炫酷。</p>
+                    <p>— 用户等级是二手街的重要参考指标，以后将会有更多特权。</p>
+                </div>
+            </div>
+            <div class="mt_50">
+                <div class="title_wrapper mb_10">
+                    <h2 class="level_title mb_10">提升等级的方法</h2>
+                </div>
+                <div class="membership_point_box">
+                    <div class="circle_orange_130">
+                        <span>每天登录</span>
+                        <span class="_increase_num">+3</span>
+                    </div>
+                    <a class="circle_red_200 active_link">
+                        <span class="mt_33_100">通过认证</span>
+                        <span class="increase_num mt_10">+120</span>
+                    </a>
+                    <a class="circle_red_160 active_link">
+                        <span class="increase_num mt_28_100">+5</span>
+                        <span class="mt_10">确认出售</span>
+                    </a>
+                    <div class="circle_blue_120">
+                        <span class="mt_33_100">用户互动</span>
+                        <span class="increase_num mt_10">+2</span>
+                    </div>
+                    <a class="circle_yellow_150 active_link">
+                        <span class="mt_33_100">发布商品</span>
+                        <span class="increase_num mt_10">+8</span>
+                    </a>
+                    <a class="circle_green_155 active_link">
+                        <span class="increase_num mt_28_100">+30</span>
+                        <span class="mt_10">完善资料</span>
+                    </a>
+                    <a class="circle_blue_140 active_link">
+                        <span class="mt_33_100">上传头像</span>
+                        <span class="increase_num mt_10">+10</span>
+                    </a>
+                    <div class="circle_transparent_68"></div>
+                    <div class="circle_transparent_80"></div>
+                    <div class="circle_transparent_50"></div>
+                    <div class="circle_transparent_36"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<aside>
+    <a class="release-button" href="">我要发布</a>
+    <div class="helped">
+        <span class="helpers">9554</span>
+    </div>
+    <div class="qrcode-wr">
+        <img src="static/image/new_web_qrcode.png" alt="下载APP二维码"/>
+    </div>
+    <h2 class="qqgroup">用户交流群: 369185631</h2>
+    <div class="fl-wrapper clearfix">
+        <div class="wx-follow">
+            <a href="javascript:void(0);" class="fl-icon">
+                <img src="static/image/weixin-fl.png"/>
+            </a>
+            <div class="wx-fl-qrcode">
+                <p>关注我</p><img src="static/image/wx-fl-qrcode.png" /><p>校园二手街</p>
+                <div class="dc-dot"></div>
+            </div>
+        </div>
+        <div class="sina-follow">
+            <a href="" class="fl-icon" target="_blank" title="校园二手街官方微博">
+                <img src="static/image/sina-fl.png"/>
+            </a>
+        </div>
+    </div>
+</aside>
+<footer>
+    <img class="footer-tri" src="static/image/footer-tri.png" alt=""/>
+    <div class="friend-links">
+        <div class="links-title center">友情链接</div>
+        <ul class="links-wr center">
+            <li class="first"><a href="http://www.hust.edu.cn/" target="_blank" class="links">华中科技大学</a></li>
+            <li><a href="http://www.hustonline.net" target="_blank" class="links">华中大在线</a></li>
+            <li><a href="http://ik.hustonline.net/" target="_blank" class="links">iKnow问答</a></li>
+            <li><a href="http://www.weapp.me" target="_blank" class="links">桌游助手</a></li>
+            <li><a href="http://app.hustonline.net/" target="_blank" class="links">大软坊</a></li>
+            <li><a href="http://suta.im/" target="_blank" class="links">苏塔</a></li>
+        </ul>
+    </div>
+    <div class="site-msg line1"><a class="report">鄂ICP备12345667号</a><span class="power">&nbsp;Powered by <a
+            href="www.bingyan.net">冰岩作坊</a></span></div>
+    <div class="site-msg line2"><span class="copy">&copy;2014易橙网络&nbsp;</span><a class="about" href="/about">关于我们</a><a
+            class="contact"
+            href="/contact">联系我们</a></div>
+</footer>
+
+<div class="login-cover">
+    <div class="login-wr">
+        <div class="login-header">
+            <img class="login-logo" src="static/image/logo.png" alt="logo"/>
+            <p class="site-name">校园二手街</p>
+            <div class="share-buttons">
+                <a id="renren-button" href="">人人网登陆</a>
+                <a id="qq-button" href="">QQ登陆</a>
+            </div>
+        </div>
+        <div class="login-form-container">
+            <form action="">
+                <span class="input-name" data-value="账号">
+                    <input class="input-class" type="text" id="user-name" name="user-name"/>
+                </span>
+                <span class="input-name" data-value="密码">
+                    <!-- <input class="input-class pw-text" type="hidden" style="display:none"/> -->
+                    <input class="input-class" type="password" name="pw" id="pw"/>
+                </span>
+                <p class="ex clearfix">
+                    <label class="rem-wr" for="rem">
+                        <input id="rem" name="rem" type="checkbox"/>
+                        <span>记住我</span>
+                    </label>
+                    <a class="forget" href="javascript:void(0);">忘记密码</a>
+                </p>
+                <button class="submit" type="button">登录二手街</button>
+            </form>
+            <a class="reg" href="javascript:void(0);">马上注册</a>
+        </div>
+        <a class="close" href="javascript:void(0);">关闭</a>
+    </div>
+</div>
+
+<div class="reg-cover">
+    <div class="reg-wr">
+        <div class="reg-header">
+            <img class="login-logo" src="static/image/logo.png" alt="logo"/>
+            <p class="site-name">校园二手街</p>
+        </div>
+        <div class="reg-form-container">
+            <form action="">
+                <span class="input-name" data-value="用户名"><input class="input-class" type="text" id="uname" name="uname"/></span>
+                <span class="input-name" data-value="邮箱"><input class="input-class" type="email" id="email" name="email"/></span>
+                <span class="input-name" data-value="密码"><input class="input-class" type="password" id="passw" name="passw"/></span>
+                <span class="input-name" data-value="确认密码"><input class="input-class" type="password" id="cpassw" name="cpassw"/></span>
+                <a href="##"><button type="button" class="submit">注册二手街</button></a>
+            </form>
+            <a class="log" href="javascript:void(0);">立即登录</a>
+        </div>
+        <a class="close" href="javascript:void(0);">关闭</a>
+    </div>
+</div>
+<div class="fade_back">
+    <h1><span class="fd_close">关闭</span>反馈给校园二手街</h1>
+    <div class="fade_area">
+        <div class="not_good">
+            <h2>逛街时有什么不爽的，请告诉我们</h2>
+            <textarea id="feedback" placeholder="我给你们讲哦..."></textarea>
+        </div>
+        <div class="leave_name">
+            <h2>英雄留个联系方式吧</h2>
+            <textarea id="contact" placeholder="邮箱、QQ、手机都可以..."></textarea>
+        </div>
+        <a class="fd_btn" href="javascript:void(0);" onclick="feedback();"></a>
+    </div>
+</div>
+<div class="thanks_fd">
+    感谢反馈，校园二手街团队已经收到，请相信我们可以做的更好。
+</div>
+<div id="circular-loading" class="hidden">
+    <div id="circularG_1" class="circularG">
+    </div>
+    <div id="circularG_2" class="circularG">
+    </div>
+    <div id="circularG_3" class="circularG">
+    </div>
+    <div id="circularG_4" class="circularG">
+    </div>
+    <div id="circularG_5" class="circularG">
+    </div>
+    <div id="circularG_6" class="circularG">
+    </div>
+    <div id="circularG_7" class="circularG">
+    </div>
+    <div id="circularG_8" class="circularG">
+    </div>
+    <div class="load-tip">登录中</div>
+</div>
+<div class="std_id_box">
+    <img  src="static/image/std_pic.png" alt="logo"/>
+    <div class="std_input_info">
+        <h1>学号认证</h1>
+        <div class="std_input">
+            <span>学号</span>
+            <input  type="text" name="uname" value="例U201214951" />
+        </div>
+        <div class="std_input">
+            <span>姓名</span>
+            <input  type="text" name="uname"  value="请输入真实姓名"/>
+        </div>
+        <div id="not_match">学号和姓名不匹配</div>
+        <div id="identify_btn">
+            <img  src="static/image/idtf_btn.png" alt="logo"/>
+        </div>
+    </div>
+    <img id="id_close" src="static/image/login_close.png" alt="logo"/>
+</div>
+<img id="id_succeed" src="static/image/id_succeed.png" alt="logo"/>
+<script src="static/js/jquery-1.7.2.min.js"></script>
+<script src="static/js/common.min.js"></script>
+<script src="static/js/add.min.js"></script>
+</body>
+</html>

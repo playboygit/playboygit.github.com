@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta charset="utf-8">
+    <meta name="keywords" content="校园二手街,二手市场">
+    <meta name="description" content="校园二手街提供自行车,电动车,教材,手机,电脑,租房,洗衣机,球,衣物,数码配件等二手商品信息。充分满足老师和学生查看/发布二手商品的需求。" />
+    <meta id="viewport" name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>校园二手街 - 最安全方便的校内二手市场</title>
+    <link rel="stylesheet" href="static/css/compatible.css" type="text/css"/>
+</head>
+<body>
+<div class="page profile-page" id="main">
+    <div class="login-header">
+        <a class="right fr" href="http://2shoujie.com/download"></a>
+        <a class="left fl" href="http://2shoujie.com/mobile/"></a>
+    </div>
+    <div class="wrap-seller profile-seller group">
+        <a href="/mobile/user/edit" class="edit-btn">编辑</a>
+        <div class="wrap-person-img fl wrap-pro-l">
+            <img src="static/image/person-img.png" alt="头像"/>
+        </div>
+        <div class="wrap-pro-r fl">
+            <p class="seller-name">美国队长</p>
+            <p class="seller-qq">QQ:<span>123456789</span></p>
+            <p class="seller-tel">手机号:<span>12345678912</span></p>
+        </div>
+    </div>
+    <div class="no-goods hide">
+        <div class="no-logo"></div>
+        <p>这里空空如也</p>
+        <a href="/mobile/release">立即发布</a>
+    </div>
+</div>
+<script src="static/js/jquery2.1.1.min.js"></script>
+<script src="static/js/template-native.js"></script>
+<script src="static/js/profile_person.js"></script>
+<script id="on_shelf" type="text/html">
+    <div class="wrap-selling-txt">
+        <div class="wrap-selling profile-selling">
+            正在出售
+        </div>
+        <span class="line"></span>
+    </div>
+    <div class="wrap-goods" id="on-list">
+        <% for(var i=0; i<on_shelf.length; i++){ %>
+            <ul class="wrap-listview" data-id="<%=on_shelf[i].goods_id%>">
+                <li>
+                    <a href="/mobile/goods/<%=on_shelf[i].goods_id%>">
+                        <dl class="group">
+                            <dt class="fl">
+                                <img src="<%=on_shelf[i].goods_image%>" alt="<%=on_shelf[i].goods_name%>" width="55" height="55"/>
+                            </dt>
+                            <dd class="fl">
+                                <p class="goods-name"><%=on_shelf[i].goods_name%></p>
+                                <p class="goods-price">￥<span><%=on_shelf[i].goods_price%></span></p>
+                                <p class="goods-time"><%=on_shelf[i].goods_release_time%></p>
+                            </dd>
+                        </dl>
+                    </a>
+                    <ul class="listview-attr group">
+                        <li><a href="/mobile/goods/edit/<%=on_shelf[i].goods_id%>" class="edit-goods">编辑</a></li>
+                        <li><a href="javascript:;" class="down-goods">下架</a></li>
+                        <li><a href="javascript:;" class="old-goods">确认出售</a></li>
+                    </ul>
+                </li>
+            </ul>
+        <%}%>
+    </div>
+</script>
+<script id="off_shelf" type="text/html">
+    <div class="wrap-selling-txt has-down">
+        <div class="wrap-selling profile-selling">
+            已下架
+        </div>
+        <span class="line"></span>
+    </div>
+    <div class="wrap-goods" id="off-list">
+        <% for(var i=0; i<off_shelf.length; i++){ %>
+        <ul class="wrap-listview" data-id="<%=off_shelf[i].goods_id%>">
+            <li>
+                <a href="/mobile/goods/<%=off_shelf[i].goods_id%>">
+                    <dl class="group">
+                        <dt class="fl">
+                            <img src="<%=off_shelf[i].goods_image%>" alt="<%=off_shelf[i].goods_name%>" width="55" height="55"/>
+                        </dt>
+                        <dd class="fl">
+                            <p class="goods-name"><%=off_shelf[i].goods_name%></p>
+                            <p class="goods-price">￥<span><%=off_shelf[i].goods_price%></span></p>
+                            <p class="goods-time"><%=off_shelf[i].goods_release_time%></p>
+                        </dd>
+                    </dl>
+                </a>
+                <ul class="listview-attr group twoattr">
+                    <li><a href="/mobile/goods/edit/<%=off_shelf[i].goods_id%>" class="edit-goods">编辑</a></li>
+                    <li><a href="javascript:;" class="up-goods">上架</a></li>
+                </ul>
+            </li>
+        </ul>
+        <%}%>
+    </div>
+</script>
+<script id="sold" type="text/html">
+    <div class="wrap-selling-txt has-down">
+        <div class="wrap-selling profile-selling">
+            已售出
+        </div>
+        <span class="line"></span>
+    </div>
+    <div class="wrap-goods" id="sold-list">
+        <% for(var i=0; i<sold.length; i++){ %>
+        <ul class="wrap-listview" data-id="<%=sold[i].goods_id%>">
+            <li>
+                <a href="/mobile/goods/<%=sold[i].goods_id%>">
+                    <dl class="group">
+                        <dt class="fl">
+                            <img src="<%=sold[i].goods_image%>" alt="<%=sold[i].goods_name%>" width="55" height="55"/>
+                        </dt>
+                        <dd class="fl">
+                            <p class="goods-name"><%=sold[i].goods_name%></p>
+                            <p class="goods-price">￥<span><%=sold[i].goods_price%></span></p>
+                            <p class="goods-time"><%=sold[i].goods_release_time%></p>
+                        </dd>
+                    </dl>
+                </a>
+            </li>
+        </ul>
+        <%}%>
+    </div>
+</script>
+</body>
+</html>
