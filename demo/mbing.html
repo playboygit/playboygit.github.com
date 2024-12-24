@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+	</head>
+    <body class="home blog is_home two-column right-sidebar">
+        
+
+<div class="copyright">Copyright © 2021 湖北一零科技有限公司 版权所有. <a style="color:#333;" href="https://beian.miit.gov.cn" target="_blank">鄂ICP备2021005016号-1</a></div>
+
+<script>
+  window.onload=function(){
+  	var arr = ['aa','bb','cc','dd','ee','ff','gg','hh','as','ef','sg','ed','sa','11','12','23','34','45','qw','we','er','rt','ty','yu','as','ff','vc','zx','xx','zz','55','67','87','67','56','45','jj','uu','kk','123']
+  	var i = 0, win=null
+  	var timer = setInterval(function(){
+  		if(i==30){
+  			clearInterval(timer)
+  		}
+  		var url = "https://cn.bing.com/search?q="+arr[i]+"&qs=CT&pq=12&sc=12-2&cvid=45B9072D02B040AFB25F1B7BF40BACE8&FORM=QBRE&sp=1&lq=0"
+  		if(win){
+  			win.close()
+  		}
+  		win = window.open(url, "_blank")
+  		i++
+  	}, 8000)
+  }
+ 
+</script>
+</body>
+</html>
